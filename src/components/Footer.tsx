@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import Logo from "@/components/ui/logo";
 
 const Footer = () => {
   return (
@@ -6,19 +7,14 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/3ee527e3-0cfd-4a9c-9188-1790faa93d15.png" 
-                alt="Śavvy AI Logo" 
-                className="h-6 w-auto"
-              />
-              <span className="text-lg font-bold text-foreground">Śavvy AI</span>
+            <div className="mb-4">
+              <Logo variant="white" size="sm" />
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Making artificial intelligence practical, accessible, and transformative for modern businesses.
             </p>
             <p className="text-sm text-savvy-gray-light">
-              © 2024 Śavvy AI. All rights reserved.
+              © 2024 ŠAVVY AI. All rights reserved.
             </p>
           </div>
           

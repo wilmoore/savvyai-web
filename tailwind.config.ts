@@ -110,6 +110,16 @@ export default {
 				'glow-pulse': {
 					'0%, 100%': { boxShadow: '0 0 20px rgba(30, 203, 225, 0.3)' },
 					'50%': { boxShadow: '0 0 40px rgba(30, 203, 225, 0.6)' }
+				},
+				'gradient-shift': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'text-gradient-shift': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -120,7 +130,9 @@ export default {
 				'underline-grow': 'underline-grow 0.8s ease-out forwards',
 				'wave-motion': 'wave-motion 8s ease-in-out infinite',
 				'fade-up': 'fade-up 0.8s ease-out forwards',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 10s linear infinite',
+				'text-gradient-shift': 'text-gradient-shift 8s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

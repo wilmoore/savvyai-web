@@ -19,8 +19,15 @@ const Logo: React.FC<LogoProps> = ({
 
   const color = variant === 'white' ? '#FFFFFF' : '#000000';
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className={`flex items-center space-x-2 ${className}`}>
+    <div 
+      className={`flex items-center space-x-2 ${className} cursor-pointer hover:opacity-80 transition-opacity duration-200`}
+      onClick={scrollToTop}
+    >
       {/* Logo Icon */}
       <svg 
         width={size === 'sm' ? 24 : size === 'md' ? 32 : 48} 

@@ -7,6 +7,13 @@ const Hero = () => {
   const [buttonHover, setButtonHover] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
     
@@ -131,6 +138,7 @@ const Hero = () => {
                 style={{
                   transform: buttonHover ? `translate(${mousePosition.x * 3 - 1.5}px, ${mousePosition.y * 3 - 1.5}px)` : 'translate(0, 0)'
                 }}
+                onClick={() => window.open('https://book.savvyai.dev/', '_blank')}
               >
                 <span className="relative z-10">Read AI Literate</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -140,6 +148,7 @@ const Hero = () => {
                 size="lg" 
                 variant="outline"
                 className="w-full sm:w-auto h-16 px-10 text-lg font-semibold border-2 border-white text-white bg-transparent rounded-xl hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 hover:scale-105"
+                onClick={() => scrollToSection('contact')}
               >
                 Start Your Project
               </Button>
@@ -214,8 +223,8 @@ const Hero = () => {
                   <div className="w-3 h-3 bg-[#10B981] rounded-full" />
                 </div>
                 <div>
-                  <div className="text-white text-xs font-medium">Prompt Engineering</div>
-                  <div className="text-[#94A3B8] text-xs">Input Design</div>
+                                      <div className="text-white text-xs font-medium">Prompt Engineering</div>
+                    <div className="text-[#94A3B8] text-xs">Context Planning</div>
                 </div>
               </div>
 

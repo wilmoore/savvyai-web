@@ -2,14 +2,83 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
-  const benefits = [
-    "Free initial consultation and AI readiness assessment",
-    "Custom roadmap and implementation timeline",
-    "Direct access to our engineering team",
-    "Transparent pricing with no hidden costs"
+  const [selectedSigns, setSelectedSigns] = useState<number[]>([]);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    challenge: ''
+  });
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const codeRescueSigns = [
+    "Your developer disappeared, and you're locked out of your own code.",
+    "Progress has stalled, and the product can't move forward.",
+    "Deadlines are slipping because of unresolved technical issues.",
+    "The codebase is buggy, unstable, or impossible to maintain.",
+    "You've been quoted an outrageous amount just to get things working again."
   ];
+
+  const handleCheckboxChange = (index: number) => {
+    setSelectedSigns(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear field error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email';
+    if (!formData.company.trim()) newErrors.company = 'Company is required';
+    if (!formData.challenge.trim()) newErrors.challenge = 'Please describe your challenge';
+
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+    
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      console.log('Form submitted:', { ...formData, selectedSigns });
+      setIsSubmitting(false);
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        challenge: ''
+      });
+      setSelectedSigns([]);
+      setErrors({});
+    }, 1000);
+  };
 
   return (
     <section id="contact" className="py-32 bg-background relative">
@@ -18,67 +87,94 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Side - Text & Benefits */}
             <div>
-              <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-6">
-                Let's Talk
+              <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-4">
+                Need a Code Rescue?
               </h2>
               <p className="text-xl text-[#94A3B8] mb-8 leading-relaxed">
-                Ready to build AI that actually works? Tell us about your challenge, and I'll work with you directly to solve it.
+                Is one of the following is true for you or your business?:
               </p>
               
-              <div className="space-y-4 mb-8">
-                {benefits.map((benefit, index) => (
+              <div className="space-y-2 mb-8">
+                {codeRescueSigns.map((sign, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#2563EB] flex-shrink-0" />
-                    <span className="text-[#94A3B8]">{benefit}</span>
+                    <input
+                      type="checkbox"
+                      id={`sign-${index}`}
+                      checked={selectedSigns.includes(index)}
+                      onChange={() => handleCheckboxChange(index)}
+                      className="w-6 h-6 text-[#2563EB] bg-transparent border-2 border-[#475569] rounded focus:ring-[#2563EB] focus:ring-2 focus:ring-offset-0 focus:border-[#2563EB] cursor-pointer"
+                    />
+                    <label htmlFor={`sign-${index}`} className="text-[#94A3B8] cursor-pointer flex-1">
+                      {sign}
+                    </label>
                   </div>
                 ))}
+
               </div>
-              
-              <p className="text-lg text-[#94A3B8]">
-                <strong className="text-white">No sales pitches.</strong> Just a honest conversation about what's possible and what it takes to get there.
-              </p>
             </div>
 
             {/* Right Side - Form */}
             <div className="bg-gradient-card border border-border rounded-xl p-8">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <Input
                       placeholder="First Name"
-                      className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
+                      value={formData.firstName}
+                      onChange={(e) => handleInputChange('firstName', e.target.value)}
+                      className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.firstName ? 'border-red-500' : ''}`}
                     />
+                    {errors.firstName && <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>}
                   </div>
                   <div>
                     <Input
                       placeholder="Last Name"
-                      className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
+                      value={formData.lastName}
+                      onChange={(e) => handleInputChange('lastName', e.target.value)}
+                      className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.lastName ? 'border-red-500' : ''}`}
                     />
+                    {errors.lastName && <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>}
                   </div>
                 </div>
                 
-                <Input
-                  placeholder="Work Email"
-                  type="email"
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
-                />
+                <div>
+                  <Input
+                    placeholder="Work Email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.email ? 'border-red-500' : ''}`}
+                  />
+                  {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+                </div>
                 
-                <Input
-                  placeholder="Company"
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
-                />
+                <div>
+                  <Input
+                    placeholder="Company"
+                    value={formData.company}
+                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.company ? 'border-red-500' : ''}`}
+                  />
+                  {errors.company && <p className="text-red-400 text-sm mt-1">{errors.company}</p>}
+                </div>
                 
-                <Textarea
-                  placeholder="What's your AI challenge? Tell us about the problem you're trying to solve."
-                  rows={5}
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] resize-none"
-                />
+                <div>
+                  <Textarea
+                    placeholder="What's your AI challenge? Tell us about the problem you're trying to solve."
+                    rows={5}
+                    value={formData.challenge}
+                    onChange={(e) => handleInputChange('challenge', e.target.value)}
+                    className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] resize-none ${errors.challenge ? 'border-red-500' : ''}`}
+                  />
+                  {errors.challenge && <p className="text-red-400 text-sm mt-1">{errors.challenge}</p>}
+                </div>
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 border-2 border-white text-white bg-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 font-semibold hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full h-12 border-2 border-white text-white bg-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 font-semibold hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Start the Conversation
+                  {isSubmitting ? 'Sending...' : 'Start the Conversation'}
                 </Button>
               </form>
             </div>

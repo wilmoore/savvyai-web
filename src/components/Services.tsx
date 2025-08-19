@@ -4,22 +4,22 @@ const Services = () => {
   const services = [
     {
       icon: Target,
-      title: "Strategy",
-      description: "Roadmap, governance, and AI implementation strategy.",
+      title: "AI Readiness",
+      description: "We prepare your organization for AI.",
       bullets: [
-        "AI readiness assessment and roadmap development",
-        "Governance frameworks and ethical AI guidelines",
-        "Technology stack recommendations and architecture planning"
+        "AI readiness assessment and roadmap development.",
+        "Technology stack recommendations and architecture planning.",
+        "Data strategy, security, and compliance frameworks."
       ]
     },
     {
       icon: Code,
-      title: "Build",
-      description: "Custom models, infrastructure, and AI solutions.",
+      title: "LLM/MLops",
+      description: "Custom models, fine-tuning, inference.",
       bullets: [
         "Custom model development and fine-tuning",
         "Scalable AI infrastructure and MLOps pipelines",
-        "Production-ready AI applications and services"
+        "API, RAG and platform integrations"
       ]
     },
     {
@@ -27,18 +27,18 @@ const Services = () => {
       title: "Integrate",
       description: "APIs, workflows, and legacy system integration.",
       bullets: [
-        "Seamless API integration and workflow automation",
-        "Legacy system modernization with AI capabilities",
+        "API integration and workflow automation",
+        "System modernization with AI capabilities",
         "Real-time data processing and intelligent decisioning"
       ]
     },
     {
       icon: Users,
       title: "Educate",
-      description: "Training, scaling, and knowledge transfer.",
+      description: "Training, mentorship, and support.",
       bullets: [
-        "Team training and AI literacy programs",
-        "Best practices documentation and knowledge transfer",
+        "Team training and AI literacy",
+        "Best practices documentation and guides",
         "Ongoing support and capability development"
       ]
     }

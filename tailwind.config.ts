@@ -99,18 +99,35 @@ export default {
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'cursor-blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
+				},
+				'underline-grow': {
+					'0%': { transform: 'scaleX(0)' },
+					'100%': { transform: 'scaleX(1)' }
+				},
+				'spotlight-shift': {
+					'0%': { backgroundPosition: '50% 20%' },
+					'100%': { backgroundPosition: '50% 80%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 3s ease-in-out infinite'
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'cursor-blink': 'cursor-blink 1.2s infinite',
+				'underline-grow': 'underline-grow 0.8s ease-out forwards',
+				'spotlight-shift': 'spotlight-shift 30s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-hero-spotlight': 'var(--gradient-hero-spotlight)',
 				'gradient-card': 'var(--gradient-card)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-cta': 'var(--gradient-cta)'
 			},
 			boxShadow: {
 				'premium': 'var(--shadow-premium)',

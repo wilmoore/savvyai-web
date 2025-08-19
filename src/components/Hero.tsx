@@ -1,62 +1,53 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Target, Cog } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--savvy-blue)/0.1),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,hsl(var(--savvy-blue)/0.05),transparent_50%)]" />
+      {/* Background Spotlight */}
+      <div className="absolute inset-0 bg-gradient-hero-spotlight animate-spotlight-shift" />
       
-      <div className="container mx-auto px-6 pt-20">
+      <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 animate-float">
-            <div className="inline-flex items-center space-x-2 bg-accent/50 border border-border rounded-full px-4 py-2 text-sm text-savvy-gray-light">
-              <Zap className="w-4 h-4 text-primary" />
-              <span>Practical AI Solutions</span>
-            </div>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-savvy-gray-light bg-clip-text text-transparent leading-tight">
-            AI Engineering
-            <br />
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Without the Hype
+          {/* Main Headline */}
+          <h1 className="text-[56px] md:text-[64px] font-bold leading-[1.1] mb-6 text-white">
+            AI That Works in the{" "}
+            <span className="relative">
+              <span className="bg-gradient-cta bg-clip-text text-transparent">
+                Real World
+              </span>
+              {isVisible && (
+                <span 
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-cta transform origin-left animate-underline-grow"
+                  style={{ animationDelay: '1s' }}
+                />
+              )}
             </span>
+            <span className="animate-cursor-blink text-cyan-400 ml-1">|</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-savvy-gray-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            We're a team of AI engineers, strategists, and educators building solutions that make artificial intelligence practical, accessible, and transformative for modern businesses.
+          {/* Subheadline */}
+          <p 
+            className="text-[20px] md:text-[22px] font-medium mb-12 max-w-2xl mx-auto"
+            style={{ color: '#9CA3AF' }}
+          >
+            We don't chase demos. We build systems that deliver measurable results.
           </p>
           
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Rather than chasing hype, we focus on execution. Every tool, server, agent, or workflow we build is designed to solve real problems with real-world impact.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-accent border-0 shadow-glow text-lg px-8 py-4 h-auto">
+          {/* Single CTA */}
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              className="w-full md:w-[280px] h-16 text-lg font-semibold bg-gradient-cta border-0 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] transition-all duration-300 hover:scale-105"
+            >
               Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 h-auto border-border/50 hover:bg-accent/30">
-              View Our Work
-            </Button>
-          </div>
-          
-          {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center space-x-2 bg-card/50 border border-border rounded-full px-4 py-2">
-              <Target className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Real-World Focus</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-card/50 border border-border rounded-full px-4 py-2">
-              <Cog className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Custom Solutions</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-card/50 border border-border rounded-full px-4 py-2">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Proven Results</span>
-            </div>
           </div>
         </div>
       </div>

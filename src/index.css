@@ -46,9 +46,15 @@ All colors MUST be HSL.
     --savvy-gray-light: 217 10% 60%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--savvy-navy)), hsl(220 35% 8%));
+    --gradient-hero: linear-gradient(135deg, #0B0F19, #111827);
+    --gradient-hero-spotlight: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.06), transparent 70%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 25% 10%));
     --gradient-accent: linear-gradient(90deg, hsl(var(--savvy-blue)), hsl(var(--savvy-blue-dark)));
+    --gradient-cta: linear-gradient(135deg, #06B6D4, #0891B2);
+    
+    /* Custom colors for hero */
+    --hero-accent: 186 100% 60%;
+    --hero-subtext: 210 10% 65%;
     
     /* Shadows */
     --shadow-premium: 0 25px 50px -12px hsl(220 50% 4% / 0.8);

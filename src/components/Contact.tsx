@@ -15,6 +15,8 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
   
   const codeRescueSigns = [
     "Your developer disappeared, and you're locked out of your own code.",
@@ -62,15 +64,48 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Submit to Airtable
+    // Prepare form data for Supabase
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append('name', formData.name);
+    formDataToSubmit.append('email', formData.email);
+    formDataToSubmit.append('company', formData.company);
+    formDataToSubmit.append('challenge', formData.challenge);
+    formDataToSubmit.append('selectedSigns', codeRescueSigns.filter((_, index) => selectedSigns.includes(index)).join(', '));
+    
     try {
-      const result = await submitToAirtable({
-        ...formData,
+      console.log('Submitting form data:', {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        challenge: formData.challenge,
         selectedSigns: codeRescueSigns.filter((_, index) => selectedSigns.includes(index))
       });
 
-      if (result.success) {
-        console.log('Form submitted successfully to Airtable');
+      // Submit to Supabase Edge Function
+      console.log('Making request to Supabase function...');
+      const response = await fetch('https://fdubglolnuychhaptdsb.supabase.co/functions/v1/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          challenge: formData.challenge + (selectedSigns.length > 0 ? '\n\nCode Rescue Signs:\n' + codeRescueSigns.filter((_, index) => selectedSigns.includes(index)).map(sign => `• ${sign}`).join('\n') : ''),
+          selectedSigns: codeRescueSigns.filter((_, index) => selectedSigns.includes(index)).join(', ')
+        }),
+      });
+
+      console.log('Response status:', response.status);
+      const responseData = await response.json();
+      console.log('Response data:', responseData);
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        setSubmitStatus('success');
+        setSubmitMessage('Thank you! We\'ll be in touch soon.');
+        
         // Reset form
         setFormData({
           name: '',
@@ -80,12 +115,27 @@ const Contact = () => {
         });
         setSelectedSigns([]);
         setErrors({});
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('idle');
+          setSubmitMessage('');
+        }, 5000);
       } else {
-        throw new Error(result.message);
+        const errorMessage = responseData.error || 'Failed to submit form';
+        const details = responseData.details ? ` (${responseData.details})` : '';
+        throw new Error(`${errorMessage}${details}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      // You might want to show an error message to the user here
+      setSubmitStatus('error');
+      setSubmitMessage(error instanceof Error ? error.message : 'Failed to submit form. Please try again.');
+      
+      // Clear error message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setSubmitMessage('');
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -126,9 +176,10 @@ const Contact = () => {
 
             {/* Right Side - Form */}
             <div className="bg-gradient-card border border-border rounded-xl p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="contact">
                 <div>
                   <Input
+                    name="name"
                     placeholder="Full Name"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
@@ -139,6 +190,7 @@ const Contact = () => {
                 
                 <div>
                   <Input
+                    name="email"
                     placeholder="Work Email"
                     type="email"
                     value={formData.email}
@@ -150,6 +202,7 @@ const Contact = () => {
                 
                 <div>
                   <Input
+                    name="company"
                     placeholder="Company"
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
@@ -160,6 +213,7 @@ const Contact = () => {
                 
                 <div>
                   <Textarea
+                    name="challenge"
                     placeholder="What's your AI challenge? Tell us about the problem you're trying to solve."
                     rows={5}
                     value={formData.challenge}
@@ -176,6 +230,19 @@ const Contact = () => {
                 >
                   {isSubmitting ? 'Sending...' : 'Start the Conversation'}
                 </Button>
+                
+                {/* Success/Error Messages */}
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+                    <p className="text-green-400 text-sm font-medium">{submitMessage}</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                    <p className="text-red-400 text-sm font-medium">{submitMessage}</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>

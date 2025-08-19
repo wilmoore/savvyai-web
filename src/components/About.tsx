@@ -1,84 +1,60 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Users, Target, Lightbulb } from "lucide-react";
+import { CheckCircle, Users, Lightbulb } from "lucide-react";
 
 const About = () => {
-  const values = [
+  const principles = [
     {
-      icon: Target,
-      title: "Execution Over Hype",
-      description: "We focus on delivering practical solutions that solve real business problems, not just impressive demos."
+      icon: CheckCircle,
+      title: "Execution > Hype",
+      description: "We prioritize delivering working solutions over flashy demonstrations.",
     },
     {
       icon: Users,
-      title: "Collaborative Partnership",
-      description: "We work alongside your team as strategic partners, ensuring knowledge transfer and sustainable growth."
+      title: "True Partnership",
+      description: "We work alongside your team, sharing knowledge and building lasting capabilities.",
     },
     {
       icon: Lightbulb,
-      title: "Innovation with Purpose",
-      description: "Every innovation we pursue is driven by clear business value and measurable impact."
-    }
-  ];
-
-  const expertise = [
-    "Machine Learning & Deep Learning",
-    "Natural Language Processing",
-    "Computer Vision",
-    "Reinforcement Learning",
-    "MLOps & Model Deployment",
-    "Data Engineering",
-    "AI Strategy & Governance",
-    "Conversational AI"
+      title: "Practical Innovation",
+      description: "Every innovation we implement serves a clear business purpose and measurable outcome.",
+    },
   ];
 
   return (
-    <section id="about" className="py-24 bg-savvy-navy/30">
+    <section className="py-32 bg-savvy-pure-black relative">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-savvy-gray-light bg-clip-text text-transparent">
-              About Śavvy AI
+        <div className="max-w-6xl mx-auto">
+          {/* Manifesto Section */}
+          <div className="text-center mb-20">
+            <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-8">
+              Our Mission
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Bridging the gap between AI potential and business reality.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">Our Mission</h3>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe artificial intelligence should enhance human capabilities, not replace them. Our mission is to make AI accessible, practical, and transformative for businesses of all sizes.
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-xl md:text-2xl text-savvy-gray-400 leading-relaxed">
+                <strong className="text-white">The AI industry is drowning in hype.</strong> Every day, new tools promise to revolutionize everything, but most fail to deliver real value.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                By focusing on execution over experimentation, we help organizations navigate the complex landscape of AI implementation with confidence and clarity.
+              <p className="text-xl md:text-2xl text-savvy-gray-400 leading-relaxed">
+                We exist to cut through the noise. <strong className="text-savvy-electric-cyan">We build AI that works.</strong> No fluff, no empty promises—just practical solutions that solve real problems and deliver measurable results.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">Our Expertise</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {expertise.map((skill, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span className="text-sm text-savvy-gray-light">{skill}</span>
-                  </div>
-                ))}
+          </div>
+
+          {/* Core Principles */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {principles.map((principle, index) => (
+              <div
+                key={principle.title}
+                className="group bg-gradient-card border border-border rounded-xl p-8 hover:border-savvy-electric-cyan/30 hover:shadow-cyan-glow transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 bg-savvy-electric-cyan/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-savvy-electric-cyan/20 transition-colors">
+                  <principle.icon className="w-6 h-6 text-savvy-electric-cyan" />
+                </div>
+                <h3 className="text-[24px] font-bold text-white mb-4">
+                  {principle.title}
+                </h3>
+                <p className="text-savvy-gray-400 leading-relaxed">
+                  {principle.description}
+                </p>
               </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="bg-gradient-card border-border/50 shadow-card text-center">
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-6 h-6 text-background" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">{value.title}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>

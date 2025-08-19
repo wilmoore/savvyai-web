@@ -1,82 +1,103 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Code, Database, MessageSquare, Workflow, Zap } from "lucide-react";
+import { Target, Code, Zap, Users } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Brain,
-      title: "AI Strategy & Consulting",
-      description: "Strategic roadmaps for AI implementation that align with your business objectives and deliver measurable outcomes.",
-      features: ["AI Readiness Assessment", "Implementation Roadmap", "ROI Analysis", "Risk Mitigation"]
+      icon: Target,
+      title: "Strategy",
+      description: "Roadmap, governance, and AI implementation strategy.",
+      bullets: [
+        "AI readiness assessment and roadmap development",
+        "Governance frameworks and ethical AI guidelines",
+        "Technology stack recommendations and architecture planning"
+      ]
     },
     {
       icon: Code,
-      title: "Custom AI Development",
-      description: "Bespoke AI solutions engineered to solve your specific challenges with precision and scalability.",
-      features: ["Machine Learning Models", "Computer Vision Systems", "NLP Applications", "Predictive Analytics"]
-    },
-    {
-      icon: MessageSquare,
-      title: "Intelligent Agents",
-      description: "Autonomous AI agents that handle complex workflows, customer interactions, and business processes.",
-      features: ["Conversational AI", "Process Automation", "Decision Support", "Multi-Agent Systems"]
-    },
-    {
-      icon: Database,
-      title: "Data Infrastructure",
-      description: "Robust data pipelines and infrastructure that power your AI initiatives with clean, accessible data.",
-      features: ["Data Pipeline Design", "MLOps Implementation", "Model Monitoring", "Scalable Architecture"]
-    },
-    {
-      icon: Workflow,
-      title: "AI Integration",
-      description: "Seamless integration of AI capabilities into your existing systems and workflows.",
-      features: ["API Development", "Legacy System Integration", "Workflow Optimization", "Change Management"]
+      title: "Build",
+      description: "Custom models, infrastructure, and AI solutions.",
+      bullets: [
+        "Custom model development and fine-tuning",
+        "Scalable AI infrastructure and MLOps pipelines",
+        "Production-ready AI applications and services"
+      ]
     },
     {
       icon: Zap,
-      title: "AI Training & Education",
-      description: "Comprehensive training programs to upskill your team and build internal AI capabilities.",
-      features: ["Technical Workshops", "Leadership Training", "Certification Programs", "Ongoing Support"]
+      title: "Integrate",
+      description: "APIs, workflows, and legacy system integration.",
+      bullets: [
+        "Seamless API integration and workflow automation",
+        "Legacy system modernization with AI capabilities",
+        "Real-time data processing and intelligent decisioning"
+      ]
+    },
+    {
+      icon: Users,
+      title: "Educate",
+      description: "Training, scaling, and knowledge transfer.",
+      bullets: [
+        "Team training and AI literacy programs",
+        "Best practices documentation and knowledge transfer",
+        "Ongoing support and capability development"
+      ]
     }
   ];
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section className="py-32 bg-background relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-savvy-gray-light bg-clip-text text-transparent">
-            Our Services
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            End-to-end AI solutions designed to drive real business value and competitive advantage.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-premium transition-all duration-300 group">
-              <CardHeader className="pb-4">
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-300">
-                  <service.icon className="w-6 h-6 text-background" />
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-6">
+              How We Work
+            </h2>
+            <p className="text-xl text-savvy-gray-400 max-w-3xl mx-auto">
+              From strategy to execution, we deliver AI solutions that create real business value.
+            </p>
+          </div>
+
+          {/* Service Blocks */}
+          <div className="space-y-8">
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className="group bg-gradient-card border border-border rounded-xl p-8 hover:border-savvy-electric-cyan/30 hover:shadow-cyan-glow transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="flex flex-col md:flex-row gap-6">
+                  {/* Icon & Title */}
+                  <div className="flex items-center gap-4 md:w-1/3">
+                    <div className="w-12 h-12 bg-savvy-electric-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-savvy-electric-cyan/20 transition-colors">
+                      <service.icon className="w-6 h-6 text-savvy-electric-cyan" />
+                    </div>
+                    <div>
+                      <h3 className="text-[24px] md:text-[28px] font-bold text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-savvy-gray-400 mt-1">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Bullets */}
+                  <div className="md:w-2/3">
+                    <ul className="space-y-3">
+                      {service.bullets.map((bullet, bulletIndex) => (
+                        <li key={bulletIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-savvy-electric-cyan rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-savvy-gray-400 leading-relaxed">
+                            {bullet}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-savvy-gray-light">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

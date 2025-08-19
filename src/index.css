@@ -8,58 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Base Design System - Śavvy AI Refined */
     --background: 220 27% 6%;
-    --foreground: 210 40% 98%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 27% 6%;
+    /* Primary Accent - Electric Cyan */
+    --primary: 184 88% 50%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Deep Teal Alternative */
+    --secondary: 174 100% 29%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 217 10% 60%;
+    --muted: 215 16% 22%;
+    --muted-foreground: 210 10% 68%;
 
-    --accent: 220 15% 18%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 184 88% 50%;
+    --accent-foreground: 0 0% 4%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 217 91% 60%;
+    --border: 215 16% 22%;
+    --input: 215 16% 22%;
+    --ring: 184 88% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom Śavvy AI Design Tokens */
-    --savvy-navy: 220 40% 12%;
-    --savvy-blue: 217 91% 60%;
-    --savvy-blue-dark: 217 70% 45%;
-    --savvy-gray: 220 15% 25%;
-    --savvy-gray-light: 217 10% 60%;
+    /* Śavvy AI Brand Colors */
+    --savvy-navy-dark: 220 45% 6%;
+    --savvy-navy: 220 35% 11%;
+    --savvy-electric-cyan: 184 88% 50%;
+    --savvy-deep-teal: 174 100% 29%;
+    --savvy-pure-black: 0 0% 4%;
+    --savvy-off-white: 213 27% 97%;
+    --savvy-gray-400: 210 11% 68%;
+    --savvy-gray-700: 210 11% 25%;
     
-    /* Gradients */
+    /* Refined Gradients */
     --gradient-hero: linear-gradient(135deg, #0B0F19, #111827);
-    --gradient-hero-spotlight: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.06), transparent 70%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 25% 10%));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--savvy-blue)), hsl(var(--savvy-blue-dark)));
-    --gradient-cta: linear-gradient(135deg, #06B6D4, #0891B2);
+    --gradient-secondary: linear-gradient(90deg, #1ECBE1 0%, #6366F1 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--savvy-pure-black)), hsl(215 20% 6%));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--savvy-electric-cyan)), hsl(var(--savvy-deep-teal)));
+    --gradient-cta: linear-gradient(135deg, #1ECBE1, #009688);
     
-    /* Custom colors for hero */
-    --hero-accent: 186 100% 60%;
-    --hero-subtext: 210 10% 65%;
-    
-    /* Shadows */
-    --shadow-premium: 0 25px 50px -12px hsl(220 50% 4% / 0.8);
-    --shadow-card: 0 10px 30px -5px hsl(220 50% 4% / 0.5);
-    --shadow-glow: 0 0 40px hsl(var(--savvy-blue) / 0.15);
+    /* Enhanced Shadows */
+    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 40px rgba(30, 203, 225, 0.15);
+    --shadow-cyan-glow: 0 0 30px rgba(30, 203, 225, 0.3);
 
     --radius: 0.75rem;
 

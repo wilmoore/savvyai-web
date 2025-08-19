@@ -26,10 +26,10 @@ const Hero = () => {
   return (
     <section 
       ref={heroRef}
-      className="min-h-screen bg-gradient-to-br from-[#0B0F19] to-[#111827] flex items-center relative overflow-hidden pt-20"
+      className="min-h-screen bg-gradient-to-br from-[#0B1120] to-[#111827] flex items-center relative overflow-hidden pt-20"
     >
       {/* Cinematic Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F19] via-[#0F141F] to-[#111827] animate-gradient-shift" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#0F141F] to-[#111827] animate-gradient-shift" />
       
       {/* Shield Arc Motif */}
       <div className="absolute inset-0 opacity-5">
@@ -37,9 +37,9 @@ const Hero = () => {
           <svg viewBox="0 0 1200 400" className="w-full h-full">
             <defs>
               <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(34, 211, 238, 0.1)" />
-                <stop offset="50%" stopColor="rgba(20, 184, 166, 0.2)" />
-                <stop offset="100%" stopColor="rgba(34, 211, 238, 0.1)" />
+                <stop offset="0%" stopColor="rgba(37, 99, 235, 0.1)" />
+                <stop offset="50%" stopColor="rgba(59, 130, 246, 0.2)" />
+                <stop offset="100%" stopColor="rgba(37, 99, 235, 0.1)" />
               </linearGradient>
             </defs>
             <path 
@@ -57,13 +57,13 @@ const Hero = () => {
       {/* Subtle Grid Overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" 
-             style={{
-               backgroundImage: `
-                 linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-                 linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px)
-               `,
-               backgroundSize: '60px 60px'
-             }} />
+                           style={{
+                backgroundImage: `
+                  linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px)
+                `,
+                backgroundSize: '60px 60px'
+              }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -75,7 +75,7 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold leading-[0.9] text-white">
                 <span 
-                  className={`block transition-all duration-1000 ${
+                  className={`block transition-all duration-1000 text-white ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                   style={{ transitionDelay: '0.2s' }}
@@ -84,20 +84,20 @@ const Hero = () => {
                 </span>
                 <span className="block relative">
                   <span 
-                    className={`bg-gradient-to-r from-cyan-400 via-teal-400 to-cyan-500 bg-clip-text text-transparent font-semibold transition-all duration-1000 ${
+                    className={`bg-gradient-to-r from-[#2563EB] via-[#6366F1] to-[#3B82F6] bg-clip-text text-transparent font-semibold transition-all duration-1000 ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}
                     style={{ 
                       transitionDelay: '0.6s',
                       backgroundSize: '200% 100%',
-                      animation: 'gradient-shift 8s ease-in-out infinite'
+                      animation: 'text-gradient-shift 8s ease-in-out infinite'
                     }}
                   >
                     Engineered for Impact.
                   </span>
                   {/* Blinking Cursor */}
                   <span 
-                    className={`inline-block w-0.5 h-20 bg-cyan-400 ml-2 animate-cursor-blink transition-all duration-1000 ${
+                    className={`inline-block w-0.5 h-20 bg-[#2563EB] ml-2 animate-cursor-blink transition-all duration-1000 ${
                       isVisible ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{ transitionDelay: '1s' }}
@@ -108,7 +108,7 @@ const Hero = () => {
             
             {/* Subline */}
             <p 
-              className={`text-lg md:text-xl lg:text-[20px] text-gray-400 max-w-[500px] leading-relaxed transition-all duration-1000 ${
+              className={`text-lg md:text-xl lg:text-[20px] text-[#94A3B8] max-w-[500px] leading-relaxed transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: '1.2s' }}
@@ -125,7 +125,7 @@ const Hero = () => {
             >
               <Button 
                 size="lg" 
-                className="w-full sm:w-auto h-16 px-10 text-lg font-bold bg-gradient-to-r from-cyan-400 to-teal-500 border-0 text-white rounded-xl hover:shadow-[0_0_40px_rgba(34,211,238,0.4)] transition-all duration-300 hover:scale-105 group relative overflow-hidden"
+                className="w-full sm:w-auto h-16 px-10 text-lg font-bold bg-gradient-to-r from-[#2563EB] to-[#3B82F6] border-0 text-white rounded-xl hover:shadow-[0_0_40px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-105 group relative overflow-hidden"
                 onMouseEnter={() => setButtonHover(true)}
                 onMouseLeave={() => setButtonHover(false)}
                 style={{
@@ -133,13 +133,13 @@ const Hero = () => {
                 }}
               >
                 <span className="relative z-10">Start Your Project</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-teal-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2563EB] to-[#3B82F6] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
               
               <Button 
                 size="lg" 
                 variant="outline"
-                className="w-full sm:w-auto h-16 px-10 text-lg font-semibold border-2 border-white text-white bg-transparent rounded-xl hover:bg-white hover:text-[#0B0F19] transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto h-16 px-10 text-lg font-semibold border-2 border-white text-white bg-transparent rounded-xl hover:bg-[#2563EB] hover:border-[#2563EB] hover:text-white transition-all duration-300 hover:scale-105"
               >
                 View Our Work
               </Button>
@@ -159,9 +159,9 @@ const Hero = () => {
               <div className="absolute inset-0 opacity-20">
                 <svg viewBox="0 0 400 400" className="w-full h-full">
                   <defs>
-                    <pattern id="isometricGrid" patternUnits="userSpaceOnUse" width="40" height="40">
-                      <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="rgba(34, 211, 238, 0.1)" strokeWidth="1" fill="none"/>
-                    </pattern>
+                                         <pattern id="isometricGrid" patternUnits="userSpaceOnUse" width="40" height="40">
+                       <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="rgba(37, 99, 235, 0.1)" strokeWidth="1" fill="none"/>
+                     </pattern>
                   </defs>
                   <rect width="100%" height="100%" fill="url(#isometricGrid)" />
                 </svg>
@@ -175,10 +175,10 @@ const Hero = () => {
                     DATA
                   </div>
                 </div>
-                {/* Data Nodes */}
-                <div className="absolute -top-4 -left-4 w-3 h-3 bg-cyan-400 rounded-full animate-pulse" />
-                <div className="absolute -top-4 -right-4 w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+                                 {/* Data Nodes */}
+                 <div className="absolute -top-4 -left-4 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" />
+                 <div className="absolute -top-4 -right-4 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
               </div>
 
               {/* Model Layer */}
@@ -189,9 +189,9 @@ const Hero = () => {
                     MODEL
                   </div>
                 </div>
-                {/* Processing Nodes */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full animate-pulse" />
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
+                                 {/* Processing Nodes */}
+                 <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3B82F6] rounded-full animate-pulse" />
+                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3B82F6] rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
               </div>
 
               {/* Agent Layer */}
@@ -202,8 +202,8 @@ const Hero = () => {
                     AGENT
                   </div>
                 </div>
-                {/* Agent Core */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-teal-400 rounded-full animate-pulse" />
+                                 {/* Agent Core */}
+                 <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#6366F1] rounded-full animate-pulse" />
               </div>
 
               {/* App Layer */}
@@ -214,17 +214,17 @@ const Hero = () => {
                     APP
                   </div>
                 </div>
-                {/* App Interface Elements */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-cyan-400 rounded-lg animate-pulse" />
+                                 {/* App Interface Elements */}
+                 <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#2563EB] rounded-lg animate-pulse" />
               </div>
 
               {/* Data Flow Connections */}
               <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
                 <defs>
-                  <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="rgba(34, 211, 238, 0.6)" />
-                    <stop offset="100%" stopColor="rgba(20, 184, 166, 0.6)" />
-                  </linearGradient>
+                                     <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                     <stop offset="0%" stopColor="rgba(37, 99, 235, 0.6)" />
+                     <stop offset="100%" stopColor="rgba(59, 130, 246, 0.6)" />
+                   </linearGradient>
                 </defs>
                 {/* Data to Model */}
                 <line x1="50%" y1="75%" x2="50%" y2="65%" stroke="url(#dataFlow)" strokeWidth="2" strokeDasharray="5,5">
@@ -240,10 +240,10 @@ const Hero = () => {
                 </line>
               </svg>
 
-              {/* Floating Particles */}
-              <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400/60 rounded-full animate-float" />
-              <div className="absolute top-20 right-20 w-1.5 h-1.5 bg-teal-400/60 rounded-full animate-float" style={{ animationDelay: '2s' }} />
-              <div className="absolute bottom-20 left-20 w-1 h-1 bg-blue-400/60 rounded-full animate-float" style={{ animationDelay: '4s' }} />
+                             {/* Floating Particles */}
+               <div className="absolute top-10 left-10 w-2 h-2 bg-[#2563EB]/60 rounded-full animate-float" />
+               <div className="absolute top-20 right-20 w-1.5 h-1.5 bg-[#6366F1]/60 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+               <div className="absolute bottom-20 left-20 w-1 h-1 bg-[#3B82F6]/60 rounded-full animate-float" style={{ animationDelay: '4s' }} />
             </div>
           </div>
         </div>

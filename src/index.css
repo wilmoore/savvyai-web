@@ -41,28 +41,30 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Śavvy AI Brand Colors */
+    /* Śavvy AI Brand Colors - Professional Blue Palette */
     --savvy-navy-dark: 220 45% 6%;
     --savvy-navy: 220 35% 11%;
-    --savvy-electric-cyan: 184 88% 50%;
-    --savvy-deep-teal: 174 100% 29%;
+    --savvy-electric-blue: 217 91% 60%;
+    --savvy-bright-blue: 217 91% 60%;
+    --savvy-midnight-blue: 217 91% 40%;
+    --savvy-violet: 238 83% 67%;
     --savvy-pure-black: 0 0% 4%;
     --savvy-off-white: 213 27% 97%;
-    --savvy-gray-400: 210 11% 68%;
+    --savvy-slate-gray: 215 16% 56%;
     --savvy-gray-700: 210 11% 25%;
     
-    /* Refined Gradients */
-    --gradient-hero: linear-gradient(135deg, #0B0F19, #111827);
-    --gradient-secondary: linear-gradient(90deg, #1ECBE1 0%, #6366F1 100%);
+    /* Professional Blue Gradients */
+    --gradient-hero: linear-gradient(135deg, #0B1120, #111827);
+    --gradient-secondary: linear-gradient(90deg, #2563EB 0%, #6366F1 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--savvy-pure-black)), hsl(215 20% 6%));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--savvy-electric-cyan)), hsl(var(--savvy-deep-teal)));
-    --gradient-cta: linear-gradient(135deg, #1ECBE1, #009688);
+    --gradient-accent: linear-gradient(90deg, #2563EB, #3B82F6);
+    --gradient-cta: linear-gradient(135deg, #2563EB, #3B82F6);
     
     /* Enhanced Shadows */
     --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
     --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 40px rgba(30, 203, 225, 0.15);
-    --shadow-cyan-glow: 0 0 30px rgba(30, 203, 225, 0.3);
+    --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.15);
+    --shadow-blue-glow: 0 0 30px rgba(37, 99, 235, 0.3);
 
     --radius: 0.75rem;
 
@@ -125,6 +127,10 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {

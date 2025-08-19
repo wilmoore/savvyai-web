@@ -12,7 +12,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-32 bg-background relative">
+    <section id="contact" className="py-32 bg-background relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -21,20 +21,20 @@ const Contact = () => {
               <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-6">
                 Let's Talk
               </h2>
-              <p className="text-xl text-savvy-gray-400 mb-8 leading-relaxed">
+              <p className="text-xl text-[#94A3B8] mb-8 leading-relaxed">
                 Ready to build AI that actually works? Tell us about your challenge, and we'll show you how to solve it.
               </p>
               
               <div className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-savvy-electric-cyan flex-shrink-0" />
-                    <span className="text-savvy-gray-400">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-[#2563EB] flex-shrink-0" />
+                    <span className="text-[#94A3B8]">{benefit}</span>
                   </div>
                 ))}
               </div>
               
-              <p className="text-lg text-savvy-gray-400">
+              <p className="text-lg text-[#94A3B8]">
                 <strong className="text-white">No sales pitches.</strong> Just a honest conversation about what's possible and what it takes to get there.
               </p>
             </div>
@@ -46,13 +46,13 @@ const Contact = () => {
                   <div>
                     <Input
                       placeholder="First Name"
-                      className="bg-savvy-pure-black border-border text-white placeholder:text-savvy-gray-400"
+                      className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
                     />
                   </div>
                   <div>
                     <Input
                       placeholder="Last Name"
-                      className="bg-savvy-pure-black border-border text-white placeholder:text-savvy-gray-400"
+                      className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
                     />
                   </div>
                 </div>
@@ -60,23 +60,23 @@ const Contact = () => {
                 <Input
                   placeholder="Work Email"
                   type="email"
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-savvy-gray-400"
+                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
                 />
                 
                 <Input
                   placeholder="Company"
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-savvy-gray-400"
+                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8]"
                 />
                 
                 <Textarea
                   placeholder="What's your AI challenge? Tell us about the problem you're trying to solve."
                   rows={5}
-                  className="bg-savvy-pure-black border-border text-white placeholder:text-savvy-gray-400 resize-none"
+                  className="bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] resize-none"
                 />
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-gradient-cta border-0 hover:shadow-cyan-glow transition-all duration-300 font-semibold"
+                  className="w-full h-12 bg-gradient-to-r from-[#2563EB] to-[#3B82F6] border-0 hover:shadow-blue-glow transition-all duration-300 font-semibold"
                 >
                   Start the Conversation
                 </Button>

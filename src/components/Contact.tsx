@@ -22,7 +22,7 @@ const Contact = () => {
                 Let's Talk
               </h2>
               <p className="text-xl text-[#94A3B8] mb-8 leading-relaxed">
-                Ready to build AI that actually works? Tell us about your challenge, and we'll show you how to solve it.
+                Ready to build AI that actually works? Tell us about your challenge, and I'll work with you directly to solve it.
               </p>
               
               <div className="space-y-4 mb-8">

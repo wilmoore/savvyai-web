@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -120,6 +123,39 @@ export default {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'spotlight-sweep': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'book-glow': {
+					'0%, 100%': { opacity: '0.15' },
+					'50%': { opacity: '0.25' }
+				},
+				'orbit-1': {
+					'0%': { transform: 'translate(-80px, -64px) rotate(0deg)' },
+					'100%': { transform: 'translate(-80px, -64px) rotate(360deg)' }
+				},
+				'orbit-2': {
+					'0%': { transform: 'translate(64px, -80px) rotate(0deg)' },
+					'100%': { transform: 'translate(64px, -80px) rotate(360deg)' }
+				},
+				'orbit-3': {
+					'0%': { transform: 'translate(80px, 64px) rotate(0deg)' },
+					'100%': { transform: 'translate(80px, 64px) rotate(360deg)' }
+				},
+				'orbit-4': {
+					'0%': { transform: 'translate(80px, 64px) rotate(0deg)' },
+					'100%': { transform: 'translate(80px, 64px) rotate(360deg)' }
+				},
+				'orbit-5': {
+					'0%': { transform: 'translate(-80px, 64px) rotate(0deg)' },
+					'100%': { transform: 'translate(-80px, 64px) rotate(360deg)' }
+				},
+				'orbit-6': {
+					'0%': { transform: 'translate(-80px, 64px) rotate(0deg)' },
+					'100%': { transform: 'translate(-80px, 64px) rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -132,7 +168,15 @@ export default {
 				'fade-up': 'fade-up 0.8s ease-out forwards',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 10s linear infinite',
-				'text-gradient-shift': 'text-gradient-shift 8s ease-in-out infinite'
+				'text-gradient-shift': 'text-gradient-shift 8s ease-in-out infinite',
+				'spotlight-sweep': 'spotlight-sweep 6s ease-in-out infinite',
+				'book-glow': 'book-glow 4s ease-in-out infinite',
+				'orbit-1': 'orbit-1 20s linear infinite',
+				'orbit-2': 'orbit-2 25s linear infinite',
+				'orbit-3': 'orbit-3 22s linear infinite',
+				'orbit-4': 'orbit-4 28s linear infinite',
+				'orbit-5': 'orbit-5 24s linear infinite',
+				'orbit-6': 'orbit-6 26s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

@@ -4,8 +4,8 @@ const About = () => {
   const principles = [
     {
       icon: CheckCircle,
-      title: "Execution > Hype",
-      description: "We prioritize delivering working solutions over flashy demonstrations.",
+      title: "Speed and Practicality Over Hype",
+      description: "We deliver working prototypes the same day; real execution, and a real demo URL.",
     },
     {
       icon: Users,
@@ -15,7 +15,7 @@ const About = () => {
     {
       icon: Lightbulb,
       title: "Practical Innovation",
-      description: "Every innovation we implement serves a clear business purpose and measurable outcome.",
+      description: "Solution we choose to create serves a clear business purpose and delivers measurable results.",
     },
   ];
 
@@ -30,10 +30,10 @@ const About = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-xl md:text-2xl text-[#94A3B8] leading-relaxed">
-                <strong className="text-white">The AI industry is drowning in hype.</strong> Every day, new tools promise to revolutionize everything, but most fail to deliver real value.
+                <strong className="text-white">The AI industry is flooded with hype.</strong> Every day, new tools pop up; but, only a few deliver real value.
               </p>
               <p className="text-xl md:text-2xl text-[#94A3B8] leading-relaxed">
-                We exist to cut through the noise. <strong className="text-[#2563EB]">We build AI that works.</strong> No fluff, no empty promises—just practical solutions that solve real problems and deliver measurable results.
+                At Savvy AI, we cut through the noise. <strong className="text-[#2563EB]">We build AI that works.</strong> Pragmatic solutions that solve problems that matter and deliver measurable results.
               </p>
             </div>
           </div>

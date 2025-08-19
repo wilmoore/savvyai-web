@@ -21,7 +21,7 @@ const Footer = () => {
               Making artificial intelligence practical, accessible, and transformative for modern businesses.
             </p>
             <p className="text-sm text-[#94A3B8]">
-              © 2024 ŠAVVY AI. All rights reserved.
+              © 2024 ŚAVVY AI. All rights reserved.
             </p>
           </div>
           

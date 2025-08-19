@@ -113,7 +113,7 @@ const Hero = () => {
               }`}
               style={{ transitionDelay: '1.2s' }}
             >
-              From strategy to integration, we design AI that works in the real world.
+              Helping you master the essential building blocks of modern AI.
             </p>
             
             {/* CTA Buttons with Magnetic Effect */}
@@ -132,7 +132,7 @@ const Hero = () => {
                   transform: buttonHover ? `translate(${mousePosition.x * 3 - 1.5}px, ${mousePosition.y * 3 - 1.5}px)` : 'translate(0, 0)'
                 }}
               >
-                <span className="relative z-10">Start Your Project</span>
+                <span className="relative z-10">Read AI Literate</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
               
@@ -141,109 +141,131 @@ const Hero = () => {
                 variant="outline"
                 className="w-full sm:w-auto h-16 px-10 text-lg font-semibold border-2 border-white text-white bg-transparent rounded-xl hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 hover:scale-105"
               >
-                View Our Work
+                Start Your Project
               </Button>
             </div>
           </div>
           
-          {/* Right Column - Isometric AI Engineering Diagram */}
+                    {/* Right Column - Premium AI Literate Book Visual */}
           <div className="relative">
             <div 
               className="w-full h-[600px] lg:h-[700px] relative overflow-hidden"
               style={{
-                transform: `perspective(1000px) rotateY(${(mousePosition.x - 0.5) * 5}deg) rotateX(${(mousePosition.y - 0.5) * 5}deg)`,
+                transform: `perspective(1000px) rotateY(${(mousePosition.x - 0.5) * 1.5}deg) rotateX(${(mousePosition.y - 0.5) * 1.5}deg)`,
                 transition: 'transform 0.1s ease-out'
               }}
             >
-              {/* Isometric Grid Background */}
-              <div className="absolute inset-0 opacity-20">
-                <svg viewBox="0 0 400 400" className="w-full h-full">
-                  <defs>
-                                         <pattern id="isometricGrid" patternUnits="userSpaceOnUse" width="40" height="40">
-                       <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="rgba(37, 99, 235, 0.1)" strokeWidth="1" fill="none"/>
-                     </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#isometricGrid)" />
-                </svg>
-              </div>
-
-              {/* Data Layer */}
-              <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-                <div className="w-32 h-8 bg-gradient-to-r from-gray-600 to-gray-500 rounded transform rotate-45 relative">
-                  <div className="absolute inset-1 bg-gradient-to-r from-gray-700 to-gray-600 rounded-sm" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs text-gray-300 font-mono">
-                    DATA
+              {/* Central AI Literate Book */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="relative">
+                  {/* Book Shadow */}
+                  <div className="absolute inset-0 bg-black/20 blur-xl rounded-lg transform rotate-12 translate-y-4" />
+                  
+                  {/* Book Cover */}
+                  <div className="w-64 h-80 bg-gradient-to-br from-[#1E293B] via-[#334155] to-[#475569] rounded-lg border border-[#64748B] shadow-2xl relative transform rotate-12 overflow-hidden">
+                    {/* Spotlight Sweep Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse" 
+                         style={{ animationDuration: '4s', animationTimingFunction: 'ease-in-out' }} />
+                    
+                    {/* Book Spine Texture */}
+                    <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-[#2563EB]/30 to-[#3B82F6]/30" />
+                    
+                    {/* Book Cover Content */}
+                    <div className="p-8 h-full flex flex-col justify-center">
+                      {/* Shield Arc Motif */}
+                      <div className="absolute top-4 right-4 opacity-20">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                          <path d="M8 20 A12 12 0 0 1 32 20" stroke="rgba(37, 99, 235, 0.6)" strokeWidth="2" strokeLinecap="round" fill="none" />
+                          <line x1="12" y1="24" x2="28" y2="8" stroke="rgba(37, 99, 235, 0.6)" strokeWidth="1.5" strokeLinecap="round" />
+                        </svg>
+                      </div>
+                      
+                      {/* Book Title */}
+                      <div className="text-center space-y-2">
+                        <div className="text-[#94A3B8] text-sm font-medium tracking-wider">PRACTICAL GUIDE</div>
+                        <div className="text-white text-3xl font-bold tracking-tight">AI Literate</div>
+                        <div className="text-black text-sm font-playfair font-semibold">ŚAVVY AI</div>
+                      </div>
+                      
+                      {/* Subtle Glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/5 to-transparent rounded-lg" />
+                    </div>
                   </div>
+                  
+                  {/* Book Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/20 to-[#3B82F6]/20 blur-2xl rounded-lg transform rotate-12 animate-pulse" 
+                       style={{ animationDuration: '3s' }} />
                 </div>
-                                 {/* Data Nodes */}
-                 <div className="absolute -top-4 -left-4 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" />
-                 <div className="absolute -top-4 -right-4 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#2563EB] rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
               </div>
 
-              {/* Model Layer */}
-              <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2">
-                <div className="w-40 h-10 bg-gradient-to-r from-blue-600 to-blue-500 rounded transform rotate-45 relative">
-                  <div className="absolute inset-1 bg-gradient-to-r from-blue-700 to-blue-600 rounded-sm" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs text-blue-100 font-mono">
-                    MODEL
-                  </div>
+              {/* Floating Content Cards */}
+              <div className="absolute top-8 left-8 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float">
+                <div className="w-8 h-8 bg-[#2563EB]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#2563EB] rounded-full" />
                 </div>
-                                 {/* Processing Nodes */}
-                 <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3B82F6] rounded-full animate-pulse" />
-                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#3B82F6] rounded-full animate-pulse" style={{ animationDelay: '1.5s' }} />
+                <div>
+                  <div className="text-white text-xs font-medium">Fine-Tuning</div>
+                  <div className="text-[#94A3B8] text-xs">Model Training</div>
+                </div>
               </div>
 
-              {/* Agent Layer */}
-              <div className="absolute bottom-44 left-1/2 transform -translate-x-1/2">
-                <div className="w-36 h-12 bg-gradient-to-r from-teal-600 to-teal-500 rounded transform rotate-45 relative">
-                  <div className="absolute inset-1 bg-gradient-to-r from-teal-700 to-teal-600 rounded-sm" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs text-teal-100 font-mono">
-                    AGENT
-                  </div>
+              <div className="absolute top-8 right-8 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float" style={{ animationDelay: '1s' }}>
+                <div className="w-8 h-8 bg-[#10B981]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#10B981] rounded-full" />
                 </div>
-                                 {/* Agent Core */}
-                 <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#6366F1] rounded-full animate-pulse" />
+                <div>
+                  <div className="text-white text-xs font-medium">Prompt Engineering</div>
+                  <div className="text-[#94A3B8] text-xs">Input Design</div>
+                </div>
               </div>
 
-              {/* App Layer */}
-              <div className="absolute bottom-56 left-1/2 transform -translate-x-1/2">
-                <div className="w-44 h-14 bg-gradient-to-r from-cyan-600 to-cyan-500 rounded transform rotate-45 relative">
-                  <div className="absolute inset-1 bg-gradient-to-r from-cyan-700 to-cyan-600 rounded-sm" />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs text-cyan-100 font-mono">
-                    APP
-                  </div>
+              <div className="absolute bottom-8 right-8 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float" style={{ animationDelay: '2s' }}>
+                <div className="w-8 h-8 bg-[#F59E0B]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#F59E0B] rounded-full" />
                 </div>
-                                 {/* App Interface Elements */}
-                 <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#2563EB] rounded-lg animate-pulse" />
+                <div>
+                  <div className="text-white text-xs font-medium">Agents</div>
+                  <div className="text-[#94A3B8] text-xs">Autonomous AI</div>
+                </div>
               </div>
 
-              {/* Data Flow Connections */}
-              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
-                <defs>
-                                     <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                     <stop offset="0%" stopColor="rgba(37, 99, 235, 0.6)" />
-                     <stop offset="100%" stopColor="rgba(59, 130, 246, 0.6)" />
-                   </linearGradient>
-                </defs>
-                {/* Data to Model */}
-                <line x1="50%" y1="75%" x2="50%" y2="65%" stroke="url(#dataFlow)" strokeWidth="2" strokeDasharray="5,5">
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                </line>
-                {/* Model to Agent */}
-                <line x1="50%" y1="60%" x2="50%" y2="50%" stroke="url(#dataFlow)" strokeWidth="2" strokeDasharray="5,5">
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                </line>
-                {/* Agent to App */}
-                <line x1="50%" y1="45%" x2="50%" y2="35%" stroke="url(#dataFlow)" strokeWidth="2" strokeDasharray="5,5">
-                  <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite" />
-                </line>
-              </svg>
+              <div className="absolute bottom-8 left-8 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float" style={{ animationDelay: '3s' }}>
+                <div className="w-8 h-8 bg-[#8B5CF6]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#8B5CF6] rounded-full" />
+                </div>
+                <div>
+                  <div className="text-white text-xs font-medium">Agents</div>
+                  <div className="text-[#94A3B8] text-xs">Voice</div>
+                </div>
+              </div>
 
-                             {/* Floating Particles */}
-               <div className="absolute top-10 left-10 w-2 h-2 bg-[#2563EB]/60 rounded-full animate-float" />
-               <div className="absolute top-20 right-20 w-1.5 h-1.5 bg-[#6366F1]/60 rounded-full animate-float" style={{ animationDelay: '2s' }} />
-               <div className="absolute bottom-20 left-20 w-1 h-1 bg-[#3B82F6]/60 rounded-full animate-float" style={{ animationDelay: '4s' }} />
+              <div className="absolute top-1/2 left-2 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="w-8 h-8 bg-[#EF4444]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#EF4444] rounded-full" />
+                </div>
+                <div>
+                  <div className="text-white text-xs font-medium">LLMOps</div>
+                  <div className="text-[#94A3B8] text-xs">Operations</div>
+                </div>
+              </div>
+
+              <div className="absolute top-1/2 right-2 w-40 h-24 bg-[#1E293B]/90 backdrop-blur-sm border border-[#475569] rounded-lg p-3 flex items-center space-x-2 animate-float" style={{ animationDelay: '2.5s' }}>
+                <div className="w-8 h-8 bg-[#06B6D4]/20 rounded-lg flex items-center justify-center">
+                  <div className="w-3 h-3 bg-[#06B6D4] rounded-full" />
+                </div>
+                <div>
+                  <div className="text-white text-xs font-medium">RAG</div>
+                  <div className="text-[#94A3B8] text-xs">Retrieval</div>
+                </div>
+              </div>
+
+
+
+              {/* Ambient Particles */}
+              <div className="absolute top-24 left-1/4 w-1.5 h-1.5 bg-[#2563EB]/40 rounded-full animate-float" />
+              <div className="absolute top-32 right-1/3 w-1 h-1 bg-[#3B82F6]/40 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+              <div className="absolute bottom-28 left-1/3 w-1.5 h-1.5 bg-[#6366F1]/40 rounded-full animate-float" style={{ animationDelay: '4s' }} />
+              <div className="absolute bottom-24 right-1/4 w-1 h-1 bg-[#10B981]/40 rounded-full animate-float" style={{ animationDelay: '1s' }} />
             </div>
           </div>
         </div>

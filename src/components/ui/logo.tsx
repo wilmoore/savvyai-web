@@ -51,10 +51,10 @@ const Logo: React.FC<LogoProps> = ({
       </svg>
       
       {/* Text */}
-      <span className={`font-serif font-bold tracking-wide ${
+      <span className={`font-playfair font-semibold tracking-wide ${
         size === 'sm' ? 'text-lg' : size === 'md' ? 'text-xl' : 'text-2xl'
       } ${variant === 'white' ? 'text-white' : 'text-black'}`}>
-        ŠAVVY AI
+        ŚAVVY AI
       </span>
     </div>
   );

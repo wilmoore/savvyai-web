@@ -40,8 +40,8 @@ const Header = () => {
           
           {/* CTA Button */}
           <Button 
-            variant="default" 
-            className="bg-gradient-to-r from-[#2563EB] to-[#3B82F6] border-0 shadow-glow hover:shadow-blue-glow transition-all duration-300"
+            variant="outline"
+            className="border-2 border-white text-white bg-transparent hover:bg-transparent hover:text-white hover:border-white hover:scale-105 transition-all duration-200"
           >
             Get Started
           </Button>

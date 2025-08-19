@@ -76,7 +76,7 @@ const Contact = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-gradient-to-r from-[#2563EB] to-[#3B82F6] border-0 hover:shadow-blue-glow transition-all duration-300 font-semibold"
+                  className="w-full h-12 border-2 border-white text-white bg-transparent hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 font-semibold hover:scale-105"
                 >
                   Start the Conversation
                 </Button>

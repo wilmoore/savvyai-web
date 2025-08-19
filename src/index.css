@@ -137,3 +137,28 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Word streaming animation for hero headline */
+@keyframes word-stream {
+  0%, 20% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  25%, 45% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50%, 100% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+.animate-word-cycle {
+  animation: word-stream 8s infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}

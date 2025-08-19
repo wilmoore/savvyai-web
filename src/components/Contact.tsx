@@ -3,12 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { submitToAirtable } from "@/lib/airtable";
 
 const Contact = () => {
   const [selectedSigns, setSelectedSigns] = useState<number[]>([]);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     company: '',
     challenge: ''
@@ -44,8 +44,7 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors: {[key: string]: string} = {};
     
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email';
     if (!formData.company.trim()) newErrors.company = 'Company is required';
@@ -63,21 +62,33 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', { ...formData, selectedSigns });
-      setIsSubmitting(false);
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        challenge: ''
+    // Submit to Airtable
+    try {
+      const result = await submitToAirtable({
+        ...formData,
+        selectedSigns: codeRescueSigns.filter((_, index) => selectedSigns.includes(index))
       });
-      setSelectedSigns([]);
-      setErrors({});
-    }, 1000);
+
+      if (result.success) {
+        console.log('Form submitted successfully to Airtable');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          challenge: ''
+        });
+        setSelectedSigns([]);
+        setErrors({});
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // You might want to show an error message to the user here
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -116,25 +127,14 @@ const Contact = () => {
             {/* Right Side - Form */}
             <div className="bg-gradient-card border border-border rounded-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Input
-                      placeholder="First Name"
-                      value={formData.firstName}
-                      onChange={(e) => handleInputChange('firstName', e.target.value)}
-                      className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.firstName ? 'border-red-500' : ''}`}
-                    />
-                    {errors.firstName && <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>}
-                  </div>
-                  <div>
-                    <Input
-                      placeholder="Last Name"
-                      value={formData.lastName}
-                      onChange={(e) => handleInputChange('lastName', e.target.value)}
-                      className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.lastName ? 'border-red-500' : ''}`}
-                    />
-                    {errors.lastName && <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>}
-                  </div>
+                <div>
+                  <Input
+                    placeholder="Full Name"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    className={`bg-savvy-pure-black border-border text-white placeholder:text-[#94A3B8] ${errors.name ? 'border-red-500' : ''}`}
+                  />
+                  {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
                 </div>
                 
                 <div>

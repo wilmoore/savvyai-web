@@ -5,7 +5,12 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [buttonHover, setButtonHover] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
   const heroRef = useRef<HTMLDivElement>(null);
+
+  const words = ['Impact', 'Change', 'Innovation', 'Scale'];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -26,9 +31,36 @@ const Hero = () => {
       }
     };
 
+    // Word cycling effect with typewriter animation
+    const wordInterval = setInterval(() => {
+      setIsTyping(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setCurrentCharIndex(0);
+        setIsTyping(true);
+      }, 1000); // Wait 1 second before starting next word
+    }, 4000); // Total 4 seconds per word (3 seconds typing + 1 second pause)
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      clearInterval(wordInterval);
+    };
+  }, [words.length]);
+
+  // Typewriter effect for current word
+  useEffect(() => {
+    if (!isTyping) return;
+
+    const currentWord = words[currentWordIndex];
+    if (currentCharIndex < currentWord.length) {
+      const timer = setTimeout(() => {
+        setCurrentCharIndex(prev => prev + 1);
+      }, 150); // Type each character every 150ms
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentCharIndex, currentWordIndex, isTyping, words]);
 
   return (
     <section 
@@ -80,7 +112,7 @@ const Hero = () => {
           <div className="space-y-10">
             {/* Headline with Staggered Animation */}
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold leading-[0.9] text-white">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-bold leading-[1.1] text-white">
                 <span 
                   className={`block transition-all duration-1000 text-white ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -100,8 +132,16 @@ const Hero = () => {
                       animation: 'text-gradient-shift 8s ease-in-out infinite'
                     }}
                   >
-                    Engineered for Impact.
+                    Engineered for
                   </span>
+                  <br />
+                  <span className="inline-block transition-all duration-500 ease-in-out bg-gradient-to-r from-[#2563EB] via-[#6366F1] to-[#3B82F6] bg-clip-text text-transparent font-semibold mb-6 pb-2 leading-[1.1]">
+                    {words[currentWordIndex].slice(0, currentCharIndex)}
+                    {isTyping && currentCharIndex < words[currentWordIndex].length && (
+                      <span className="animate-pulse">|</span>
+                    )}
+                  </span>
+                  .
                   {/* Blinking Cursor */}
                   <span 
                     className={`inline-block w-0.5 h-20 bg-[#2563EB] ml-2 animate-cursor-blink transition-all duration-1000 ${

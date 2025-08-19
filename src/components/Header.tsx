@@ -36,6 +36,14 @@ const Header = () => {
             >
               Contact
             </button>
+            <a 
+              href="https://book.savvyai.dev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
+            >
+              Book
+            </a>
           </nav>
           
           {/* CTA Button */}

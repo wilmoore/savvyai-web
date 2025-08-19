@@ -25,7 +25,7 @@ const Services = () => {
     {
       icon: Zap,
       title: "Integrate",
-      description: "APIs, workflows, and legacy system integration.",
+      description: "APIs, workflows, system integrations.",
       bullets: [
         "API integration and workflow automation",
         "System modernization with AI capabilities",
@@ -35,7 +35,7 @@ const Services = () => {
     {
       icon: Users,
       title: "Educate",
-      description: "Training, mentorship, and support.",
+      description: "Training, mentorship, support.",
       bullets: [
         "Team training and AI literacy",
         "Best practices documentation and guides",

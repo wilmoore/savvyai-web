@@ -25,37 +25,19 @@ const Logo: React.FC<LogoProps> = ({
 
   return (
     <div 
-      className={`flex items-center space-x-2 ${className} cursor-pointer hover:opacity-80 transition-opacity duration-200`}
+      className={`flex items-center space-x-0.5 ${className} cursor-pointer hover:opacity-80 transition-opacity duration-200`}
       onClick={scrollToTop}
     >
       {/* Logo Icon */}
-      <svg 
-        width={size === 'sm' ? 24 : size === 'md' ? 32 : 48} 
-        height={size === 'sm' ? 24 : size === 'md' ? 32 : 48} 
-        viewBox="0 0 32 32" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-        className={sizeClasses[size]}
-      >
-        {/* Gauge Arc - thicker and more prominent */}
-        <path 
-          d="M4 22 A12 12 0 0 1 28 22" 
-          stroke={color} 
-          strokeWidth="4" 
-          strokeLinecap="round"
-          fill="none"
-        />
-        {/* Diagonal Line - thinner and more dynamic */}
-        <line 
-          x1="6" 
-          y1="24" 
-          x2="26" 
-          y2="8" 
-          stroke={color} 
-          strokeWidth="2" 
-          strokeLinecap="round"
-        />
-      </svg>
+      <img 
+        src="/logomark.png" 
+        alt="ŚAVVY AI Logo"
+        className={`${sizeClasses[size]} w-auto object-contain`}
+        style={{ 
+          transform: 'translateY(-4px)',
+          verticalAlign: 'middle'
+        }}
+      />
       
       {/* Text */}
       <span className={`font-playfair font-semibold tracking-wide ${

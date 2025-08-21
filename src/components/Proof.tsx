@@ -7,10 +7,10 @@ const Proof = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-savvy-electric-cyan">
-                7
+                &lt; 24 hr
               </div>
               <div className="text-lg text-savvy-gray-400 font-medium">
-                Founders Trained in AI Literacy
+                Prototype Delivery
               </div>
             </div>
             

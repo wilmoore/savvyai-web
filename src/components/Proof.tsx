@@ -7,16 +7,16 @@ const Proof = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-savvy-electric-cyan">
-                50+
+                7
               </div>
               <div className="text-lg text-savvy-gray-400 font-medium">
-                Automations Deployed
+                Founders Trained in AI Literacy
               </div>
             </div>
             
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-savvy-electric-cyan">
-                10
+                10+
               </div>
               <div className="text-lg text-savvy-gray-400 font-medium">
                 Years Engineering Experience
@@ -25,10 +25,10 @@ const Proof = () => {
             
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-savvy-electric-cyan">
-                100%
+                3
               </div>
               <div className="text-lg text-savvy-gray-400 font-medium">
-                Practical Focus
+                Code Rescues
               </div>
             </div>
           </div>

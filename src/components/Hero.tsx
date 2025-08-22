@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -178,7 +179,7 @@ const Hero = () => {
                 style={{
                   transform: buttonHover ? `translate(${mousePosition.x * 3 - 1.5}px, ${mousePosition.y * 3 - 1.5}px)` : 'translate(0, 0)'
                 }}
-                onClick={() => window.open('https://book.savvyai.dev/', '_blank')}
+                onClick={() => window.open(EXTERNAL_LINKS.BOOK, '_blank')}
               >
                 <span className="relative z-10">Read AI Literate</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

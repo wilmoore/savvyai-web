@@ -161,7 +161,7 @@ const Hero = () => {
               }`}
               style={{ transitionDelay: '1.2s' }}
             >
-              Helping you master the essential building blocks of modern AI.
+              The AI industry is flooded with hype. Every day, new tools pop up; but, only a few deliver real value.
             </p>
             
             {/* CTA Buttons with Magnetic Effect */}

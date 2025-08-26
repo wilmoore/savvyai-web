@@ -30,9 +30,6 @@ const About = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-xl md:text-2xl text-[#94A3B8] leading-relaxed">
-                <strong className="text-white">The AI industry is flooded with hype.</strong> Every day, new tools pop up; but, only a few deliver real value.
-              </p>
-              <p className="text-xl md:text-2xl text-[#94A3B8] leading-relaxed">
                 At Savvy AI, we cut through the noise. <strong className="text-[#2563EB]">We build AI that works.</strong> Pragmatic solutions that solve problems that matter and deliver measurable results.
               </p>
             </div>

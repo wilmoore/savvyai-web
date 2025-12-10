@@ -1,0 +1,6 @@
+{
+  "lastSequence": 1,
+  "entries": [
+    {"branch": "fix/remove-book-navigation-links", "adrs": ["001-remove-book-links-from-navigation.md"]}
+  ]
+}

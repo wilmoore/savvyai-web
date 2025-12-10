@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -164,34 +163,25 @@ const Hero = () => {
               The AI industry is flooded with hype. Every day, new tools pop up; but, only a few deliver real value.
             </p>
             
-            {/* CTA Buttons with Magnetic Effect */}
-            <div 
+            {/* CTA Button with Magnetic Effect */}
+            <div
               className={`flex flex-col sm:flex-row gap-6 pt-6 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: '1.4s' }}
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full sm:w-auto h-16 px-10 text-lg font-bold bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] border-0 text-white rounded-xl hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] transition-all duration-300 hover:scale-105 group relative overflow-hidden"
                 onMouseEnter={() => setButtonHover(true)}
                 onMouseLeave={() => setButtonHover(false)}
                 style={{
                   transform: buttonHover ? `translate(${mousePosition.x * 3 - 1.5}px, ${mousePosition.y * 3 - 1.5}px)` : 'translate(0, 0)'
                 }}
-                onClick={() => window.open(EXTERNAL_LINKS.BOOK, '_blank')}
-              >
-                <span className="relative z-10">Read AI Literate</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="w-full sm:w-auto h-16 px-10 text-lg font-semibold border-2 border-white text-white bg-transparent rounded-xl hover:bg-transparent hover:text-white hover:border-white transition-all duration-200 hover:scale-105"
                 onClick={() => scrollToSection('contact')}
               >
-                Start Your Project
+                <span className="relative z-10">Start Your Project</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#A855F7] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
             </div>
           </div>

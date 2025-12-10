@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
-import { EXTERNAL_LINKS } from "@/lib/constants";
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -31,20 +30,12 @@ const Header = () => {
             >
               About
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
+            <button
+              onClick={() => scrollToSection('contact')}
               className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
             >
               Contact
             </button>
-            <a 
-              href={EXTERNAL_LINKS.BOOK}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
-            >
-              Book
-            </a>
           </nav>
           
           {/* CTA Button */}

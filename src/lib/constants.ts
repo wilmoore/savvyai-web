@@ -1,7 +1,6 @@
 // External Links Configuration
 export const EXTERNAL_LINKS = {
-  BOOK: 'https://book.savvyai.dev',
-  // Add other external links here as needed
+  // Add external links here as needed
   // CONTACT: 'mailto:contact@savvyai.dev',
   // LINKEDIN: 'https://linkedin.com/in/...',
   // GITHUB: 'https://github.com/...',

@@ -13,6 +13,7 @@
     }
   },
   "problem": {
+    "label": "The Challenge",
     "title": "Why AI Feels Hard for Most Teams",
     "intro": {
       "line1": "AI tools are easy to access.",
@@ -33,6 +34,7 @@
     }
   },
   "belief": {
+    "label": "Our Belief",
     "title": "Our Belief",
     "statements": [
       "Teams do not need to become AI experts.",
@@ -137,6 +139,7 @@
     "aside": "If workshop is the wrong word, think of it as a structured thinking session where your team gets aligned and leaves with a plan."
   },
   "workshopOutcomes": {
+    "artifactLabel": "Output",
     "title": "What Teams Leave With",
     "intro": "Every team is different. Outcomes depend on where you start and what you are trying to solve.",
     "typicalTitle": "Typical outcomes:",
@@ -174,6 +177,7 @@
     "closing": "If you have specific compliance requirements, we address them before any work begins."
   },
   "homeFaq": {
+    "label": "Common Questions",
     "title": "Quick Answers",
     "items": [
       {

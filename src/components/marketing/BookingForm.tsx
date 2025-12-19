@@ -41,14 +41,14 @@ export default function BookingForm() {
   };
 
   const inputClasses =
-    'w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors';
+    'w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors';
 
   if (isSubmitted) {
     return (
       <Section id="book" size="wide">
         <GlassCard variant="elevated" className="max-w-xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white mb-4">Thank you</h2>
-          <p className="text-base text-white/60">We will be in touch soon.</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-gray-900 mb-4">Thank you</h2>
+          <p className="text-base text-gray-600">We will be in touch soon.</p>
         </GlassCard>
       </Section>
     );
@@ -57,15 +57,15 @@ export default function BookingForm() {
   return (
     <Section id="book" size="wide">
       <GlassCard variant="elevated" className="max-w-xl mx-auto">
-        <h2 className="text-2xl font-semibold tracking-tight text-white text-center mb-2">
+        <h2 className="text-2xl font-semibold tracking-tight text-gray-900 text-center mb-2">
           {t('booking.title')}
         </h2>
-        <p className="text-base text-white/60 text-center mb-8">{t('booking.subtitle')}</p>
+        <p className="text-base text-gray-600 text-center mb-8">{t('booking.subtitle')}</p>
 
         {/* TODO: Wire up to backend (Airtable, email service, or API endpoint) */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
               {t('booking.form.name')}
             </label>
             <input
@@ -81,7 +81,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               {t('booking.form.email')}
             </label>
             <input
@@ -97,7 +97,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
               {t('booking.form.company')}
             </label>
             <input
@@ -112,7 +112,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
               {t('booking.form.message')}
             </label>
             <textarea

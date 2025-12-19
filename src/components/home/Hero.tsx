@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section, CTAButton } from '@/components/marketing';
-import { SectionLabel } from '@/components/layout';
+import { BandLabel } from '@/components/layout';
 
 export default function Hero() {
   const { t } = useTranslation('homepage');
@@ -10,15 +10,15 @@ export default function Hero() {
   return (
     <Section className="pt-32 md:pt-40 pb-20 md:pb-28" size="wide">
       <div className="max-w-4xl">
-        <SectionLabel className="mb-6">{t('hero.tagline')}</SectionLabel>
+        <BandLabel className="mb-6">{t('hero.tagline')}</BandLabel>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight text-white mb-8">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight text-gray-900 mb-8">
           {t('hero.headline')}
         </h1>
 
-        <p className="text-xl text-white/70 max-w-2xl mb-10">{t('hero.description')}</p>
+        <p className="text-xl text-gray-600 max-w-2xl mb-10">{t('hero.description')}</p>
 
-        <div className="space-y-3 text-base text-white/60 mb-12 max-w-xl">
+        <div className="space-y-3 text-base text-gray-500 mb-12 max-w-xl">
           <p>{t('hero.clarification.line1')}</p>
           <p>{t('hero.clarification.line2')}</p>
         </div>

@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/marketing';
-import { SectionLabel, GlassCard } from '@/components/layout';
+import { BandLabel } from '@/components/layout';
 
 interface FAQItem {
   question: string;
@@ -15,17 +15,17 @@ export default function FAQ() {
 
   return (
     <Section size="wide">
-      <SectionLabel>Questions</SectionLabel>
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-10">
+      <BandLabel>Questions</BandLabel>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-10">
         {t('faq.title')}
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-8">
         {items.map((item, index) => (
-          <GlassCard key={index} className="p-6">
-            <h3 className="text-base font-medium text-white mb-3">{item.question}</h3>
-            <p className="text-sm text-white/60">{item.answer}</p>
-          </GlassCard>
+          <div key={index} className="border-b border-gray-200 pb-6">
+            <h3 className="text-base font-medium text-gray-900 mb-3">{item.question}</h3>
+            <p className="text-sm text-gray-600">{item.answer}</p>
+          </div>
         ))}
       </div>
     </Section>

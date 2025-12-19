@@ -9,11 +9,19 @@ interface GlassCardProps {
 }
 
 /**
- * GlassCard - Premium glassmorphism card component.
+ * Card component for Workshop Authority light mode.
+ *
+ * Cards should be used sparingly - only for:
+ * - Listing outputs or grouped items
+ * - Quoted callouts
+ * - Highlighted outcomes
+ *
+ * NOT as the dominant layout structure.
+ * Use SectionBand for full-width sections instead.
  *
  * Variants:
- * - default: Subtle glass effect (bg-white/5)
- * - elevated: More prominent with shadow
+ * - default: Subtle border with light shadow
+ * - elevated: More prominent shadow
  * - bordered: Emphasized border treatment
  */
 export default function GlassCard({
@@ -24,19 +32,18 @@ export default function GlassCard({
   as: Component = 'div',
 }: GlassCardProps) {
   const variantClasses = {
-    default: 'bg-white/5 backdrop-blur-xl border border-white/10',
-    elevated:
-      'bg-white/[0.08] backdrop-blur-xl border border-white/[0.15] shadow-[0_8px_32px_rgba(0,0,0,0.3)]',
-    bordered: 'bg-white/5 backdrop-blur-xl border-2 border-white/20',
+    default: 'bg-white border border-gray-200 shadow-sm',
+    elevated: 'bg-white border border-gray-200 shadow-md',
+    bordered: 'bg-white border-2 border-gray-300',
   };
 
   const hoverClasses = hover
-    ? 'transition-all duration-300 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-lg'
+    ? 'transition-all duration-200 hover:shadow-md hover:border-gray-300'
     : '';
 
   return (
     <Component
-      className={cn('rounded-xl p-6 md:p-8', variantClasses[variant], hoverClasses, className)}
+      className={cn('rounded-lg p-6 md:p-8', variantClasses[variant], hoverClasses, className)}
     >
       {children}
     </Component>

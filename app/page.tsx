@@ -19,54 +19,68 @@ import {
   StartCTA,
 } from '@/components/home';
 
+/**
+ * Homepage - Workshop Authority Grammar
+ *
+ * Band Structure:
+ * - Orientation: Hero
+ * - Problem: Problem
+ * - Belief + Method: Belief, HowWeWork
+ * - Program Structure: Protocol, Pilot24
+ * - Workshop Details: WorkshopsExplained, WorkshopOutcomes
+ * - Bridge: BridgeToProtocol
+ * - Credibility: Credibility, Difference
+ * - Reassurance: Safety, HomeFAQ, Audience
+ * - Decision: StartCTA, BookingForm
+ */
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050505]">
+    <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* Hero - standalone */}
+        {/* Orientation Band - Hero standalone */}
         <Hero />
 
-        {/* Problem + Belief - contrast background, two-column layout */}
+        {/* Problem Band - The Challenge */}
         <SectionGroup variant="contrast">
           <Section size="wide">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-12">
               <Problem />
               <Belief />
             </div>
           </Section>
         </SectionGroup>
 
-        {/* How We Work + Protocol + Pilot24 - default background */}
+        {/* Method Band - How We Work + Protocol Structure */}
         <SectionGroup>
           <HowWeWork />
           <Protocol />
           <Pilot24 />
         </SectionGroup>
 
-        {/* Credibility + Difference - contrast background */}
+        {/* Workshop Details Band */}
+        <SectionGroup variant="contrast">
+          <WorkshopsExplained />
+          <WorkshopOutcomes />
+        </SectionGroup>
+
+        {/* Bridge Band */}
+        <BridgeToProtocol />
+
+        {/* Credibility Band */}
         <SectionGroup variant="contrast">
           <Credibility />
           <Difference />
         </SectionGroup>
 
-        {/* Workshop sections - default background */}
+        {/* Reassurance Band */}
         <SectionGroup>
-          <WorkshopsExplained />
-          <WorkshopOutcomes />
-          <BridgeToProtocol />
-        </SectionGroup>
-
-        {/* Safety + FAQ - contrast background */}
-        <SectionGroup variant="contrast">
           <Safety />
           <HomeFAQ />
+          <Audience />
         </SectionGroup>
 
-        {/* Audience - default background */}
-        <Audience />
-
-        {/* Final CTA + Booking - contrast background */}
+        {/* Decision Band */}
         <SectionGroup variant="contrast" className="pt-8 md:pt-12">
           <StartCTA />
           <BookingForm />

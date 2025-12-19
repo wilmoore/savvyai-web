@@ -9,11 +9,11 @@ interface SectionProps {
 }
 
 /**
- * Section component for Executive Dark Mode.
+ * Section component for Workshop Authority Light Mode.
  *
  * Variants:
- * - default: Primary dark background (#050505)
- * - contrast: Secondary dark background (#0D1117)
+ * - default: White background (#FFFFFF)
+ * - contrast: Warm gray background (#FAFAF8)
  *
  * Sizes:
  * - default: max-w-3xl for reading-optimized content
@@ -33,11 +33,13 @@ export default function Section({
     full: 'max-w-7xl',
   };
 
+  const variantClasses = {
+    default: 'bg-white',
+    contrast: 'bg-warm-50',
+  };
+
   return (
-    <section
-      id={id}
-      className={cn('py-20 md:py-28', variant === 'contrast' && 'bg-[#0D1117]', className)}
-    >
+    <section id={id} className={cn('py-16 md:py-24', variantClasses[variant], className)}>
       <div className={cn('container mx-auto px-4 md:px-6', sizeClasses[size])}>{children}</div>
     </section>
   );

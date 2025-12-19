@@ -35,3 +35,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [013. Executive Dark Mode as Default Theme](013-executive-dark-mode-theme.md)
 - [014. Glassmorphism Layout Components](014-glassmorphism-layout-components.md)
 - [015. Dual Typography System (Inter + Geist Mono)](015-dual-typography-system.md)
+- [016. Workshop Authority Light Theme](016-workshop-authority-light-theme.md)
+- [017. Section Band Layout System](017-section-band-layout-system.md)
+- [018. Tiered Label System](018-tiered-label-system.md)

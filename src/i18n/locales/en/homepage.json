@@ -103,9 +103,100 @@
       "Trend chasing without real goals"
     ]
   },
+  "credibility": {
+    "title": "Who We Work With",
+    "content": {
+      "line1": "We work with operations leads, product managers, and department heads inside established companies.",
+      "line2": "Teams that reach out are usually not starting from zero. They have tried AI tools. They have seen what is possible. They are stuck on how to move from experimentation to something their team can actually use.",
+      "line3": "This work is practical. We focus on real workflows, not theoretical possibilities."
+    }
+  },
+  "difference": {
+    "title": "What Makes This Different",
+    "items": [
+      {
+        "title": "Education before implementation",
+        "description": "Most AI projects fail because the team does not understand what they are building or why. We start with learning."
+      },
+      {
+        "title": "Focus on real workflows",
+        "description": "We do not build demos. We look at actual work your team does every day and find where AI can remove friction."
+      },
+      {
+        "title": "Ownership stays with you",
+        "description": "You are not renting access to our systems. You own the tools, the knowledge, and the decisions about what happens next."
+      }
+    ]
+  },
+  "workshopsExplained": {
+    "title": "What Happens in a Workshop",
+    "intro": "Workshops are working sessions, not presentations.",
+    "clarification": "There are no slide decks. No lectures. No passive listening.",
+    "description": "We bring your team together to work through real material. You bring the workflows, the frustrations, and the questions. We bring structure, AI fluency, and facilitation.",
+    "outcome": "By the end, your team has looked at their own work through a new lens. They understand what AI can and cannot do. And they have decided together what is worth testing first.",
+    "aside": "If workshop is the wrong word, think of it as a structured thinking session where your team gets aligned and leaves with a plan."
+  },
+  "workshopOutcomes": {
+    "title": "What Teams Leave With",
+    "intro": "Every team is different. Outcomes depend on where you start and what you are trying to solve.",
+    "typicalTitle": "Typical outcomes:",
+    "typicalItems": [
+      "Shared understanding of AI capabilities and limits",
+      "A map of your workflows with specific opportunities marked",
+      "Alignment on priorities across stakeholders",
+      "One clear problem worth testing with a pilot",
+      "Confidence to have informed conversations about AI internally"
+    ],
+    "emotional": "The noise clears. The path forward becomes obvious.",
+    "validOutcome": {
+      "line1": "Deciding not to proceed is a valid outcome.",
+      "line2": "Some teams realize AI is not the right solution for their problem. That clarity is valuable. We would rather you discover this in a workshop than six months into a project."
+    }
+  },
+  "bridgeToProtocol": {
+    "title": "From Workshop to Pilot",
+    "content": {
+      "line1": "Workshops are the front door. They are designed to be low-risk and high-clarity.",
+      "line2": "If your team decides to move forward, the next step is the Savvy Pilot Protocol. This is where we build a working AI tool in 24 hours based on what you learned in the workshop.",
+      "line3": "The decision to proceed is always yours. There is no pressure. Many teams take weeks to decide. Some never proceed, and that is fine."
+    },
+    "cta": "Learn about the Savvy Pilot Protocol"
+  },
+  "safety": {
+    "title": "Data, Security, and Boundaries",
+    "intro": "We work within your existing security and compliance constraints. We do not ask you to bypass IT or ignore your data policies.",
+    "items": [
+      "We never use opaque systems. You can see exactly what the AI is doing and why.",
+      "We do not access data we do not need.",
+      "We document what is built, how it works, and where the boundaries are.",
+      "We are clear about what is our responsibility and what is yours."
+    ],
+    "closing": "If you have specific compliance requirements, we address them before any work begins."
+  },
+  "homeFaq": {
+    "title": "Quick Answers",
+    "items": [
+      {
+        "question": "Do we need engineers involved?",
+        "answer": "Not for workshops. For pilots, engineering involvement is helpful but not required. We can build independently."
+      },
+      {
+        "question": "Is this just consulting?",
+        "answer": "No. Consulting usually means advice. We teach, then build. You leave with working tools and shared knowledge, not a report."
+      },
+      {
+        "question": "Is this only for large companies?",
+        "answer": "No. We work with teams of all sizes. What matters is having a real workflow you want to improve and people willing to learn."
+      }
+    ]
+  },
   "finalCta": {
-    "title": "Start With a Workshop",
-    "subtitle": "Every engagement begins with education.",
+    "title": "Every Engagement Starts with a Workshop",
+    "content": {
+      "line1": "We do not start with proposals. We do not start with scoping calls. We start with education.",
+      "line2": "A workshop is low-risk. It takes one day. And your team leaves with clarity whether or not you ever work with us again."
+    },
+    "closing": "If you are ready to learn before you build, start with a workshop.",
     "cta": {
       "primary": "Start with a Workshop",
       "secondary": "Book a Conversation"

@@ -72,6 +72,50 @@
       }
     ]
   },
+  "whatThisIsNot": {
+    "title": "What This Is Not",
+    "items": [
+      {
+        "label": "Not a long transformation program.",
+        "description": "This is a focused engagement with a clear end."
+      },
+      {
+        "label": "Not a slide deck or concept exercise.",
+        "description": "You get working software, not recommendations."
+      },
+      {
+        "label": "Not a generic AI rollout.",
+        "description": "We build one specific tool for one specific problem."
+      },
+      {
+        "label": "Not a commitment to ongoing work.",
+        "description": "The pilot ends. What happens next is your decision."
+      }
+    ]
+  },
+  "afterThePilot": {
+    "title": "After the Pilot, You Decide",
+    "intro": "When the pilot ends, you own the result. There is no lock-in. No recurring fees. No pressure.",
+    "options": [
+      {
+        "label": "Keep using it.",
+        "description": "The pilot works. Your team uses it. You are done."
+      },
+      {
+        "label": "Scale it.",
+        "description": "You want to expand the tool or build more. We can help."
+      },
+      {
+        "label": "Pause.",
+        "description": "You need time to evaluate. Take as long as you need."
+      },
+      {
+        "label": "Stop.",
+        "description": "The pilot did not work out. That is useful information. No hard feelings."
+      }
+    ],
+    "closing": "We succeed when you have clarity. Continuing to work together is optional."
+  },
   "faq": {
     "title": "Common Questions",
     "items": [

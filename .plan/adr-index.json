@@ -1,5 +1,5 @@
 {
-  "lastSequence": 8,
+  "lastSequence": 11,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -25,6 +25,14 @@
         "006-swiss-modernist-light-theme.md",
         "007-marketing-component-architecture.md",
         "008-section-level-i18n-organization.md"
+      ]
+    },
+    {
+      "branch": "design/homepage-swiss-modernist-hierarchy",
+      "adrs": [
+        "009-four-tier-typography-hierarchy.md",
+        "010-section-background-rhythm.md",
+        "011-section-size-variants.md"
       ]
     }
   ]

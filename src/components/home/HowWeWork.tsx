@@ -8,12 +8,12 @@ export default function HowWeWork() {
   const items = t('howWeWork.items', { returnObjects: true }) as string[];
 
   return (
-    <Section variant="muted">
+    <Section>
       <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
         {t('howWeWork.title')}
       </h2>
       <div className="space-y-6">
-        <p className="text-lg text-foreground">{t('howWeWork.intro')}</p>
+        <p className="text-xl text-muted-foreground">{t('howWeWork.intro')}</p>
 
         <div className="mt-6">
           <p className="text-base text-foreground mb-4">{t('howWeWork.description')}</p>
@@ -28,8 +28,8 @@ export default function HowWeWork() {
         </div>
 
         <div className="mt-8 space-y-1">
-          <p className="text-lg text-foreground">{t('howWeWork.closing.line1')}</p>
-          <p className="text-lg text-foreground">{t('howWeWork.closing.line2')}</p>
+          <p className="text-base text-foreground">{t('howWeWork.closing.line1')}</p>
+          <p className="text-base text-foreground">{t('howWeWork.closing.line2')}</p>
         </div>
       </div>
     </Section>

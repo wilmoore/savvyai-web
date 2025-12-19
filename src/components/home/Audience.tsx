@@ -11,7 +11,7 @@ export default function Audience() {
   }) as string[];
 
   return (
-    <Section>
+    <Section variant="muted">
       <div className="grid md:grid-cols-2 gap-12">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">

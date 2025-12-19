@@ -13,7 +13,7 @@ export default function Difference() {
   const items = t('difference.items', { returnObjects: true }) as DifferenceItem[];
 
   return (
-    <Section variant="muted">
+    <Section>
       <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-10">
         {t('difference.title')}
       </h2>

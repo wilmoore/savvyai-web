@@ -41,22 +41,22 @@ export default function BookingForm() {
 
   if (isSubmitted) {
     return (
-      <Section id="book" variant="muted">
+      <Section id="book">
         <div className="text-center">
           <h2 className="text-3xl font-semibold tracking-tight mb-4">Thank you</h2>
-          <p className="text-lg text-muted-foreground">We will be in touch soon.</p>
+          <p className="text-base text-muted-foreground">We will be in touch soon.</p>
         </div>
       </Section>
     );
   }
 
   return (
-    <Section id="book" variant="muted">
+    <Section id="book">
       <div className="max-w-xl mx-auto">
         <h2 className="text-3xl font-semibold tracking-tight text-center mb-4">
           {t('booking.title')}
         </h2>
-        <p className="text-lg text-muted-foreground text-center mb-10">{t('booking.subtitle')}</p>
+        <p className="text-xl text-muted-foreground text-center mb-10">{t('booking.subtitle')}</p>
 
         {/* TODO: Wire up to backend (Airtable, email service, or API endpoint) */}
         <form onSubmit={handleSubmit} className="space-y-6">

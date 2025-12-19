@@ -1,74 +1,51 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import { Check, X } from 'lucide-react';
 import { Section } from '@/components/marketing';
+import { SectionLabel, GlassCard } from '@/components/layout';
 
 export default function Audience() {
   const { t } = useTranslation('homepage');
   const forItems = t('audience.forItems', { returnObjects: true }) as string[];
-  const notForItems = t('audience.notForItems', {
-    returnObjects: true,
-  }) as string[];
+  const notForItems = t('audience.notForItems', { returnObjects: true }) as string[];
 
   return (
-    <Section>
-      <div className="grid md:grid-cols-2 gap-16">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
+    <Section size="wide">
+      <SectionLabel className="text-center">Is This For You?</SectionLabel>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <GlassCard variant="bordered" className="border-emerald-500/30">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8">
             {t('audience.forTitle')}
           </h2>
-          <ul className="space-y-5">
+          <ul className="space-y-4">
             {forItems.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 text-foreground">
-                <span className="text-primary mt-0.5 flex-shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
+              <li key={index} className="flex items-start gap-3 text-white">
+                <span className="text-emerald-500 mt-0.5 flex-shrink-0">
+                  <Check className="w-5 h-5" strokeWidth={2} />
                 </span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </GlassCard>
 
-        <div>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
+        <GlassCard>
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8">
             {t('audience.notForTitle')}
           </h2>
-          <ul className="space-y-5">
+          <ul className="space-y-4">
             {notForItems.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                <span className="text-muted-foreground mt-0.5 flex-shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
+              <li key={index} className="flex items-start gap-3 text-white/60">
+                <span className="text-white/40 mt-0.5 flex-shrink-0">
+                  <X className="w-5 h-5" strokeWidth={2} />
                 </span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </GlassCard>
       </div>
     </Section>
   );

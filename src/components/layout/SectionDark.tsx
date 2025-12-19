@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 
-interface SectionProps {
+interface SectionDarkProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
@@ -9,24 +9,24 @@ interface SectionProps {
 }
 
 /**
- * Section component for Executive Dark Mode.
+ * SectionDark - Dark-themed section wrapper for Executive Dark Mode.
  *
  * Variants:
  * - default: Primary dark background (#050505)
- * - contrast: Secondary dark background (#0D1117)
+ * - contrast: Secondary dark background (#0D1117) for visual rhythm
  *
  * Sizes:
  * - default: max-w-3xl for reading-optimized content
  * - wide: max-w-5xl for two-column layouts
  * - full: max-w-7xl for full-bleed content
  */
-export default function Section({
+export default function SectionDark({
   children,
   className,
   id,
   variant = 'default',
   size = 'default',
-}: SectionProps) {
+}: SectionDarkProps) {
   const sizeClasses = {
     default: 'max-w-3xl',
     wide: 'max-w-5xl',

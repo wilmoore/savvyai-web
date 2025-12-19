@@ -15,11 +15,12 @@ export default function CTAButton({
   className,
 }: CTAButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2';
+    'inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]';
 
   const variantStyles = {
-    primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
-    secondary: 'border border-border bg-background text-foreground hover:bg-muted',
+    primary: 'bg-emerald-500 text-white hover:bg-emerald-600',
+    secondary:
+      'border border-white/20 bg-transparent text-white hover:bg-white/5 hover:border-white/30',
   };
 
   return (

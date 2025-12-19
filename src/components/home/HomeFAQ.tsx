@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/marketing';
+import { SectionLabel, GlassCard } from '@/components/layout';
 
 interface FAQItem {
   question: string;
@@ -13,16 +14,18 @@ export default function HomeFAQ() {
   const items = t('homeFaq.items', { returnObjects: true }) as FAQItem[];
 
   return (
-    <Section>
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
+    <Section size="wide">
+      <SectionLabel>Common Questions</SectionLabel>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-12">
         {t('homeFaq.title')}
       </h2>
-      <div className="space-y-8">
+
+      <div className="grid md:grid-cols-2 gap-6">
         {items.map((item, index) => (
-          <div key={index} className="border-b border-border pb-6 last:border-0 last:pb-0">
-            <h3 className="text-base font-medium text-foreground mb-2">{item.question}</h3>
-            <p className="text-muted-foreground">{item.answer}</p>
-          </div>
+          <GlassCard key={index} className="p-6">
+            <h3 className="text-base font-medium text-white mb-3">{item.question}</h3>
+            <p className="text-sm text-white/60">{item.answer}</p>
+          </GlassCard>
         ))}
       </div>
     </Section>

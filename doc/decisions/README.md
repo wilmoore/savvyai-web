@@ -32,3 +32,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [010. Section Background Rhythm for Visual Grouping](010-section-background-rhythm.md)
 - [011. Section Component Size Variants](011-section-size-variants.md)
 - [012. SectionGroup Component for Visual Grouping](012-section-group-component-for-visual-grouping.md)
+- [013. Executive Dark Mode as Default Theme](013-executive-dark-mode-theme.md)
+- [014. Glassmorphism Layout Components](014-glassmorphism-layout-components.md)
+- [015. Dual Typography System (Inter + Geist Mono)](015-dual-typography-system.md)

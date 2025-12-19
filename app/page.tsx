@@ -1,6 +1,6 @@
 'use client';
 
-import { Header, Footer, BookingForm, SectionGroup } from '@/components/marketing';
+import { Header, Footer, BookingForm, SectionGroup, Section } from '@/components/marketing';
 import {
   Hero,
   Problem,
@@ -21,49 +21,53 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#050505]">
       <Header />
       <main>
-        {/* Hero - standalone white */}
+        {/* Hero - standalone */}
         <Hero />
 
-        {/* Problem + Belief - muted group */}
-        <SectionGroup variant="muted">
-          <Problem />
-          <Belief />
+        {/* Problem + Belief - contrast background, two-column layout */}
+        <SectionGroup variant="contrast">
+          <Section size="wide">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Problem />
+              <Belief />
+            </div>
+          </Section>
         </SectionGroup>
 
-        {/* How We Work + Protocol + Pilot24 - white group */}
+        {/* How We Work + Protocol + Pilot24 - default background */}
         <SectionGroup>
           <HowWeWork />
           <Protocol />
           <Pilot24 />
         </SectionGroup>
 
-        {/* Credibility + Difference - muted group */}
-        <SectionGroup variant="muted">
+        {/* Credibility + Difference - contrast background */}
+        <SectionGroup variant="contrast">
           <Credibility />
           <Difference />
         </SectionGroup>
 
-        {/* Workshop sections - white group */}
+        {/* Workshop sections - default background */}
         <SectionGroup>
           <WorkshopsExplained />
           <WorkshopOutcomes />
           <BridgeToProtocol />
         </SectionGroup>
 
-        {/* Safety + FAQ - muted group */}
-        <SectionGroup variant="muted">
+        {/* Safety + FAQ - contrast background */}
+        <SectionGroup variant="contrast">
           <Safety />
           <HomeFAQ />
         </SectionGroup>
 
-        {/* Audience - white standalone */}
+        {/* Audience - default background */}
         <Audience />
 
-        {/* Final CTA + Booking - muted group with extra emphasis */}
-        <SectionGroup variant="muted" className="pt-8 md:pt-12">
+        {/* Final CTA + Booking - contrast background */}
+        <SectionGroup variant="contrast" className="pt-8 md:pt-12">
           <StartCTA />
           <BookingForm />
         </SectionGroup>

@@ -3,6 +3,7 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import Section from './Section';
+import { GlassCard } from '@/components/layout';
 
 interface FormData {
   name: string;
@@ -39,29 +40,32 @@ export default function BookingForm() {
     setIsSubmitting(false);
   };
 
+  const inputClasses =
+    'w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors';
+
   if (isSubmitted) {
     return (
-      <Section id="book">
-        <div className="text-center">
-          <h2 className="text-3xl font-semibold tracking-tight mb-4">Thank you</h2>
-          <p className="text-base text-muted-foreground">We will be in touch soon.</p>
-        </div>
+      <Section id="book" size="wide">
+        <GlassCard variant="elevated" className="max-w-xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-white mb-4">Thank you</h2>
+          <p className="text-base text-white/60">We will be in touch soon.</p>
+        </GlassCard>
       </Section>
     );
   }
 
   return (
-    <Section id="book">
-      <div className="max-w-xl mx-auto">
-        <h2 className="text-3xl font-semibold tracking-tight text-center mb-4">
+    <Section id="book" size="wide">
+      <GlassCard variant="elevated" className="max-w-xl mx-auto">
+        <h2 className="text-2xl font-semibold tracking-tight text-white text-center mb-2">
           {t('booking.title')}
         </h2>
-        <p className="text-xl text-muted-foreground text-center mb-10">{t('booking.subtitle')}</p>
+        <p className="text-base text-white/60 text-center mb-8">{t('booking.subtitle')}</p>
 
         {/* TODO: Wire up to backend (Airtable, email service, or API endpoint) */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
               {t('booking.form.name')}
             </label>
             <input
@@ -72,12 +76,12 @@ export default function BookingForm() {
               value={formData.name}
               onChange={handleChange}
               placeholder={t('booking.form.namePlaceholder')}
-              className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
               {t('booking.form.email')}
             </label>
             <input
@@ -88,12 +92,12 @@ export default function BookingForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder={t('booking.form.emailPlaceholder')}
-              className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">
               {t('booking.form.company')}
             </label>
             <input
@@ -103,12 +107,12 @@ export default function BookingForm() {
               value={formData.company}
               onChange={handleChange}
               placeholder={t('booking.form.companyPlaceholder')}
-              className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className={inputClasses}
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
               {t('booking.form.message')}
             </label>
             <textarea
@@ -119,19 +123,19 @@ export default function BookingForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder={t('booking.form.messagePlaceholder')}
-              className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+              className={`${inputClasses} resize-none`}
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-md bg-primary px-6 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full rounded-lg bg-emerald-500 px-6 py-3 text-base font-medium text-white hover:bg-emerald-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Sending...' : t('booking.form.submit')}
           </button>
         </form>
-      </div>
+      </GlassCard>
     </Section>
   );
 }

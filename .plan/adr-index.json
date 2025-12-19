@@ -1,5 +1,5 @@
 {
-  "lastSequence": 11,
+  "lastSequence": 12,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -34,6 +34,10 @@
         "010-section-background-rhythm.md",
         "011-section-size-variants.md"
       ]
+    },
+    {
+      "branch": "feature/homepage-visual-hierarchy-refinement",
+      "adrs": ["012-section-group-component-for-visual-grouping.md"]
     }
   ]
 }

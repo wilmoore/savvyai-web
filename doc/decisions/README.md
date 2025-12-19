@@ -31,3 +31,4 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [009. Four-Tier Typography Hierarchy](009-four-tier-typography-hierarchy.md)
 - [010. Section Background Rhythm for Visual Grouping](010-section-background-rhythm.md)
 - [011. Section Component Size Variants](011-section-size-variants.md)
+- [012. SectionGroup Component for Visual Grouping](012-section-group-component-for-visual-grouping.md)

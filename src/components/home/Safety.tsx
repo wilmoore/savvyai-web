@@ -9,13 +9,13 @@ export default function Safety() {
 
   return (
     <Section>
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
         {t('safety.title')}
       </h2>
       <div className="space-y-6">
         <p className="text-xl text-muted-foreground">{t('safety.intro')}</p>
 
-        <ul className="space-y-3 mt-6">
+        <ul className="space-y-4 mt-6">
           {items.map((item, index) => (
             <li key={index} className="flex items-start gap-3 text-muted-foreground">
               <span className="text-primary mt-1.5">•</span>

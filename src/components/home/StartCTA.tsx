@@ -7,16 +7,16 @@ export default function StartCTA() {
   const { t } = useTranslation('homepage');
 
   return (
-    <Section variant="muted">
+    <Section>
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
           {t('finalCta.title')}
         </h2>
-        <div className="space-y-4 mb-6">
+        <div className="space-y-5 mb-8">
           <p className="text-xl text-muted-foreground">{t('finalCta.content.line1')}</p>
           <p className="text-base text-muted-foreground">{t('finalCta.content.line2')}</p>
         </div>
-        <p className="text-base font-medium text-foreground mb-10">{t('finalCta.closing')}</p>
+        <p className="text-base font-medium text-foreground mb-12">{t('finalCta.closing')}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <CTAButton href="#book" variant="primary">
             {t('finalCta.cta.primary')}

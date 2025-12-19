@@ -8,8 +8,8 @@ export default function WorkshopOutcomes() {
   const items = t('workshopOutcomes.typicalItems', { returnObjects: true }) as string[];
 
   return (
-    <Section variant="muted">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+    <Section>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
         {t('workshopOutcomes.title')}
       </h2>
       <div className="space-y-6">
@@ -19,7 +19,7 @@ export default function WorkshopOutcomes() {
           <p className="text-base font-medium text-foreground mb-4">
             {t('workshopOutcomes.typicalTitle')}
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-muted-foreground">
                 <span className="text-primary mt-1.5">•</span>

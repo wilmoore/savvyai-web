@@ -8,12 +8,12 @@ export default function Belief() {
   const statements = t('belief.statements', { returnObjects: true }) as string[];
 
   return (
-    <Section variant="muted">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+    <Section>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
         {t('belief.title')}
       </h2>
       <div className="space-y-6">
-        <div className="space-y-1">
+        <div className="space-y-2">
           {statements.map((statement, index) => (
             <p
               key={index}

@@ -18,7 +18,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={cn('py-16 md:py-24', variant === 'muted' && 'bg-muted/50', className)}
+      className={cn('py-20 md:py-28', variant === 'muted' && 'bg-muted/50', className)}
     >
       <div
         className={cn(

@@ -1,7 +1,16 @@
 'use client';
 
 import { Header, Footer } from '@/components/marketing';
-import { Hero, Comparison, HowItWorks, Deliverables, FAQ, ReadyCTA } from '@/components/protocol';
+import {
+  Hero,
+  Comparison,
+  HowItWorks,
+  Deliverables,
+  WhatThisIsNot,
+  AfterThePilot,
+  FAQ,
+  ReadyCTA,
+} from '@/components/protocol';
 
 export default function ProtocolPage() {
   return (
@@ -12,6 +21,8 @@ export default function ProtocolPage() {
         <Comparison />
         <HowItWorks />
         <Deliverables />
+        <WhatThisIsNot />
+        <AfterThePilot />
         <FAQ />
         <ReadyCTA />
       </main>

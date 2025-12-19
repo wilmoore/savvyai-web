@@ -1,5 +1,5 @@
 {
-  "lastSequence": 15,
+  "lastSequence": 18,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -45,6 +45,14 @@
         "013-executive-dark-mode-theme.md",
         "014-glassmorphism-layout-components.md",
         "015-dual-typography-system.md"
+      ]
+    },
+    {
+      "branch": "design/workshop-authority-grammar",
+      "adrs": [
+        "016-workshop-authority-light-theme.md",
+        "017-section-band-layout-system.md",
+        "018-tiered-label-system.md"
       ]
     }
   ]

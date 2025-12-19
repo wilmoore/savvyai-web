@@ -8,53 +8,74 @@
       "line2": "You need a clear plan and a safe way to test what works."
     },
     "cta": {
-      "primary": "Start with a Workshop",
-      "secondary": "Book a Conversation"
+      "primary": "Book a Workshop",
+      "secondary": "See How It Works"
     }
   },
-  "problem": {
-    "title": "Why AI Feels Hard for Most Teams",
-    "intro": {
-      "line1": "AI tools are easy to access.",
-      "line2": "Using them well inside a real team is not."
-    },
-    "list": {
-      "title": "Most teams:",
-      "items": [
-        "Try tools before understanding use cases",
-        "Run small experiments that never scale",
-        "Rely on one curious person instead of shared skills",
-        "Get stuck debating instead of testing"
-      ]
-    },
-    "conclusion": {
-      "line1": "The issue is not effort or intelligence.",
-      "line2": "It is lack of structure."
-    }
-  },
-  "belief": {
-    "title": "Our Belief",
-    "statements": [
-      "Teams do not need to become AI experts.",
-      "They need a clear process they can follow."
-    ],
-    "insight": "When people understand what AI can and cannot do, better decisions happen naturally.",
-    "closing": "This is how we approach every engagement."
-  },
-  "howWeWork": {
-    "title": "How We Work",
-    "intro": "We start with education before any system is built.",
-    "description": "Through interactive, hands-on workshops, teams:",
+  "whoThisIsFor": {
+    "label": "Who this is for",
     "items": [
-      "Learn how modern AI actually works",
-      "Look at their real workflows",
-      "Identify where AI could help and where it should not",
-      "Decide what is worth testing first"
+      "Operations leaders",
+      "Product managers",
+      "Engineering leads",
+      "Department heads",
+      "Teams inside established companies"
+    ]
+  },
+  "ourWorkshops": {
+    "label": "Our Workshops",
+    "title": "Programs that get teams moving",
+    "subtitle": "Every engagement starts here. Choose the format that fits your team.",
+    "workshops": [
+      {
+        "name": "AI Foundations",
+        "description": "For teams starting from scratch. Build shared understanding of what AI can and cannot do.",
+        "audience": "Cross-functional teams",
+        "duration": "Half-day",
+        "outcomes": ["Shared AI vocabulary", "Workflow audit", "First use case identified"]
+      },
+      {
+        "name": "Workflow Integration",
+        "description": "For teams with a specific problem. Design how AI fits into existing processes.",
+        "audience": "Operations & product teams",
+        "duration": "Full-day",
+        "outcomes": ["Process mapping", "Integration plan", "Pilot scope defined"]
+      },
+      {
+        "name": "24-Hour Pilot Build",
+        "description": "For teams ready to test. Go from workshop clarity to working prototype.",
+        "audience": "Teams post-workshop",
+        "duration": "24 hours",
+        "outcomes": ["Working AI pilot", "Documentation", "Handoff training"]
+      }
     ],
-    "closing": {
-      "line1": "These are working sessions, not presentations.",
-      "line2": "Teams leave with shared understanding and direction."
-    }
+    "cta": "Book a Workshop"
+  },
+  "howTeamsWork": {
+    "label": "How it works",
+    "title": "How Teams Work With Savvy",
+    "steps": [
+      {
+        "number": "1",
+        "name": "Workshop",
+        "description": "Learn, align, decide what to test"
+      },
+      {
+        "number": "2",
+        "name": "Pilot",
+        "description": "Build a working prototype in 24 hours"
+      },
+      {
+        "number": "3",
+        "name": "Iterate",
+        "description": "Refine based on real usage"
+      },
+      {
+        "number": "4",
+        "name": "Scale",
+        "description": "Expand to other workflows"
+      }
+    ]
   },
   "protocol": {
     "title": "The Savvy Pilot Protocol",
@@ -112,19 +133,30 @@
     }
   },
   "difference": {
+    "label": "The Difference",
     "title": "What Makes This Different",
-    "items": [
+    "typicalTitle": "Typical AI Training",
+    "savvyTitle": "With Savvy",
+    "comparisons": [
       {
-        "title": "Education before implementation",
-        "description": "Most AI projects fail because the team does not understand what they are building or why. We start with learning."
+        "typical": "Generic slide decks about AI trends",
+        "savvy": "Hands-on work with your actual workflows"
       },
       {
-        "title": "Focus on real workflows",
-        "description": "We do not build demos. We look at actual work your team does every day and find where AI can remove friction."
+        "typical": "Theory without application",
+        "savvy": "Working pilot in 24 hours"
       },
       {
-        "title": "Ownership stays with you",
-        "description": "You are not renting access to our systems. You own the tools, the knowledge, and the decisions about what happens next."
+        "typical": "Vendor lock-in and ongoing fees",
+        "savvy": "You own everything we build"
+      },
+      {
+        "typical": "One curious person learns, team forgets",
+        "savvy": "Whole team builds shared understanding"
+      },
+      {
+        "typical": "Months of planning before testing",
+        "savvy": "Test first, then decide what to scale"
       }
     ]
   },
@@ -137,6 +169,7 @@
     "aside": "If workshop is the wrong word, think of it as a structured thinking session where your team gets aligned and leaves with a plan."
   },
   "workshopOutcomes": {
+    "artifactLabel": "Output",
     "title": "What Teams Leave With",
     "intro": "Every team is different. Outcomes depend on where you start and what you are trying to solve.",
     "typicalTitle": "Typical outcomes:",
@@ -174,6 +207,7 @@
     "closing": "If you have specific compliance requirements, we address them before any work begins."
   },
   "homeFaq": {
+    "label": "Common Questions",
     "title": "Quick Answers",
     "items": [
       {

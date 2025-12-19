@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/marketing';
-import { SectionLabel, GlassCard } from '@/components/layout';
+import { ArtifactLabel } from '@/components/layout';
 
 interface Phase {
   number: string;
@@ -12,43 +12,55 @@ interface Phase {
   description: string;
 }
 
+/**
+ * Protocol - Dark authority section
+ *
+ * Purpose: Credibility + IP
+ * Job: Establish Savvy as a system, not a vibe
+ *
+ * Full-width, visually distinct, diagram-like.
+ * Dark sections are for authority. Use sparingly.
+ */
 export default function Protocol() {
   const { t } = useTranslation('homepage');
   const phases = t('protocol.phases', { returnObjects: true }) as Phase[];
 
   return (
-    <Section size="wide">
-      <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
-        <div>
-          <SectionLabel>The Protocol</SectionLabel>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-6">
+    <Section size="full" variant="dark">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <ArtifactLabel className="inline-block mb-4 text-emerald-400">Protocol</ArtifactLabel>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
             {t('protocol.title')}
           </h2>
-          <p className="text-lg text-white/70 mb-8">{t('protocol.subtitle')}</p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('protocol.subtitle')}</p>
+        </div>
 
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {phases.map((phase) => (
+            <div
+              key={phase.number}
+              className="relative p-6 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base font-semibold font-mono border border-emerald-500/30">
+                  {phase.number}
+                </div>
+                <h3 className="text-lg font-medium text-white">{phase.name}</h3>
+              </div>
+              <p className="text-sm text-gray-400">{phase.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
           <Link
             href="/protocol"
-            className="inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 font-medium transition-colors group"
+            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors group"
           >
             {t('protocol.cta')}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
-        </div>
-
-        <div className="space-y-4">
-          {phases.map((phase) => (
-            <GlassCard key={phase.number} className="p-5" hover>
-              <div className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm font-semibold font-mono">
-                  {phase.number}
-                </div>
-                <div>
-                  <h3 className="text-base font-medium text-white mb-1">{phase.name}</h3>
-                  <p className="text-sm text-white/60">{phase.description}</p>
-                </div>
-              </div>
-            </GlassCard>
-          ))}
         </div>
       </div>
     </Section>

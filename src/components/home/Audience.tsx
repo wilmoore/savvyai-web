@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 import { Check, X } from 'lucide-react';
 import { Section } from '@/components/marketing';
-import { SectionLabel, GlassCard } from '@/components/layout';
+import { BandLabel } from '@/components/layout';
 
 export default function Audience() {
   const { t } = useTranslation('homepage');
@@ -12,16 +12,16 @@ export default function Audience() {
 
   return (
     <Section size="wide">
-      <SectionLabel className="text-center">Is This For You?</SectionLabel>
+      <BandLabel className="text-center">Is This For You?</BandLabel>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <GlassCard variant="bordered" className="border-emerald-500/30">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8">
+        <div className="bg-white border-2 border-emerald-200 rounded-lg p-8">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-8">
             {t('audience.forTitle')}
           </h2>
           <ul className="space-y-4">
             {forItems.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 text-white">
+              <li key={index} className="flex items-start gap-3 text-gray-700">
                 <span className="text-emerald-500 mt-0.5 flex-shrink-0">
                   <Check className="w-5 h-5" strokeWidth={2} />
                 </span>
@@ -29,23 +29,23 @@ export default function Audience() {
               </li>
             ))}
           </ul>
-        </GlassCard>
+        </div>
 
-        <GlassCard>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-8">
+        <div className="bg-white border border-gray-200 rounded-lg p-8">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900 mb-8">
             {t('audience.notForTitle')}
           </h2>
           <ul className="space-y-4">
             {notForItems.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 text-white/60">
-                <span className="text-white/40 mt-0.5 flex-shrink-0">
+              <li key={index} className="flex items-start gap-3 text-gray-500">
+                <span className="text-gray-400 mt-0.5 flex-shrink-0">
                   <X className="w-5 h-5" strokeWidth={2} />
                 </span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-        </GlassCard>
+        </div>
       </div>
     </Section>
   );

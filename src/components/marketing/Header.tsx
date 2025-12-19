@@ -5,16 +5,16 @@ import Logo from '@/components/ui/logo';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#050505]/95 backdrop-blur-xl supports-[backdrop-filter]:bg-[#050505]/80">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-sm supports-[backdrop-filter]:bg-white/90">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
-          <Logo variant="white" size="md" />
+          <Logo variant="black" size="md" />
         </Link>
 
         <nav className="flex items-center gap-6">
           <Link
             href="/protocol"
-            className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
           >
             The Protocol
           </Link>

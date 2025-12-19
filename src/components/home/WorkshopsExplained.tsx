@@ -7,8 +7,8 @@ export default function WorkshopsExplained() {
   const { t } = useTranslation('homepage');
 
   return (
-    <Section variant="muted">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+    <Section>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
         {t('workshopsExplained.title')}
       </h2>
       <div className="space-y-6">

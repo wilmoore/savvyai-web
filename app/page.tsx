@@ -1,6 +1,6 @@
 'use client';
 
-import { Header, Footer, BookingForm } from '@/components/marketing';
+import { Header, Footer, BookingForm, SectionGroup } from '@/components/marketing';
 import {
   Hero,
   Problem,
@@ -24,22 +24,49 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        {/* Hero - standalone white */}
         <Hero />
-        <Problem />
-        <Belief />
-        <HowWeWork />
-        <Protocol />
-        <Pilot24 />
-        <Credibility />
-        <Difference />
-        <WorkshopsExplained />
-        <WorkshopOutcomes />
-        <BridgeToProtocol />
-        <Safety />
-        <HomeFAQ />
+
+        {/* Problem + Belief - muted group */}
+        <SectionGroup variant="muted">
+          <Problem />
+          <Belief />
+        </SectionGroup>
+
+        {/* How We Work + Protocol + Pilot24 - white group */}
+        <SectionGroup>
+          <HowWeWork />
+          <Protocol />
+          <Pilot24 />
+        </SectionGroup>
+
+        {/* Credibility + Difference - muted group */}
+        <SectionGroup variant="muted">
+          <Credibility />
+          <Difference />
+        </SectionGroup>
+
+        {/* Workshop sections - white group */}
+        <SectionGroup>
+          <WorkshopsExplained />
+          <WorkshopOutcomes />
+          <BridgeToProtocol />
+        </SectionGroup>
+
+        {/* Safety + FAQ - muted group */}
+        <SectionGroup variant="muted">
+          <Safety />
+          <HomeFAQ />
+        </SectionGroup>
+
+        {/* Audience - white standalone */}
         <Audience />
-        <StartCTA />
-        <BookingForm />
+
+        {/* Final CTA + Booking - muted group with extra emphasis */}
+        <SectionGroup variant="muted" className="pt-8 md:pt-12">
+          <StartCTA />
+          <BookingForm />
+        </SectionGroup>
       </main>
       <Footer />
     </div>

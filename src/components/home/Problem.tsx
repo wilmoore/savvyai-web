@@ -8,19 +8,19 @@ export default function Problem() {
   const items = t('problem.list.items', { returnObjects: true }) as string[];
 
   return (
-    <Section variant="muted">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+    <Section>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10">
         {t('problem.title')}
       </h2>
       <div className="space-y-6">
-        <div className="space-y-1">
+        <div className="space-y-2">
           <p className="text-xl text-muted-foreground">{t('problem.intro.line1')}</p>
           <p className="text-xl text-muted-foreground">{t('problem.intro.line2')}</p>
         </div>
 
         <div className="mt-8">
           <p className="text-base font-medium text-foreground mb-4">{t('problem.list.title')}</p>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-muted-foreground">
                 <span className="text-primary mt-1.5">•</span>

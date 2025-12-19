@@ -11,13 +11,13 @@ export default function Audience() {
   }) as string[];
 
   return (
-    <Section variant="muted">
-      <div className="grid md:grid-cols-2 gap-12">
+    <Section>
+      <div className="grid md:grid-cols-2 gap-16">
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
             {t('audience.forTitle')}
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-5">
             {forItems.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-foreground">
                 <span className="text-primary mt-0.5 flex-shrink-0">
@@ -42,10 +42,10 @@ export default function Audience() {
         </div>
 
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8">
             {t('audience.notForTitle')}
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-5">
             {notForItems.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-muted-foreground">
                 <span className="text-muted-foreground mt-0.5 flex-shrink-0">

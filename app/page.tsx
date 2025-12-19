@@ -3,6 +3,7 @@
 import { Header, Footer, BookingForm } from '@/components/marketing';
 import {
   Hero,
+  TrustBar,
   WhoThisIsFor,
   OurWorkshops,
   HowWeWork,
@@ -11,6 +12,7 @@ import {
   Protocol,
   Pilot24,
   Difference,
+  StatsGrid,
   Safety,
   HomeFAQ,
   Audience,
@@ -18,72 +20,80 @@ import {
 } from '@/components/home';
 
 /**
- * Homepage - Final Section Order
+ * Homepage - Editorial Paper & Ink "Zebra" Rhythm
  *
- * THE ONE RULE: Programs → Experience → Proof → Philosophy
+ * THE ONE RULE: Programs -> Experience -> Proof -> Philosophy
  * Never the other way around.
  *
- * Section Order:
- * 1. HERO (LIGHT) - Invitation + clarity
- * 2. WHO THIS IS FOR (LIGHT, COMPACT) - Self-qualification
- * 3. OUR WORKSHOPS (LIGHT, PROMINENT) - Commercial clarity
- * 4. HOW TEAMS WORK WITH SAVVY (NEUTRAL) - Reassurance
- * 5. WHAT HAPPENS IN A WORKSHOP (LIGHT) - Visualization
- * 6. WHAT TEAMS LEAVE WITH (LIGHT) - Tangibility
- * 7. THE SAVVY PILOT PROTOCOL (DARK – AUTHORITY) - Credibility + IP
- * 8. WHY WE BUILD A PILOT IN 24 HOURS (NEUTRAL) - Justification
- * 9. WHAT MAKES THIS DIFFERENT (LIGHT, COMPARATIVE) - Differentiation
- * 10. DATA, SECURITY, AND BOUNDARIES (DARK – REASSURANCE) - Risk removal
- * 11. QUICK ANSWERS (FAQ) (LIGHT) - Objection handling
- * 12. WHO THIS IS FOR / WHO THIS IS NOT FOR (LIGHT) - Qualification
- * 13. FINAL CTA (LIGHT, STRONG) - Conversion
- * 14. BOOK A CONVERSATION (FORM) - Capture intent
+ * Section Order (Zebra Pattern):
+ * 1. HERO (INK) - Billboard statement
+ * 2. TRUST BAR (PAPER) - Logo wall / social proof
+ * 3. WHO THIS IS FOR (PAPER) - Self-qualification
+ * 4. OUR WORKSHOPS (PAPER) - Commercial clarity
+ * 5. HOW TEAMS WORK (INK) - Technical blueprint
+ * 6. WHAT HAPPENS IN A WORKSHOP (PAPER) - Visualization
+ * 7. WHAT TEAMS LEAVE WITH (PAPER) - Artifact inventory
+ * 8. THE SAVVY PILOT PROTOCOL (INK) - Credibility + IP
+ * 9. WHY WE BUILD A PILOT IN 24 HOURS (PAPER) - Justification
+ * 10. WHAT MAKES THIS DIFFERENT (PAPER) - Differentiation
+ * 11. STATS GRID (INK) - Business impact numbers
+ * 12. DATA, SECURITY, AND BOUNDARIES (INK) - Risk removal
+ * 13. QUICK ANSWERS (FAQ) (PAPER) - Objection handling
+ * 14. WHO THIS IS FOR / WHO THIS IS NOT FOR (PAPER) - Qualification
+ * 15. FINAL CTA (INK) - Conversion
+ * 16. BOOK A CONVERSATION (PAPER) - Lead capture
  */
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header />
       <main>
-        {/* 1. HERO (LIGHT) - "What is this, and is it for me?" */}
+        {/* 1. HERO (INK) - Billboard statement */}
         <Hero />
 
-        {/* 2. WHO THIS IS FOR (LIGHT, COMPACT) - "Am I the intended audience?" */}
+        {/* 2. TRUST BAR (PAPER) - Logo wall / social proof */}
+        <TrustBar />
+
+        {/* 3. WHO THIS IS FOR (PAPER) - Self-qualification */}
         <WhoThisIsFor />
 
-        {/* 3. OUR WORKSHOPS (LIGHT, PROMINENT) - "What do you run?" */}
+        {/* 4. OUR WORKSHOPS (PAPER) - Commercial clarity */}
         <OurWorkshops />
 
-        {/* 4. HOW TEAMS WORK WITH SAVVY (NEUTRAL) - "How does engagement work?" */}
+        {/* 5. HOW TEAMS WORK (INK) - Technical blueprint */}
         <HowWeWork />
 
-        {/* 5. WHAT HAPPENS IN A WORKSHOP (LIGHT) - "What would my team experience?" */}
+        {/* 6. WHAT HAPPENS IN A WORKSHOP (PAPER) - Visualization */}
         <WorkshopsExplained />
 
-        {/* 6. WHAT TEAMS LEAVE WITH (LIGHT) - "What do we own at the end?" */}
+        {/* 7. WHAT TEAMS LEAVE WITH (PAPER) - Artifact inventory */}
         <WorkshopOutcomes />
 
-        {/* 7. THE SAVVY PILOT PROTOCOL (DARK – AUTHORITY) - "Why Savvy specifically?" */}
+        {/* 8. THE SAVVY PILOT PROTOCOL (INK) - Credibility + IP */}
         <Protocol />
 
-        {/* 8. WHY WE BUILD A PILOT IN 24 HOURS (NEUTRAL) - "Why do you work this way?" */}
+        {/* 9. WHY WE BUILD A PILOT IN 24 HOURS (PAPER) - Justification */}
         <Pilot24 />
 
-        {/* 9. WHAT MAKES THIS DIFFERENT (LIGHT, COMPARATIVE) - "Why not someone else?" */}
+        {/* 10. WHAT MAKES THIS DIFFERENT (PAPER) - Differentiation */}
         <Difference />
 
-        {/* 10. DATA, SECURITY, AND BOUNDARIES (DARK – REASSURANCE) - "Is this safe?" */}
+        {/* 11. STATS GRID (INK) - Business impact numbers */}
+        <StatsGrid />
+
+        {/* 12. DATA, SECURITY, AND BOUNDARIES (INK) - Risk removal */}
         <Safety />
 
-        {/* 11. QUICK ANSWERS (FAQ) (LIGHT) - Objection handling */}
+        {/* 13. QUICK ANSWERS (FAQ) (PAPER) - Objection handling */}
         <HomeFAQ />
 
-        {/* 12. WHO THIS IS FOR / WHO THIS IS NOT FOR (LIGHT) - Qualification */}
+        {/* 14. WHO THIS IS FOR / WHO THIS IS NOT FOR (PAPER) - Qualification */}
         <Audience />
 
-        {/* 13. FINAL CTA (LIGHT, STRONG) - "Every engagement starts with a workshop" */}
+        {/* 15. FINAL CTA (INK) - Conversion */}
         <StartCTA />
 
-        {/* 14. BOOK A CONVERSATION (FORM) - Capture intent */}
+        {/* 16. BOOK A CONVERSATION (PAPER) - Lead capture */}
         <BookingForm />
       </main>
       <Footer />

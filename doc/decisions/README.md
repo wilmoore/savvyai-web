@@ -38,3 +38,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [016. Workshop Authority Light Theme](016-workshop-authority-light-theme.md)
 - [017. Section Band Layout System](017-section-band-layout-system.md)
 - [018. Tiered Label System](018-tiered-label-system.md)
+- [019. Editorial Paper & Ink Theme](019-editorial-paper-ink-theme.md)
+- [020. Framer Motion for Section Animations](020-framer-motion-section-animations.md)
+- [021. Geist Sans Typography System](021-geist-sans-typography.md)

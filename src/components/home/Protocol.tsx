@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/marketing';
-import { ArtifactLabel } from '@/components/layout';
 
 interface Phase {
   number: string;
@@ -13,42 +12,41 @@ interface Phase {
 }
 
 /**
- * Protocol - Dark authority section
+ * Protocol - Ink background authority section
  *
- * Purpose: Credibility + IP
- * Job: Establish Savvy as a system, not a vibe
- *
- * Full-width, visually distinct, diagram-like.
- * Dark sections are for authority. Use sparingly.
+ * Already dark themed, refined for zebra rhythm.
+ * Glass cards with white/10 borders.
  */
 export default function Protocol() {
   const { t } = useTranslation('homepage');
   const phases = t('protocol.phases', { returnObjects: true }) as Phase[];
 
   return (
-    <Section size="full" variant="dark">
+    <Section size="full" variant="ink">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <ArtifactLabel className="inline-block mb-4 text-emerald-400">Protocol</ArtifactLabel>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+          <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
+            Protocol
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-4">
             {t('protocol.title')}
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('protocol.subtitle')}</p>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">{t('protocol.subtitle')}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {phases.map((phase) => (
             <div
               key={phase.number}
-              className="relative p-6 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm"
+              className="relative p-6 bg-white/5 border border-white/10 rounded-md backdrop-blur-sm"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base font-semibold font-mono border border-emerald-500/30">
                   {phase.number}
                 </div>
-                <h3 className="text-lg font-medium text-white">{phase.name}</h3>
+                <h3 className="text-lg font-semibold text-white">{phase.name}</h3>
               </div>
-              <p className="text-sm text-gray-400">{phase.description}</p>
+              <p className="text-sm text-white/60">{phase.description}</p>
             </div>
           ))}
         </div>

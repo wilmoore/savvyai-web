@@ -2,30 +2,28 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/marketing';
-import { BandLabel } from '@/components/layout';
 
 /**
  * WhoThisIsFor - Compact self-qualification section
  *
- * Purpose: Self-qualification
- * Job: Reduce confusion early
- *
- * This section appears early (section 2) to help visitors
- * quickly determine if Savvy AI is for them.
+ * Paper background for zebra rhythm.
+ * Helps visitors quickly determine if Savvy AI is for them.
  */
 export default function WhoThisIsFor() {
   const { t } = useTranslation('homepage');
   const items = t('whoThisIsFor.items', { returnObjects: true }) as string[];
 
   return (
-    <Section size="wide" className="py-12 md:py-16">
-      <BandLabel className="mb-4">{t('whoThisIsFor.label')}</BandLabel>
+    <Section variant="paper" size="wide" className="py-12 md:py-16">
+      <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
+        {t('whoThisIsFor.label')}
+      </p>
 
       <div className="flex flex-wrap gap-x-8 gap-y-3">
         {items.map((item, index) => (
           <span
             key={index}
-            className="text-base text-gray-600 before:content-['•'] before:text-emerald-500 before:mr-2"
+            className="text-base text-black/60 before:content-['•'] before:text-emerald-500 before:mr-2"
           >
             {item}
           </span>

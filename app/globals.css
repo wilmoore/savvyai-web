@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Base Design System - Śavvy AI Refined */
+    /* Base Design System - Savvy AI Refined */
     --background: 220 27% 6%;
     --foreground: 0 0% 100%;
 
@@ -41,7 +41,7 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Śavvy AI Brand Colors - Professional Blue Palette */
+    /* Savvy AI Brand Colors - Professional Blue Palette */
     --savvy-navy-dark: 220 45% 6%;
     --savvy-navy: 220 35% 11%;
     --savvy-electric-blue: 217 91% 60%;
@@ -52,36 +52,27 @@ All colors MUST be HSL.
     --savvy-off-white: 213 27% 97%;
     --savvy-slate-gray: 215 16% 56%;
     --savvy-gray-700: 210 11% 25%;
-    
+
     /* Professional Blue Gradients */
     --gradient-hero: linear-gradient(135deg, #0B1120, #111827);
     --gradient-secondary: linear-gradient(90deg, #2563EB 0%, #6366F1 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--savvy-pure-black)), hsl(215 20% 6%));
     --gradient-accent: linear-gradient(90deg, #2563EB, #3B82F6);
     --gradient-cta: linear-gradient(135deg, #2563EB, #3B82F6);
-    
+
     /* Enhanced Shadows */
     --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
     --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.15);
     --shadow-blue-glow: 0 0 30px rgba(37, 99, 235, 0.3);
 
-    --radius: 0.75rem;
-
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 

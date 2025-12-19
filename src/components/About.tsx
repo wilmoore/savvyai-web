@@ -1,21 +1,24 @@
-import { CheckCircle, Users, Lightbulb } from "lucide-react";
+import { CheckCircle, Users, Lightbulb } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation('about');
+
   const principles = [
     {
       icon: CheckCircle,
-      title: "Speed and Practicality Over Hype",
-      description: "We deliver working prototypes the same day; real execution, and a real demo URL.",
+      titleKey: 'principles.speed.title',
+      descriptionKey: 'principles.speed.description',
     },
     {
       icon: Users,
-      title: "True Partnership",
-      description: "We work alongside your team, sharing knowledge and building lasting capabilities.",
+      titleKey: 'principles.partnership.title',
+      descriptionKey: 'principles.partnership.description',
     },
     {
       icon: Lightbulb,
-      title: "Practical Innovation",
-      description: "Solution we choose to create serves a clear business purpose and delivers measurable results.",
+      titleKey: 'principles.innovation.title',
+      descriptionKey: 'principles.innovation.description',
     },
   ];
 
@@ -26,31 +29,29 @@ const About = () => {
           {/* Manifesto Section */}
           <div className="text-center mb-20">
             <h2 className="text-[36px] md:text-[40px] font-bold text-white mb-8">
-              Our Mission
+              {t('sectionTitle')}
             </h2>
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-xl md:text-2xl text-[#94A3B8] leading-relaxed">
-                At Savvy AI, we cut through the noise. <strong className="text-[#2563EB]">We build AI that works.</strong> Pragmatic solutions that solve problems that matter and deliver measurable results.
+                {t('manifesto.prefix')}{' '}
+                <strong className="text-[#2563EB]">{t('manifesto.highlight')}</strong>{' '}
+                {t('manifesto.suffix')}
               </p>
             </div>
           </div>
 
           {/* Core Principles */}
           <div className="grid md:grid-cols-3 gap-8">
-            {principles.map((principle, index) => (
+            {principles.map((principle) => (
               <div
-                key={principle.title}
+                key={principle.titleKey}
                 className="group bg-gradient-card border border-border rounded-xl p-8 hover:border-[#2563EB]/30 hover:shadow-blue-glow transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-12 h-12 bg-[#2563EB]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#2563EB]/20 transition-colors">
                   <principle.icon className="w-6 h-6 text-[#2563EB]" />
                 </div>
-                <h3 className="text-[24px] font-bold text-white mb-4">
-                  {principle.title}
-                </h3>
-                <p className="text-[#94A3B8] leading-relaxed">
-                  {principle.description}
-                </p>
+                <h3 className="text-[24px] font-bold text-white mb-4">{t(principle.titleKey)}</h3>
+                <p className="text-[#94A3B8] leading-relaxed">{t(principle.descriptionKey)}</p>
               </div>
             ))}
           </div>

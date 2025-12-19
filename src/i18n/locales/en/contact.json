@@ -1,0 +1,32 @@
+{
+  "sectionTitle": "Need a Code Rescue?",
+  "intro": "Is one of the following is true for you or your business?:",
+  "codeRescueSigns": [
+    "Your developer disappeared, and you're locked out of your own code.",
+    "Progress has stalled, and the product can't move forward.",
+    "Deadlines are slipping because of unresolved technical issues.",
+    "The codebase is buggy, unstable, or impossible to maintain.",
+    "You've been quoted an outrageous amount just to get things working again."
+  ],
+  "form": {
+    "placeholders": {
+      "name": "Full Name",
+      "email": "Work Email",
+      "company": "Company",
+      "challenge": "What's your AI challenge? Tell us about the problem you're trying to solve."
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "companyRequired": "Company is required",
+      "challengeRequired": "Please describe your challenge"
+    },
+    "submit": "Start the Conversation",
+    "submitting": "Sending..."
+  },
+  "messages": {
+    "success": "Thank you! We'll be in touch soon.",
+    "error": "Failed to submit form. Please try again."
+  }
+}

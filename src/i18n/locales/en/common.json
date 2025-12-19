@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "getStarted": "Get Started",
+    "startProject": "Start Your Project",
+    "startConversation": "Start the Conversation",
+    "sending": "Sending...",
+    "returnHome": "Return to Home"
+  },
+  "navigation": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

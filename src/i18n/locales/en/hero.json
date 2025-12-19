@@ -1,0 +1,40 @@
+{
+  "headline": {
+    "line1": "Practical AI.",
+    "line2": "Engineered for"
+  },
+  "rotatingWords": ["Impact", "Change", "Innovation", "Scale"],
+  "subline": "The AI industry is flooded with hype. Every day, new tools pop up; but, only a few deliver real value.",
+  "cta": "Start Your Project",
+  "cards": {
+    "fineTuning": {
+      "title": "Fine-Tuning",
+      "subtitle": "Model Training"
+    },
+    "promptEngineering": {
+      "title": "Prompt Engineering",
+      "subtitle": "Context Planning"
+    },
+    "agents": {
+      "title": "Agents",
+      "subtitle": "Autonomous AI"
+    },
+    "voice": {
+      "title": "Agents",
+      "subtitle": "Voice"
+    },
+    "llmops": {
+      "title": "LLMOps",
+      "subtitle": "Operations"
+    },
+    "rag": {
+      "title": "RAG",
+      "subtitle": "Retrieval"
+    }
+  },
+  "book": {
+    "subtitle": "PRACTICAL GUIDE",
+    "title": "AI Literate",
+    "author": "SAVVY AI"
+  }
+}

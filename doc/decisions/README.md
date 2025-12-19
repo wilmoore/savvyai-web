@@ -19,6 +19,9 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 ## Index
 
 <!-- New ADRs added below -->
+
 - [001. Remove book links from navigation](001-remove-book-links-from-navigation.md)
 - [002. Migrate from Vite to Next.js](002-migrate-from-vite-to-nextjs.md)
 - [003. Client Components for Interactive Pages](003-client-components-for-interactive-pages.md)
+- [004. Use i18next for internationalization](004-use-i18next-for-internationalization.md)
+- [005. Enforce i18n with ESLint and commit hooks](005-enforce-i18n-with-eslint-and-commit-hooks.md)

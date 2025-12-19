@@ -1,0 +1,42 @@
+{
+  "sectionTitle": "How We Work",
+  "sectionDescription": "From strategy to execution, we deliver AI solutions that create real business value.",
+  "items": {
+    "aiReadiness": {
+      "title": "AI Readiness",
+      "description": "We prepare your organization for AI.",
+      "bullets": [
+        "AI readiness assessment and roadmap development.",
+        "Technology stack recommendations and architecture planning.",
+        "Data strategy, security, and compliance frameworks."
+      ]
+    },
+    "llmMlops": {
+      "title": "LLM/MLops",
+      "description": "Custom models, fine-tuning, inference.",
+      "bullets": [
+        "Custom model development and fine-tuning",
+        "Scalable AI infrastructure and MLOps pipelines",
+        "API, RAG and platform integrations"
+      ]
+    },
+    "integrate": {
+      "title": "Integrate",
+      "description": "APIs, workflows, system integrations.",
+      "bullets": [
+        "API integration and workflow automation",
+        "System modernization with AI capabilities",
+        "Real-time data processing and intelligent decisioning"
+      ]
+    },
+    "educate": {
+      "title": "Educate",
+      "description": "Training, mentorship, support.",
+      "bullets": [
+        "Team training and AI literacy",
+        "Best practices documentation and guides",
+        "Ongoing support and capability development"
+      ]
+    }
+  }
+}

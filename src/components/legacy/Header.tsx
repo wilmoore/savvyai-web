@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import Logo from "@/components/ui/logo";
-import { useTranslation } from "react-i18next";
+import { Button } from '@/components/ui/button';
+import Logo from '@/components/ui/logo';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
-  const { t } = useTranslation("header");
+  const { t } = useTranslation('header');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -24,22 +24,22 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection('services')}
               className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
             >
-              {t("navigation.services")}
+              {t('navigation.services')}
             </button>
             <button
-              onClick={() => scrollToSection("about")}
+              onClick={() => scrollToSection('about')}
               className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
             >
-              {t("navigation.about")}
+              {t('navigation.about')}
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection('contact')}
               className="text-muted-foreground hover:text-[#2563EB] transition-colors font-medium"
             >
-              {t("navigation.contact")}
+              {t('navigation.contact')}
             </button>
           </nav>
 
@@ -47,9 +47,9 @@ const Header = () => {
           <Button
             variant="outline"
             className="border-2 border-white text-white bg-transparent hover:bg-transparent hover:text-white hover:border-white hover:scale-105 transition-all duration-200"
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection('contact')}
           >
-            {t("cta")}
+            {t('cta')}
           </Button>
         </div>
       </div>

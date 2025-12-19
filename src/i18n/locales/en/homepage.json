@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "tagline": "Practical AI.",
+    "headline": "Taught first. Built second.",
+    "description": "We help teams adopt AI through hands-on workshops, then turn that clarity into systems teams actually use.",
+    "clarification": {
+      "line1": "You do not need to be technical.",
+      "line2": "You need a clear plan and a safe way to test what works."
+    },
+    "cta": {
+      "primary": "Start with a Workshop",
+      "secondary": "Book a Conversation"
+    }
+  },
+  "problem": {
+    "title": "Why AI Feels Hard for Most Teams",
+    "intro": {
+      "line1": "AI tools are easy to access.",
+      "line2": "Using them well inside a real team is not."
+    },
+    "list": {
+      "title": "Most teams:",
+      "items": [
+        "Try tools before understanding use cases",
+        "Run small experiments that never scale",
+        "Rely on one curious person instead of shared skills",
+        "Get stuck debating instead of testing"
+      ]
+    },
+    "conclusion": {
+      "line1": "The issue is not effort or intelligence.",
+      "line2": "It is lack of structure."
+    }
+  },
+  "belief": {
+    "title": "Our Belief",
+    "statements": [
+      "Teams do not need to become AI experts.",
+      "They need a clear process they can follow."
+    ],
+    "insight": "When people understand what AI can and cannot do, better decisions happen naturally.",
+    "closing": "This is how we approach every engagement."
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "intro": "We start with education before any system is built.",
+    "description": "Through interactive, hands-on workshops, teams:",
+    "items": [
+      "Learn how modern AI actually works",
+      "Look at their real workflows",
+      "Identify where AI could help and where it should not",
+      "Decide what is worth testing first"
+    ],
+    "closing": {
+      "line1": "These are working sessions, not presentations.",
+      "line2": "Teams leave with shared understanding and direction."
+    }
+  },
+  "protocol": {
+    "title": "The Savvy Pilot Protocol",
+    "subtitle": "A simple, repeatable way to move from AI curiosity to confident use.",
+    "phases": [
+      {
+        "number": "1",
+        "name": "The Flight Plan",
+        "description": "Learn, align, and decide what to test."
+      },
+      {
+        "number": "2",
+        "name": "The Takeoff",
+        "description": "Build a working AI pilot in 24 hours."
+      },
+      {
+        "number": "3",
+        "name": "Ownership and Training",
+        "description": "Make sure your team understands and can use it."
+      }
+    ],
+    "cta": "Explore the Savvy Pilot Protocol"
+  },
+  "pilot24": {
+    "title": "Why We Build a Pilot in 24 Hours",
+    "intro": "Long projects create risk before value is proven.",
+    "subtitle": "A focused pilot allows teams to:",
+    "items": [
+      "Test real workflows quickly",
+      "Learn what works before scaling",
+      "Build confidence without large commitments"
+    ],
+    "safety": "We work within your existing security, data, and compliance constraints."
+  },
+  "audience": {
+    "forTitle": "Who This Is For",
+    "forItems": [
+      "Teams unsure where to start with AI",
+      "Leaders who want clarity before investing",
+      "Organizations that value learning and ownership"
+    ],
+    "notForTitle": "Who This Is Not For",
+    "notForItems": [
+      "Teams looking for slide decks",
+      "Anyone who wants AI done for them with no involvement",
+      "Trend chasing without real goals"
+    ]
+  },
+  "finalCta": {
+    "title": "Start With a Workshop",
+    "subtitle": "Every engagement begins with education.",
+    "cta": {
+      "primary": "Start with a Workshop",
+      "secondary": "Book a Conversation"
+    }
+  },
+  "booking": {
+    "title": "Book a Conversation",
+    "subtitle": "Tell us about your team and what you are exploring.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company (optional)",
+      "message": "Message",
+      "messagePlaceholder": "What are you exploring? What questions do you have?",
+      "submit": "Send Message"
+    }
+  }
+}

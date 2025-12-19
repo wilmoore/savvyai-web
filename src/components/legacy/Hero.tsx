@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { useEffect, useState, useRef } from "react";
-import { useTranslation } from "react-i18next";
+import { Button } from '@/components/ui/button';
+import { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const { t } = useTranslation('hero');

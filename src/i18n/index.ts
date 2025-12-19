@@ -12,6 +12,8 @@ import contactEn from './locales/en/contact.json';
 import proofEn from './locales/en/proof.json';
 import footerEn from './locales/en/footer.json';
 import errorsEn from './locales/en/errors.json';
+import homepageEn from './locales/en/homepage.json';
+import protocolEn from './locales/en/protocol.json';
 
 const resources = {
   en: {
@@ -24,6 +26,8 @@ const resources = {
     proof: proofEn,
     footer: footerEn,
     errors: errorsEn,
+    homepage: homepageEn,
+    protocol: protocolEn,
   },
 };
 
@@ -34,7 +38,19 @@ i18n
     resources,
     fallbackLng: 'en',
     defaultNS: 'common',
-    ns: ['common', 'hero', 'header', 'services', 'about', 'contact', 'proof', 'footer', 'errors'],
+    ns: [
+      'common',
+      'hero',
+      'header',
+      'services',
+      'about',
+      'contact',
+      'proof',
+      'footer',
+      'errors',
+      'homepage',
+      'protocol',
+    ],
     interpolation: {
       escapeValue: false, // React already escapes values
     },

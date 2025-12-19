@@ -1,8 +1,31 @@
 {
-  "lastSequence": 5,
+  "lastSequence": 8,
   "entries": [
-    {"branch": "fix/remove-book-navigation-links", "adrs": ["001-remove-book-links-from-navigation.md"]},
-    {"branch": "feature/nextjs-migration-and-gpt-guide", "adrs": ["002-migrate-from-vite-to-nextjs.md", "003-client-components-for-interactive-pages.md"]},
-    {"branch": "feature/add-i18n-with-commit-hooks", "adrs": ["004-use-i18next-for-internationalization.md", "005-enforce-i18n-with-eslint-and-commit-hooks.md"]}
+    {
+      "branch": "fix/remove-book-navigation-links",
+      "adrs": ["001-remove-book-links-from-navigation.md"]
+    },
+    {
+      "branch": "feature/nextjs-migration-and-gpt-guide",
+      "adrs": [
+        "002-migrate-from-vite-to-nextjs.md",
+        "003-client-components-for-interactive-pages.md"
+      ]
+    },
+    {
+      "branch": "feature/add-i18n-with-commit-hooks",
+      "adrs": [
+        "004-use-i18next-for-internationalization.md",
+        "005-enforce-i18n-with-eslint-and-commit-hooks.md"
+      ]
+    },
+    {
+      "branch": "feature/savvyai-marketing-website-v2",
+      "adrs": [
+        "006-swiss-modernist-light-theme.md",
+        "007-marketing-component-architecture.md",
+        "008-section-level-i18n-organization.md"
+      ]
+    }
   ]
 }

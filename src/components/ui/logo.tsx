@@ -6,14 +6,12 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-const Logo: React.FC<LogoProps> = ({ variant = 'white', className = '', size = 'md' }) => {
+const Logo: React.FC<LogoProps> = ({ variant = 'black', className = '', size = 'md' }) => {
   const sizeClasses = {
     sm: 'h-6',
     md: 'h-8',
     lg: 'h-12',
   };
-
-  const color = variant === 'white' ? '#FFFFFF' : '#000000';
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,7 +25,7 @@ const Logo: React.FC<LogoProps> = ({ variant = 'white', className = '', size = '
       {/* Logo Icon */}
       <img
         src="/logomark.png"
-        alt="ŚAVVY AI Logo"
+        alt="Savvy AI Logo"
         className={`${sizeClasses[size]} w-auto object-contain`}
         style={{
           transform: 'translateY(-4px)',
@@ -37,11 +35,11 @@ const Logo: React.FC<LogoProps> = ({ variant = 'white', className = '', size = '
 
       {/* Text */}
       <span
-        className={`font-playfair font-semibold tracking-wide ${
+        className={`font-semibold tracking-wide ${
           size === 'sm' ? 'text-lg' : size === 'md' ? 'text-xl' : 'text-2xl'
-        } ${variant === 'white' ? 'text-white' : 'text-black'}`}
+        } ${variant === 'white' ? 'text-white' : 'text-foreground'}`}
       >
-        ŚAVVY AI
+        Savvy AI
       </span>
     </div>
   );

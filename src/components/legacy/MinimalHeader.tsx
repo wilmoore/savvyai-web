@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Logo from "@/components/ui/logo";
+import Link from 'next/link';
+import Logo from '@/components/ui/logo';
 
 const MinimalHeader = () => {
   return (

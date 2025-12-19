@@ -8,63 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base Design System - Savvy AI Refined */
-    --background: 220 27% 6%;
-    --foreground: 0 0% 100%;
+    /* Light Theme - Swiss Modernist Design System */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 9%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 9%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 9%;
 
-    /* Primary Accent - Electric Cyan */
-    --primary: 184 88% 50%;
-    --primary-foreground: 0 0% 4%;
+    /* Primary Accent - Deep Teal (calm, confident) */
+    --primary: 174 84% 26%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Deep Teal Alternative */
-    --secondary: 174 100% 29%;
+    /* Secondary - Lighter Teal */
+    --secondary: 174 60% 41%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 16% 22%;
-    --muted-foreground: 210 10% 68%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 184 88% 50%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 174 84% 26%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 16% 22%;
-    --input: 215 16% 22%;
-    --ring: 184 88% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 174 84% 26%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Savvy AI Brand Colors - Professional Blue Palette */
-    --savvy-navy-dark: 220 45% 6%;
-    --savvy-navy: 220 35% 11%;
-    --savvy-electric-blue: 217 91% 60%;
-    --savvy-bright-blue: 217 91% 60%;
-    --savvy-midnight-blue: 217 91% 40%;
-    --savvy-violet: 238 83% 67%;
-    --savvy-pure-black: 0 0% 4%;
-    --savvy-off-white: 213 27% 97%;
-    --savvy-slate-gray: 215 16% 56%;
-    --savvy-gray-700: 210 11% 25%;
+    /* Savvy AI Brand Colors - Light Theme */
+    --savvy-white: 0 0% 100%;
+    --savvy-off-white: 220 14% 96%;
+    --savvy-gray-50: 220 14% 96%;
+    --savvy-gray-100: 220 14% 92%;
+    --savvy-gray-200: 220 13% 91%;
+    --savvy-gray-500: 220 9% 46%;
+    --savvy-gray-700: 220 13% 26%;
+    --savvy-gray-900: 220 13% 9%;
+    --savvy-teal-700: 174 84% 26%;
+    --savvy-teal-600: 174 60% 41%;
 
-    /* Professional Blue Gradients */
-    --gradient-hero: linear-gradient(135deg, #0b1120, #111827);
-    --gradient-secondary: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--savvy-pure-black)), hsl(215 20% 6%));
-    --gradient-accent: linear-gradient(90deg, #2563EB, #3B82F6);
-    --gradient-cta: linear-gradient(135deg, #2563EB, #3B82F6);
-
-    /* Enhanced Shadows */
-    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-    --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.15);
-    --shadow-blue-glow: 0 0 30px rgba(37, 99, 235, 0.3);
+    /* Subtle shadows for light theme */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -73,9 +65,10 @@ All colors MUST be HSL.
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 174 84% 26%;
   }
 
+  /* Dark theme preserved for future use */
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -86,8 +79,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 174 84% 40%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -95,23 +88,23 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 174 84% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 174 84% 40%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 174 84% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 174 84% 40%;
   }
 }
 

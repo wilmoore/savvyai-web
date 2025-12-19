@@ -1,11 +1,12 @@
-"use client";
+/* eslint-disable i18next/no-literal-string */
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import MinimalHeader from "@/components/MinimalHeader";
+import { useState } from 'react';
+import Link from 'next/link';
+import MinimalHeader from '@/components/legacy/MinimalHeader';
 
 export default function GptGuidePage() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -15,7 +16,7 @@ export default function GptGuidePage() {
 
     // TODO: Wire up to email capture backend
     // For now, simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setSubmitted(true);
     setIsSubmitting(false);
@@ -35,13 +36,14 @@ export default function GptGuidePage() {
               </h1>
 
               <p className="text-lg md:text-xl text-[#94A3B8] mb-4">
-                If you keep re-typing the same context every time you use ChatGPT, you are doing it wrong.
+                If you keep re-typing the same context every time you use ChatGPT, you are doing it
+                wrong.
               </p>
 
               <p className="text-base text-[#6B7280] mb-8">
-                This guide explains how to identify when a custom GPT is worth building,
-                what makes it useful vs. noise, and the exact process to build one that
-                actually saves you time.
+                This guide explains how to identify when a custom GPT is worth building, what makes
+                it useful vs. noise, and the exact process to build one that actually saves you
+                time.
               </p>
 
               <EmailForm
@@ -59,9 +61,7 @@ export default function GptGuidePage() {
         <section className="py-16 md:py-24 border-t border-[#1a1a1a]">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-                The Problem
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">The Problem</h2>
 
               <p className="text-[#94A3B8] mb-6">
                 You already know how to use AI. That is not the problem. The problem is friction.
@@ -74,19 +74,28 @@ export default function GptGuidePage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#6B7280] mr-3">-</span>
-                  <span>You re-type your preferences, constraints, and frameworks from scratch.</span>
+                  <span>
+                    You re-type your preferences, constraints, and frameworks from scratch.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#6B7280] mr-3">-</span>
-                  <span>You get generic answers because the model does not know how you think.</span>
+                  <span>
+                    You get generic answers because the model does not know how you think.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#6B7280] mr-3">-</span>
-                  <span>You know what you want but spend more time setting up than getting output.</span>
+                  <span>
+                    You know what you want but spend more time setting up than getting output.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#6B7280] mr-3">-</span>
-                  <span>You have built GPTs before but they sit unused because they do not actually help.</span>
+                  <span>
+                    You have built GPTs before but they sit unused because they do not actually
+                    help.
+                  </span>
                 </li>
               </ul>
 
@@ -101,35 +110,38 @@ export default function GptGuidePage() {
         <section className="py-16 md:py-24 border-t border-[#1a1a1a]">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-                The Reframe
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">The Reframe</h2>
 
               <p className="text-[#94A3B8] mb-6">
-                Custom GPTs are not AI products. They are <span className="text-white font-medium">context containers</span> and <span className="text-white font-medium">decision systems</span>.
+                Custom GPTs are not AI products. They are{' '}
+                <span className="text-white font-medium">context containers</span> and{' '}
+                <span className="text-white font-medium">decision systems</span>.
               </p>
 
               <div className="space-y-6 mb-8">
                 <div className="border-l-2 border-[#2563EB] pl-4">
                   <p className="text-white font-medium mb-1">Free GPTs = information and clarity</p>
                   <p className="text-[#6B7280]">
-                    They encode how you think. They remove the need to explain yourself.
-                    They give you leverage over your own mental models.
+                    They encode how you think. They remove the need to explain yourself. They give
+                    you leverage over your own mental models.
                   </p>
                 </div>
 
                 <div className="border-l-2 border-[#2563EB] pl-4">
-                  <p className="text-white font-medium mb-1">Paid GPTs = enforcement, pressure, and leverage</p>
+                  <p className="text-white font-medium mb-1">
+                    Paid GPTs = enforcement, pressure, and leverage
+                  </p>
                   <p className="text-[#6B7280]">
-                    They apply your thinking to others. They create accountability.
-                    They systematize what you would otherwise do manually.
+                    They apply your thinking to others. They create accountability. They systematize
+                    what you would otherwise do manually.
                   </p>
                 </div>
               </div>
 
               <p className="text-[#94A3B8]">
-                Most people think about GPTs as tools for others. The real opportunity is building them for yourself first.
-                Once you stop re-typing your own context, you can decide if it is worth packaging for anyone else.
+                Most people think about GPTs as tools for others. The real opportunity is building
+                them for yourself first. Once you stop re-typing your own context, you can decide if
+                it is worth packaging for anyone else.
               </p>
             </div>
           </div>
@@ -148,35 +160,45 @@ export default function GptGuidePage() {
                   <span className="text-[#2563EB] font-mono mr-3">01</span>
                   <div>
                     <p className="text-white font-medium">Spotting GPT Opportunities</p>
-                    <p className="text-[#6B7280]">The signals that indicate a GPT is worth building vs. a waste of time.</p>
+                    <p className="text-[#6B7280]">
+                      The signals that indicate a GPT is worth building vs. a waste of time.
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#2563EB] font-mono mr-3">02</span>
                   <div>
                     <p className="text-white font-medium">Context Fatigue as a Signal</p>
-                    <p className="text-[#6B7280]">How to recognize when you are repeating yourself and what to do about it.</p>
+                    <p className="text-[#6B7280]">
+                      How to recognize when you are repeating yourself and what to do about it.
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#2563EB] font-mono mr-3">03</span>
                   <div>
                     <p className="text-white font-medium">Internal vs. External GPTs</p>
-                    <p className="text-[#6B7280]">When to build for yourself vs. when to build for others.</p>
+                    <p className="text-[#6B7280]">
+                      When to build for yourself vs. when to build for others.
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#2563EB] font-mono mr-3">04</span>
                   <div>
                     <p className="text-white font-medium">The 7-Step Build Process</p>
-                    <p className="text-[#6B7280]">The exact sequence for building a GPT that actually gets used.</p>
+                    <p className="text-[#6B7280]">
+                      The exact sequence for building a GPT that actually gets used.
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#2563EB] font-mono mr-3">05</span>
                   <div>
                     <p className="text-white font-medium">What Makes a GPT Worth Building</p>
-                    <p className="text-[#6B7280]">The criteria that separate useful GPTs from forgotten experiments.</p>
+                    <p className="text-[#6B7280]">
+                      The criteria that separate useful GPTs from forgotten experiments.
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -188,9 +210,7 @@ export default function GptGuidePage() {
         <section className="py-16 md:py-24 border-t border-[#1a1a1a]">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-                Who This Is For
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Who This Is For</h2>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -227,9 +247,7 @@ export default function GptGuidePage() {
         <section className="py-16 md:py-24 border-t border-[#1a1a1a]">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Get the Guide
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Get the Guide</h2>
 
               <p className="text-[#94A3B8] mb-8">
                 Stop re-typing context. Start building GPTs that actually save you time.
@@ -256,9 +274,7 @@ export default function GptGuidePage() {
                 <Link href="/" className="text-[#6B7280] hover:text-white transition-colors">
                   Savvy AI
                 </Link>
-                <p className="text-[#4B5563] text-sm">
-                  More resources coming soon.
-                </p>
+                <p className="text-[#4B5563] text-sm">More resources coming soon.</p>
               </div>
             </div>
           </div>
@@ -273,7 +289,7 @@ function EmailForm({
   setEmail,
   isSubmitting,
   submitted,
-  onSubmit
+  onSubmit,
 }: {
   email: string;
   setEmail: (email: string) => void;
@@ -305,7 +321,7 @@ function EmailForm({
         disabled={isSubmitting}
         className="px-6 py-3 bg-[#2563EB] text-white font-medium rounded-lg hover:bg-[#1d4ed8] transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
       >
-        {isSubmitting ? "Sending..." : "Get the Free Guide"}
+        {isSubmitting ? 'Sending...' : 'Get the Free Guide'}
       </button>
     </form>
   );

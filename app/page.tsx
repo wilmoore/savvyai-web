@@ -1,22 +1,32 @@
-"use client";
+'use client';
 
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import About from "@/components/About";
-import Proof from "@/components/Proof";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { Header, Footer, BookingForm } from '@/components/marketing';
+import {
+  Hero,
+  Problem,
+  Belief,
+  HowWeWork,
+  Protocol,
+  Pilot24,
+  Audience,
+  StartCTA,
+} from '@/components/home';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Proof />
-      <Contact />
+      <main>
+        <Hero />
+        <Problem />
+        <Belief />
+        <HowWeWork />
+        <Protocol />
+        <Pilot24 />
+        <Audience />
+        <StartCTA />
+        <BookingForm />
+      </main>
       <Footer />
     </div>
   );

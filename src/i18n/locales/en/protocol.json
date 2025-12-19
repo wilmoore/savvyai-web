@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "title": "The Savvy Pilot Protocol",
+    "headline": {
+      "line1": "Go from \"Vague AI Idea\" to \"Working Pilot\"",
+      "line2": "in 24 Hours."
+    },
+    "subtitle": "A structured, fixed-price engagement to validate AI value without months of development.",
+    "cta": "Book a Pilot"
+  },
+  "comparison": {
+    "title": "The Old Way vs. The Savvy Way",
+    "oldWay": {
+      "title": "THE OLD WAY",
+      "items": [
+        "Endless scoping meetings",
+        "\"It depends\" answers from consultants",
+        "Months to see a demo",
+        "Teams afraid to touch what gets built"
+      ]
+    },
+    "savvyWay": {
+      "title": "THE SAVVY PILOT PROTOCOL",
+      "items": [
+        "One day of strategy (Flight Plan)",
+        "One day of building (Takeoff)",
+        "A working tool you can use",
+        "Full team training included"
+      ]
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "phases": [
+      {
+        "name": "Phase 1: The Flight Plan",
+        "description": "We bring the right stakeholders together for a facilitated working session.",
+        "detail": "No lectures. We map real workflows, identify bottlenecks, and select one high-value target.",
+        "output": "Output: A clear, validated plan."
+      },
+      {
+        "name": "Phase 2: The Takeoff",
+        "description": "We build the pilot immediately after alignment.",
+        "detail": "We connect to your data safely, configure the AI, and build a usable interface tied to real work.",
+        "output": "Output: A live, working pilot."
+      },
+      {
+        "name": "Phase 3: Ownership and Training",
+        "description": "We walk your team through how the pilot works.",
+        "detail": "We explain decisions, usage, and how to extend or modify the system over time.",
+        "output": "Output: Recorded training and documentation."
+      }
+    ]
+  },
+  "deliverables": {
+    "title": "What You Get",
+    "items": [
+      {
+        "number": "1",
+        "name": "Strategy Summary",
+        "description": "A clear overview of opportunities, risks, and recommended next steps."
+      },
+      {
+        "number": "2",
+        "name": "Working AI Pilot",
+        "description": "A functional internal tool or application built on real logic and real data."
+      },
+      {
+        "number": "3",
+        "name": "Training and Handoff",
+        "description": "Clear explanations so your team is not dependent on us going forward."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Common Questions",
+    "items": [
+      {
+        "question": "Does this require our engineering team?",
+        "answer": "No. We can build independently. Collaboration is welcome, but not required."
+      },
+      {
+        "question": "Is our data safe?",
+        "answer": "Yes. We work within your existing security, data, and compliance constraints."
+      },
+      {
+        "question": "What happens after the pilot?",
+        "answer": "You own the result. You can scale it, pause it, or bring us back for further work. No lock-in."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to Start?",
+    "subtitle": "Stop debating AI. Start using it.",
+    "cta": "Book a Pilot"
+  }
+}

@@ -25,3 +25,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [003. Client Components for Interactive Pages](003-client-components-for-interactive-pages.md)
 - [004. Use i18next for internationalization](004-use-i18next-for-internationalization.md)
 - [005. Enforce i18n with ESLint and commit hooks](005-enforce-i18n-with-eslint-and-commit-hooks.md)
+- [006. Swiss Modernist Light Theme Design System](006-swiss-modernist-light-theme.md)
+- [007. Marketing Component Architecture](007-marketing-component-architecture.md)
+- [008. Section-Level i18n Organization](008-section-level-i18n-organization.md)

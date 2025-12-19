@@ -23,12 +23,19 @@ export default function Protocol() {
 
   return (
     <Section size="full" variant="ink">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
+          [ 07 / PROTOCOL ]
+        </span>
+      </div>
+
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
             Protocol
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
             {t('protocol.title')}
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">{t('protocol.subtitle')}</p>

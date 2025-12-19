@@ -20,10 +20,17 @@ export default function Difference() {
 
   return (
     <Section variant="paper" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 09 / CONTRAST ]
+        </span>
+      </div>
+
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('difference.label')}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-ink mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-12">
         {t('difference.title')}
       </h2>
 

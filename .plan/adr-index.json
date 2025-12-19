@@ -1,5 +1,5 @@
 {
-  "lastSequence": 21,
+  "lastSequence": 23,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -62,6 +62,10 @@
         "020-framer-motion-section-animations.md",
         "021-geist-sans-typography.md"
       ]
+    },
+    {
+      "branch": "design/high-density-editorial-perfection",
+      "adrs": ["022-section-id-system.md", "023-paper-on-desk-stats-pattern.md"]
     }
   ]
 }

@@ -18,6 +18,13 @@ export default function Safety() {
 
   return (
     <Section size="full" variant="ink">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
+          [ 11 / SECURITY ]
+        </span>
+      </div>
+
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
@@ -26,7 +33,7 @@ export default function Safety() {
               Security
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
             {t('safety.title')}
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">{t('safety.intro')}</p>

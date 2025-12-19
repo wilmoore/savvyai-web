@@ -41,3 +41,5 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [019. Editorial Paper & Ink Theme](019-editorial-paper-ink-theme.md)
 - [020. Framer Motion for Section Animations](020-framer-motion-section-animations.md)
 - [021. Geist Sans Typography System](021-geist-sans-typography.md)
+- [022. Section ID System](022-section-id-system.md)
+- [023. Paper-on-Desk Stats Pattern](023-paper-on-desk-stats-pattern.md)

@@ -13,10 +13,17 @@ export default function StartCTA() {
 
   return (
     <Section variant="ink" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
+          [ 14 / NEXT ]
+        </span>
+      </div>
+
       <div className="max-w-3xl">
         <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">Next Steps</p>
 
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-white mb-8">
           {t('finalCta.title')}
         </h2>
 

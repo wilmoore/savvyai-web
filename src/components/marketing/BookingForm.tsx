@@ -50,8 +50,17 @@ export default function BookingForm() {
   if (isSubmitted) {
     return (
       <Section id="book" variant="paper" size="wide">
+        {/* Section ID */}
+        <div className="mb-6">
+          <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+            [ 15 / CONTACT ]
+          </span>
+        </div>
+
         <div className="max-w-xl mx-auto text-center bg-white border border-black/10 rounded-md p-8 shadow-lg">
-          <h2 className="text-3xl font-bold tracking-tighter text-ink mb-4">Thank you</h2>
+          <h2 className="text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-4">
+            Thank you
+          </h2>
           <p className="text-base text-black/60">We will be in touch soon.</p>
         </div>
       </Section>
@@ -60,8 +69,15 @@ export default function BookingForm() {
 
   return (
     <Section id="book" variant="paper" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 15 / CONTACT ]
+        </span>
+      </div>
+
       <div className="max-w-xl mx-auto bg-white border border-black/10 rounded-md p-8 shadow-lg">
-        <h2 className="text-2xl font-bold tracking-tighter text-ink text-center mb-2">
+        <h2 className="text-2xl font-bold tracking-tighter leading-[1.1] text-ink text-center mb-2">
           {t('booking.title')}
         </h2>
         <p className="text-base text-black/60 text-center mb-8">{t('booking.subtitle')}</p>

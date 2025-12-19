@@ -14,13 +14,20 @@ export default function Audience() {
 
   return (
     <Section variant="paper" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 13 / QUALIFICATION ]
+        </span>
+      </div>
+
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 text-center mb-8">
         Is This For You?
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white border-2 border-emerald-200 rounded-md p-8">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-ink mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-8">
             {t('audience.forTitle')}
           </h2>
           <ul className="space-y-4">
@@ -34,7 +41,7 @@ export default function Audience() {
         </div>
 
         <div className="bg-white border border-black/10 rounded-md p-8">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-ink mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-8">
             {t('audience.notForTitle')}
           </h2>
           <ul className="space-y-4">

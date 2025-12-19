@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/marketing';
+import { SectionLabel, GlassCard } from '@/components/layout';
 
 interface Deliverable {
   number: string;
@@ -14,20 +15,21 @@ export default function Deliverables() {
   const items = t('deliverables.items', { returnObjects: true }) as Deliverable[];
 
   return (
-    <Section variant="muted">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-10">
+    <Section variant="contrast" size="wide">
+      <SectionLabel>What You Get</SectionLabel>
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-10">
         {t('deliverables.title')}
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid md:grid-cols-3 gap-6">
         {items.map((item) => (
-          <div key={item.number} className="bg-background border border-border rounded-lg p-6">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold mb-4">
+          <GlassCard key={item.number} hover>
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm font-semibold font-mono mb-4">
               {item.number}
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">{item.name}</h3>
-            <p className="text-muted-foreground text-sm">{item.description}</p>
-          </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
+            <p className="text-white/60 text-sm">{item.description}</p>
+          </GlassCard>
         ))}
       </div>
     </Section>

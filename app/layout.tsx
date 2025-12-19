@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { Providers } from './providers';
 
@@ -8,6 +9,8 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
 });
+
+const geistMono = GeistMono;
 
 export const metadata: Metadata = {
   title: 'Savvy AI - Practical AI. Taught first. Built second.',
@@ -40,8 +43,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>
+    <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>
+      <body className="bg-[#050505] text-white antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>

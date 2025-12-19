@@ -2,7 +2,9 @@
 
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/marketing';
+import { SectionLabel, GlassCard } from '@/components/layout';
 
 interface Phase {
   number: string;
@@ -15,47 +17,39 @@ export default function Protocol() {
   const phases = t('protocol.phases', { returnObjects: true }) as Phase[];
 
   return (
-    <Section>
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-        {t('protocol.title')}
-      </h2>
-      <p className="text-xl text-muted-foreground mb-12">{t('protocol.subtitle')}</p>
+    <Section size="wide">
+      <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div>
+          <SectionLabel>The Protocol</SectionLabel>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-6">
+            {t('protocol.title')}
+          </h2>
+          <p className="text-lg text-white/70 mb-8">{t('protocol.subtitle')}</p>
 
-      <div className="space-y-8">
-        {phases.map((phase) => (
-          <div key={phase.number} className="flex gap-4 items-start">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-semibold">
-              {phase.number}
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-foreground mb-1">{phase.name}</h3>
-              <p className="text-muted-foreground">{phase.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10">
-        <Link
-          href="/protocol"
-          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
-        >
-          {t('protocol.cta')}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+          <Link
+            href="/protocol"
+            className="inline-flex items-center gap-2 text-emerald-500 hover:text-emerald-400 font-medium transition-colors group"
           >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </Link>
+            {t('protocol.cta')}
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+
+        <div className="space-y-4">
+          {phases.map((phase) => (
+            <GlassCard key={phase.number} className="p-5" hover>
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm font-semibold font-mono">
+                  {phase.number}
+                </div>
+                <div>
+                  <h3 className="text-base font-medium text-white mb-1">{phase.name}</h3>
+                  <p className="text-sm text-white/60">{phase.description}</p>
+                </div>
+              </div>
+            </GlassCard>
+          ))}
+        </div>
       </div>
     </Section>
   );

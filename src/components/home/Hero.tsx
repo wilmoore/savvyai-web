@@ -2,25 +2,28 @@
 
 import { useTranslation } from 'react-i18next';
 import { Section, CTAButton } from '@/components/marketing';
+import { SectionLabel } from '@/components/layout';
 
 export default function Hero() {
   const { t } = useTranslation('homepage');
 
   return (
-    <Section className="pt-28 md:pt-40 pb-24 md:pb-36" size="wide">
-      <div className="text-center">
-        <p className="text-base md:text-lg text-muted-foreground/70 mb-6">{t('hero.tagline')}</p>
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold leading-none tracking-tight mb-10">
+    <Section className="pt-32 md:pt-40 pb-20 md:pb-28" size="wide">
+      <div className="max-w-4xl">
+        <SectionLabel className="mb-6">{t('hero.tagline')}</SectionLabel>
+
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight text-white mb-8">
           {t('hero.headline')}
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-          {t('hero.description')}
-        </p>
-        <div className="space-y-2 text-base text-foreground mb-14 max-w-xl mx-auto">
+
+        <p className="text-xl text-white/70 max-w-2xl mb-10">{t('hero.description')}</p>
+
+        <div className="space-y-3 text-base text-white/60 mb-12 max-w-xl">
           <p>{t('hero.clarification.line1')}</p>
           <p>{t('hero.clarification.line2')}</p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <div className="flex flex-col sm:flex-row gap-4">
           <CTAButton href="#book" variant="primary">
             {t('hero.cta.primary')}
           </CTAButton>

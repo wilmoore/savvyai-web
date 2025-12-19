@@ -5,22 +5,22 @@ import Logo from '@/components/ui/logo';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#050505]/95 backdrop-blur-xl supports-[backdrop-filter]:bg-[#050505]/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
-          <Logo variant="black" size="md" />
+          <Logo variant="white" size="md" />
         </Link>
 
         <nav className="flex items-center gap-6">
           <Link
             href="/protocol"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm font-medium text-white/70 hover:text-white transition-colors"
           >
             The Protocol
           </Link>
           <Link
             href="#book"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center justify-center rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-600 transition-colors"
           >
             Book a Conversation
           </Link>

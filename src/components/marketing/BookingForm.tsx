@@ -3,7 +3,6 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import Section from './Section';
-import { GlassCard } from '@/components/layout';
 
 interface FormData {
   name: string;
@@ -12,6 +11,12 @@ interface FormData {
   message: string;
 }
 
+/**
+ * BookingForm - Paper background with high-contrast form
+ *
+ * Clean form styling with editorial borders.
+ * Emerald focus rings and submit button.
+ */
 export default function BookingForm() {
   const { t } = useTranslation('homepage');
   const [formData, setFormData] = useState<FormData>({
@@ -33,7 +38,6 @@ export default function BookingForm() {
     setIsSubmitting(true);
 
     // TODO: Add backend wiring for form submission
-    // This is a placeholder that simulates a submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setIsSubmitted(true);
@@ -41,31 +45,30 @@ export default function BookingForm() {
   };
 
   const inputClasses =
-    'w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors';
+    'w-full rounded-md border border-black/10 bg-white px-4 py-3 text-ink placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors';
 
   if (isSubmitted) {
     return (
-      <Section id="book" size="wide">
-        <GlassCard variant="elevated" className="max-w-xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-900 mb-4">Thank you</h2>
-          <p className="text-base text-gray-600">We will be in touch soon.</p>
-        </GlassCard>
+      <Section id="book" variant="paper" size="wide">
+        <div className="max-w-xl mx-auto text-center bg-white border border-black/10 rounded-md p-8 shadow-lg">
+          <h2 className="text-3xl font-bold tracking-tighter text-ink mb-4">Thank you</h2>
+          <p className="text-base text-black/60">We will be in touch soon.</p>
+        </div>
       </Section>
     );
   }
 
   return (
-    <Section id="book" size="wide">
-      <GlassCard variant="elevated" className="max-w-xl mx-auto">
-        <h2 className="text-2xl font-semibold tracking-tight text-gray-900 text-center mb-2">
+    <Section id="book" variant="paper" size="wide">
+      <div className="max-w-xl mx-auto bg-white border border-black/10 rounded-md p-8 shadow-lg">
+        <h2 className="text-2xl font-bold tracking-tighter text-ink text-center mb-2">
           {t('booking.title')}
         </h2>
-        <p className="text-base text-gray-600 text-center mb-8">{t('booking.subtitle')}</p>
+        <p className="text-base text-black/60 text-center mb-8">{t('booking.subtitle')}</p>
 
-        {/* TODO: Wire up to backend (Airtable, email service, or API endpoint) */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-ink mb-2">
               {t('booking.form.name')}
             </label>
             <input
@@ -81,7 +84,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-ink mb-2">
               {t('booking.form.email')}
             </label>
             <input
@@ -97,7 +100,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-ink mb-2">
               {t('booking.form.company')}
             </label>
             <input
@@ -112,7 +115,7 @@ export default function BookingForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-ink mb-2">
               {t('booking.form.message')}
             </label>
             <textarea
@@ -130,12 +133,12 @@ export default function BookingForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-lg bg-emerald-500 px-6 py-3 text-base font-medium text-white hover:bg-emerald-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full rounded-md bg-emerald-500 px-6 py-3 text-base font-medium text-white hover:bg-emerald-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Sending...' : t('booking.form.submit')}
           </button>
         </form>
-      </GlassCard>
+      </div>
     </Section>
   );
 }

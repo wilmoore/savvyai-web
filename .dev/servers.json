@@ -1,0 +1,7 @@
+{
+  "web": {
+    "command": "npx next dev -p {PORT}",
+    "preferredPort": 3426,
+    "healthCheck": "http://localhost:{PORT}"
+  }
+}

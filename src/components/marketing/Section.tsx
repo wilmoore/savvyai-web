@@ -1,21 +1,28 @@
+'use client';
+
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
-  variant?: 'default' | 'contrast' | 'dark' | 'neutral';
+  variant?: 'paper' | 'ink' | 'default' | 'contrast' | 'dark' | 'neutral';
   size?: 'default' | 'wide' | 'full';
+  animate?: boolean;
+  animationDelay?: number;
 }
 
 /**
- * Section component for Workshop Authority theme system.
+ * Section component for Editorial Paper & Ink theme system.
  *
  * Variants:
- * - default: White background (#FFFFFF) - Primary light sections
- * - contrast: Warm gray background (#FAFAF8) - Visual rhythm in light mode
- * - dark: Deep black background (#050505) - Authority sections (Protocol, Security)
- * - neutral: Subtle gray background (#F5F5F5) - Reassurance sections
+ * - paper: Paper White (#FFFFFF) - Light sections in zebra pattern
+ * - ink: Ink Black (#050505) - Dark sections in zebra pattern (applies theme-ink class)
+ * - default: Alias for paper (backwards compatibility)
+ * - contrast: Same as paper (backwards compatibility)
+ * - dark: Alias for ink (backwards compatibility)
+ * - neutral: Same as paper (backwards compatibility)
  *
  * Sizes:
  * - default: max-w-3xl for reading-optimized content
@@ -26,8 +33,10 @@ export default function Section({
   children,
   className,
   id,
-  variant = 'default',
+  variant = 'paper',
   size = 'default',
+  animate = true,
+  animationDelay = 0,
 }: SectionProps) {
   const sizeClasses = {
     default: 'max-w-3xl',
@@ -35,16 +44,48 @@ export default function Section({
     full: 'max-w-7xl',
   };
 
+  // Map legacy variants to new Paper & Ink system
+  const normalizedVariant =
+    variant === 'default' || variant === 'contrast' || variant === 'neutral'
+      ? 'paper'
+      : variant === 'dark'
+        ? 'ink'
+        : variant;
+
   const variantClasses = {
-    default: 'bg-white text-gray-900',
-    contrast: 'bg-warm-50 text-gray-900',
-    dark: 'bg-[#050505] text-white',
-    neutral: 'bg-gray-100 text-gray-900',
+    paper: 'bg-paper text-ink',
+    ink: 'bg-ink text-white theme-ink',
   };
 
+  const content = (
+    <div className={cn('container mx-auto px-4 md:px-6', sizeClasses[size])}>{children}</div>
+  );
+
+  if (!animate) {
+    return (
+      <section
+        id={id}
+        className={cn('py-16 md:py-24', variantClasses[normalizedVariant], className)}
+      >
+        {content}
+      </section>
+    );
+  }
+
   return (
-    <section id={id} className={cn('py-16 md:py-24', variantClasses[variant], className)}>
-      <div className={cn('container mx-auto px-4 md:px-6', sizeClasses[size])}>{children}</div>
-    </section>
+    <motion.section
+      id={id}
+      className={cn('py-16 md:py-24', variantClasses[normalizedVariant], className)}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{
+        duration: 0.6,
+        delay: animationDelay,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+    >
+      {content}
+    </motion.section>
   );
 }

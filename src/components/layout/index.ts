@@ -1,10 +1,13 @@
-// Workshop Authority Layout Primitives
+// Editorial Paper & Ink Layout Primitives
 export { default as SectionBand } from './SectionBand';
 export { default as BandLabel } from './BandLabel';
 export { default as OutcomeBlock } from './OutcomeBlock';
 export { default as ArtifactLabel } from './ArtifactLabel';
 
-// Cards (light mode styling in Workshop Authority)
+// Animation Components
+export { default as FadeInSection } from './FadeInSection';
+
+// Cards
 export { default as GlassCard } from './GlassCard';
 
 // Legacy Components (preserved for compatibility)

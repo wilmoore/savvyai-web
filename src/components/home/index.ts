@@ -1,10 +1,13 @@
 // Homepage section components
-// Order matches the final homepage section order specification
+// Order matches the Editorial Paper & Ink "Zebra" rhythm
 
-// 1. Hero (LIGHT) - Invitation + clarity
+// 1. Hero (INK) - Invitation + clarity
 export { default as Hero } from './Hero';
 
-// 2. Who This Is For (LIGHT, COMPACT) - Self-qualification
+// 2. Trust Bar (PAPER) - Social proof logos
+export { default as TrustBar } from './TrustBar';
+
+// 3. Who This Is For (PAPER) - Self-qualification
 export { default as WhoThisIsFor } from './WhoThisIsFor';
 
 // 3. Our Workshops (LIGHT, PROMINENT) - Commercial clarity
@@ -25,10 +28,13 @@ export { default as Protocol } from './Protocol';
 // 8. Why We Build a Pilot in 24 Hours (NEUTRAL) - Justification
 export { default as Pilot24 } from './Pilot24';
 
-// 9. What Makes This Different (LIGHT, COMPARATIVE) - Differentiation
+// 9. What Makes This Different (PAPER) - Differentiation
 export { default as Difference } from './Difference';
 
-// 10. Data, Security, and Boundaries (DARK – REASSURANCE) - Risk removal
+// 10. Stats Grid (INK) - Business Impact Numbers
+export { default as StatsGrid } from './StatsGrid';
+
+// 11. Data, Security, and Boundaries (INK) - Risk removal
 export { default as Safety } from './Safety';
 
 // 11. Quick Answers (FAQ) (LIGHT) - Objection handling

@@ -1,5 +1,5 @@
 {
-  "lastSequence": 18,
+  "lastSequence": 21,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -53,6 +53,14 @@
         "016-workshop-authority-light-theme.md",
         "017-section-band-layout-system.md",
         "018-tiered-label-system.md"
+      ]
+    },
+    {
+      "branch": "design/editorial-paper-ink-theme",
+      "adrs": [
+        "019-editorial-paper-ink-theme.md",
+        "020-framer-motion-section-animations.md",
+        "021-geist-sans-typography.md"
       ]
     }
   ]

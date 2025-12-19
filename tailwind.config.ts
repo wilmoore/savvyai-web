@@ -20,8 +20,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        inter: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-geist-sans)', 'Geist Sans', 'system-ui', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'Geist Mono', 'monospace'],
       },
       colors: {
@@ -30,11 +29,14 @@ export default {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        // Workshop Authority colors
-        warm: {
-          50: '#FAFAF8',
-          100: '#F5F5F0',
-          200: '#EBEBDE',
+        // Editorial Paper & Ink colors
+        ink: {
+          DEFAULT: '#050505',
+          secondary: '#0D1117',
+        },
+        paper: {
+          DEFAULT: '#FFFFFF',
+          secondary: '#FAFAFA',
         },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -80,6 +82,10 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      letterSpacing: {
+        tighter: '-0.04em',
+        editorial: '-0.03em',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -90,7 +96,7 @@ export default {
           to: { height: '0' },
         },
         'fade-up': {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         'fade-in': {
@@ -109,7 +115,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-up': 'fade-up 0.4s ease-out forwards',
+        'fade-up': 'fade-up 0.5s ease-out forwards',
         'fade-in': 'fade-in 0.4s ease-out forwards',
         'slide-in-left': 'slide-in-left 0.5s ease-out forwards',
         'slide-in-right': 'slide-in-right 0.5s ease-out forwards',

@@ -1,18 +1,16 @@
 'use client';
 
-import { Header, Footer, BookingForm, SectionGroup, Section } from '@/components/marketing';
+import { Header, Footer, BookingForm } from '@/components/marketing';
 import {
   Hero,
-  Problem,
-  Belief,
+  WhoThisIsFor,
+  OurWorkshops,
   HowWeWork,
-  Protocol,
-  Pilot24,
-  Credibility,
-  Difference,
   WorkshopsExplained,
   WorkshopOutcomes,
-  BridgeToProtocol,
+  Protocol,
+  Pilot24,
+  Difference,
   Safety,
   HomeFAQ,
   Audience,
@@ -20,71 +18,73 @@ import {
 } from '@/components/home';
 
 /**
- * Homepage - Workshop Authority Grammar
+ * Homepage - Final Section Order
  *
- * Band Structure:
- * - Orientation: Hero
- * - Problem: Problem
- * - Belief + Method: Belief, HowWeWork
- * - Program Structure: Protocol, Pilot24
- * - Workshop Details: WorkshopsExplained, WorkshopOutcomes
- * - Bridge: BridgeToProtocol
- * - Credibility: Credibility, Difference
- * - Reassurance: Safety, HomeFAQ, Audience
- * - Decision: StartCTA, BookingForm
+ * THE ONE RULE: Programs → Experience → Proof → Philosophy
+ * Never the other way around.
+ *
+ * Section Order:
+ * 1. HERO (LIGHT) - Invitation + clarity
+ * 2. WHO THIS IS FOR (LIGHT, COMPACT) - Self-qualification
+ * 3. OUR WORKSHOPS (LIGHT, PROMINENT) - Commercial clarity
+ * 4. HOW TEAMS WORK WITH SAVVY (NEUTRAL) - Reassurance
+ * 5. WHAT HAPPENS IN A WORKSHOP (LIGHT) - Visualization
+ * 6. WHAT TEAMS LEAVE WITH (LIGHT) - Tangibility
+ * 7. THE SAVVY PILOT PROTOCOL (DARK – AUTHORITY) - Credibility + IP
+ * 8. WHY WE BUILD A PILOT IN 24 HOURS (NEUTRAL) - Justification
+ * 9. WHAT MAKES THIS DIFFERENT (LIGHT, COMPARATIVE) - Differentiation
+ * 10. DATA, SECURITY, AND BOUNDARIES (DARK – REASSURANCE) - Risk removal
+ * 11. QUICK ANSWERS (FAQ) (LIGHT) - Objection handling
+ * 12. WHO THIS IS FOR / WHO THIS IS NOT FOR (LIGHT) - Qualification
+ * 13. FINAL CTA (LIGHT, STRONG) - Conversion
+ * 14. BOOK A CONVERSATION (FORM) - Capture intent
  */
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* Orientation Band - Hero standalone */}
+        {/* 1. HERO (LIGHT) - "What is this, and is it for me?" */}
         <Hero />
 
-        {/* Problem Band - The Challenge */}
-        <SectionGroup variant="contrast">
-          <Section size="wide">
-            <div className="grid md:grid-cols-2 gap-12">
-              <Problem />
-              <Belief />
-            </div>
-          </Section>
-        </SectionGroup>
+        {/* 2. WHO THIS IS FOR (LIGHT, COMPACT) - "Am I the intended audience?" */}
+        <WhoThisIsFor />
 
-        {/* Method Band - How We Work + Protocol Structure */}
-        <SectionGroup>
-          <HowWeWork />
-          <Protocol />
-          <Pilot24 />
-        </SectionGroup>
+        {/* 3. OUR WORKSHOPS (LIGHT, PROMINENT) - "What do you run?" */}
+        <OurWorkshops />
 
-        {/* Workshop Details Band */}
-        <SectionGroup variant="contrast">
-          <WorkshopsExplained />
-          <WorkshopOutcomes />
-        </SectionGroup>
+        {/* 4. HOW TEAMS WORK WITH SAVVY (NEUTRAL) - "How does engagement work?" */}
+        <HowWeWork />
 
-        {/* Bridge Band */}
-        <BridgeToProtocol />
+        {/* 5. WHAT HAPPENS IN A WORKSHOP (LIGHT) - "What would my team experience?" */}
+        <WorkshopsExplained />
 
-        {/* Credibility Band */}
-        <SectionGroup variant="contrast">
-          <Credibility />
-          <Difference />
-        </SectionGroup>
+        {/* 6. WHAT TEAMS LEAVE WITH (LIGHT) - "What do we own at the end?" */}
+        <WorkshopOutcomes />
 
-        {/* Reassurance Band */}
-        <SectionGroup>
-          <Safety />
-          <HomeFAQ />
-          <Audience />
-        </SectionGroup>
+        {/* 7. THE SAVVY PILOT PROTOCOL (DARK – AUTHORITY) - "Why Savvy specifically?" */}
+        <Protocol />
 
-        {/* Decision Band */}
-        <SectionGroup variant="contrast" className="pt-8 md:pt-12">
-          <StartCTA />
-          <BookingForm />
-        </SectionGroup>
+        {/* 8. WHY WE BUILD A PILOT IN 24 HOURS (NEUTRAL) - "Why do you work this way?" */}
+        <Pilot24 />
+
+        {/* 9. WHAT MAKES THIS DIFFERENT (LIGHT, COMPARATIVE) - "Why not someone else?" */}
+        <Difference />
+
+        {/* 10. DATA, SECURITY, AND BOUNDARIES (DARK – REASSURANCE) - "Is this safe?" */}
+        <Safety />
+
+        {/* 11. QUICK ANSWERS (FAQ) (LIGHT) - Objection handling */}
+        <HomeFAQ />
+
+        {/* 12. WHO THIS IS FOR / WHO THIS IS NOT FOR (LIGHT) - Qualification */}
+        <Audience />
+
+        {/* 13. FINAL CTA (LIGHT, STRONG) - "Every engagement starts with a workshop" */}
+        <StartCTA />
+
+        {/* 14. BOOK A CONVERSATION (FORM) - Capture intent */}
+        <BookingForm />
       </main>
       <Footer />
     </div>

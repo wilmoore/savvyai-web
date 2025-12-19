@@ -1,42 +1,56 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Shield } from 'lucide-react';
+import { Shield, Lock, Eye, FileText } from 'lucide-react';
 import { Section } from '@/components/marketing';
-import { BandLabel } from '@/components/layout';
 
+const icons = [Shield, Lock, Eye, FileText];
+
+/**
+ * Safety - Dark reassurance section
+ *
+ * Purpose: Risk removal
+ * Job: Calm procurement and legal brains
+ *
+ * This section should feel boring and competent.
+ * Answers: "Is this safe?"
+ */
 export default function Safety() {
   const { t } = useTranslation('homepage');
   const items = t('safety.items', { returnObjects: true }) as string[];
 
   return (
-    <Section size="wide">
-      <div className="grid md:grid-cols-[1fr_1.5fr] gap-12 md:gap-16 items-start">
-        <div>
-          <BandLabel>Trust & Safety</BandLabel>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-6">
+    <Section size="full" variant="dark">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Shield className="w-5 h-5 text-emerald-400" />
+            <span className="text-sm font-medium text-emerald-400 uppercase tracking-wider">
+              Security
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
             {t('safety.title')}
           </h2>
-          <p className="text-lg text-gray-600">{t('safety.intro')}</p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">{t('safety.intro')}</p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
-          <ul className="space-y-4">
-            {items.map((item, index) => (
-              <li key={index} className="flex items-start gap-3 text-gray-600">
-                <Shield
-                  className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0"
-                  strokeWidth={1.5}
-                />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="text-base text-gray-700 mt-6 pt-4 border-t border-gray-200">
-            {t('safety.closing')}
-          </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          {items.map((item, index) => {
+            const Icon = icons[index % icons.length];
+            return (
+              <div
+                key={index}
+                className="flex items-start gap-4 p-5 bg-white/5 border border-white/10 rounded-lg"
+              >
+                <Icon className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                <span className="text-sm text-gray-300">{item}</span>
+              </div>
+            );
+          })}
         </div>
+
+        <p className="text-center text-sm text-gray-500 mt-8">{t('safety.closing')}</p>
       </div>
     </Section>
   );

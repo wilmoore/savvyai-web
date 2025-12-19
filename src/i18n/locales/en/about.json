@@ -1,0 +1,22 @@
+{
+  "sectionTitle": "Our Mission",
+  "manifesto": {
+    "prefix": "At Savvy AI, we cut through the noise.",
+    "highlight": "We build AI that works.",
+    "suffix": "Pragmatic solutions that solve problems that matter and deliver measurable results."
+  },
+  "principles": {
+    "speed": {
+      "title": "Speed and Practicality Over Hype",
+      "description": "We deliver working prototypes the same day; real execution, and a real demo URL."
+    },
+    "partnership": {
+      "title": "True Partnership",
+      "description": "We work alongside your team, sharing knowledge and building lasting capabilities."
+    },
+    "innovation": {
+      "title": "Practical Innovation",
+      "description": "Solution we choose to create serves a clear business purpose and delivers measurable results."
+    }
+  }
+}

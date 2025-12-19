@@ -1,7 +1,8 @@
 {
-  "lastSequence": 3,
+  "lastSequence": 5,
   "entries": [
     {"branch": "fix/remove-book-navigation-links", "adrs": ["001-remove-book-links-from-navigation.md"]},
-    {"branch": "feature/nextjs-migration-and-gpt-guide", "adrs": ["002-migrate-from-vite-to-nextjs.md", "003-client-components-for-interactive-pages.md"]}
+    {"branch": "feature/nextjs-migration-and-gpt-guide", "adrs": ["002-migrate-from-vite-to-nextjs.md", "003-client-components-for-interactive-pages.md"]},
+    {"branch": "feature/add-i18n-with-commit-hooks", "adrs": ["004-use-i18next-for-internationalization.md", "005-enforce-i18n-with-eslint-and-commit-hooks.md"]}
   ]
 }

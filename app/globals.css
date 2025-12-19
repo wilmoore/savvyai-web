@@ -54,8 +54,8 @@ All colors MUST be HSL.
     --savvy-gray-700: 210 11% 25%;
 
     /* Professional Blue Gradients */
-    --gradient-hero: linear-gradient(135deg, #0B1120, #111827);
-    --gradient-secondary: linear-gradient(90deg, #2563EB 0%, #6366F1 100%);
+    --gradient-hero: linear-gradient(135deg, #0b1120, #111827);
+    --gradient-secondary: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--savvy-pure-black)), hsl(215 20% 6%));
     --gradient-accent: linear-gradient(90deg, #2563EB, #3B82F6);
     --gradient-cta: linear-gradient(135deg, #2563EB, #3B82F6);
@@ -131,15 +131,18 @@ All colors MUST be HSL.
 
 /* Word streaming animation for hero headline */
 @keyframes word-stream {
-  0%, 20% {
+  0%,
+  20% {
     opacity: 0;
     transform: translateX(30px);
   }
-  25%, 45% {
+  25%,
+  45% {
     opacity: 1;
     transform: translateX(0);
   }
-  50%, 100% {
+  50%,
+  100% {
     opacity: 0;
     transform: translateX(-30px);
   }

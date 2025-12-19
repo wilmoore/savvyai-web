@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "prototypeDelivery": {
+      "value": "< 24 hr",
+      "label": "Prototype Delivery"
+    },
+    "experience": {
+      "value": "10+",
+      "label": "Years Engineering Experience"
+    },
+    "rescues": {
+      "value": "3",
+      "label": "Code Rescues"
+    }
+  }
+}

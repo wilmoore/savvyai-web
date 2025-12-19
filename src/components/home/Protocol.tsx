@@ -15,11 +15,11 @@ export default function Protocol() {
   const phases = t('protocol.phases', { returnObjects: true }) as Phase[];
 
   return (
-    <Section>
+    <Section variant="muted">
       <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
         {t('protocol.title')}
       </h2>
-      <p className="text-lg text-muted-foreground mb-10">{t('protocol.subtitle')}</p>
+      <p className="text-xl text-muted-foreground mb-10">{t('protocol.subtitle')}</p>
 
       <div className="space-y-8">
         {phases.map((phase) => (

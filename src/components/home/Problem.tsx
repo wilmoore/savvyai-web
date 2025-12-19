@@ -14,8 +14,8 @@ export default function Problem() {
       </h2>
       <div className="space-y-6">
         <div className="space-y-1">
-          <p className="text-lg text-foreground">{t('problem.intro.line1')}</p>
-          <p className="text-lg text-foreground">{t('problem.intro.line2')}</p>
+          <p className="text-xl text-muted-foreground">{t('problem.intro.line1')}</p>
+          <p className="text-xl text-muted-foreground">{t('problem.intro.line2')}</p>
         </div>
 
         <div className="mt-8">
@@ -31,8 +31,8 @@ export default function Problem() {
         </div>
 
         <div className="mt-8 space-y-1">
-          <p className="text-lg text-foreground">{t('problem.conclusion.line1')}</p>
-          <p className="text-lg font-medium text-foreground">{t('problem.conclusion.line2')}</p>
+          <p className="text-base text-foreground">{t('problem.conclusion.line1')}</p>
+          <p className="text-base font-medium text-foreground">{t('problem.conclusion.line2')}</p>
         </div>
       </div>
     </Section>

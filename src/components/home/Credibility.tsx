@@ -12,9 +12,9 @@ export default function Credibility() {
         {t('credibility.title')}
       </h2>
       <div className="space-y-6">
-        <p className="text-lg text-foreground">{t('credibility.content.line1')}</p>
-        <p className="text-lg text-muted-foreground">{t('credibility.content.line2')}</p>
-        <p className="text-lg text-foreground font-medium">{t('credibility.content.line3')}</p>
+        <p className="text-xl text-muted-foreground">{t('credibility.content.line1')}</p>
+        <p className="text-base text-muted-foreground">{t('credibility.content.line2')}</p>
+        <p className="text-base text-foreground font-medium">{t('credibility.content.line3')}</p>
       </div>
     </Section>
   );

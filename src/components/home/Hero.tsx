@@ -7,16 +7,16 @@ export default function Hero() {
   const { t } = useTranslation('homepage');
 
   return (
-    <Section className="pt-20 md:pt-32 pb-16 md:pb-24">
+    <Section className="pt-24 md:pt-36 pb-20 md:pb-32" size="wide">
       <div className="text-center">
-        <p className="text-lg md:text-xl text-muted-foreground mb-2">{t('hero.tagline')}</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
+        <p className="text-base md:text-lg text-muted-foreground mb-4">{t('hero.tagline')}</p>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold leading-none tracking-tight mb-8">
           {t('hero.headline')}
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
           {t('hero.description')}
         </p>
-        <div className="space-y-2 text-base md:text-lg text-foreground mb-10">
+        <div className="space-y-1 text-base text-foreground mb-12 max-w-xl mx-auto">
           <p>{t('hero.clarification.line1')}</p>
           <p>{t('hero.clarification.line2')}</p>
         </div>

@@ -13,7 +13,7 @@ export default function WorkshopOutcomes() {
         {t('workshopOutcomes.title')}
       </h2>
       <div className="space-y-6">
-        <p className="text-lg text-foreground">{t('workshopOutcomes.intro')}</p>
+        <p className="text-xl text-muted-foreground">{t('workshopOutcomes.intro')}</p>
 
         <div className="mt-6">
           <p className="text-base font-medium text-foreground mb-4">
@@ -29,13 +29,15 @@ export default function WorkshopOutcomes() {
           </ul>
         </div>
 
-        <p className="text-lg text-foreground mt-8">{t('workshopOutcomes.emotional')}</p>
+        <p className="text-base text-foreground mt-8">{t('workshopOutcomes.emotional')}</p>
 
         <div className="mt-8 border-l-2 border-primary/30 pl-6">
-          <p className="text-lg font-medium text-foreground">
+          <p className="text-base font-medium text-foreground">
             {t('workshopOutcomes.validOutcome.line1')}
           </p>
-          <p className="text-muted-foreground mt-2">{t('workshopOutcomes.validOutcome.line2')}</p>
+          <p className="text-sm text-muted-foreground mt-2">
+            {t('workshopOutcomes.validOutcome.line2')}
+          </p>
         </div>
       </div>
     </Section>

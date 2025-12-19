@@ -13,7 +13,7 @@ export default function Pilot24() {
         {t('pilot24.title')}
       </h2>
       <div className="space-y-6">
-        <p className="text-lg text-foreground">{t('pilot24.intro')}</p>
+        <p className="text-xl text-muted-foreground">{t('pilot24.intro')}</p>
 
         <div className="mt-6">
           <p className="text-base text-foreground mb-4">{t('pilot24.subtitle')}</p>

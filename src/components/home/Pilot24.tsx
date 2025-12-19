@@ -16,6 +16,13 @@ export default function Pilot24() {
 
   return (
     <Section size="wide" variant="paper">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 08 / METHOD ]
+        </span>
+      </div>
+
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <Clock className="w-6 h-6 text-emerald-500" />
@@ -24,7 +31,7 @@ export default function Pilot24() {
           </p>
         </div>
 
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-ink mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-6">
           {t('pilot24.title')}
         </h2>
 

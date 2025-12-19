@@ -15,6 +15,13 @@ export default function WhoThisIsFor() {
 
   return (
     <Section variant="paper" size="wide" className="py-12 md:py-16">
+      {/* Section ID */}
+      <div className="mb-4">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 02 / AUDIENCE ]
+        </span>
+      </div>
+
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('whoThisIsFor.label')}
       </p>

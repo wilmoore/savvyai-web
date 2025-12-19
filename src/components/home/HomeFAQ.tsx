@@ -19,10 +19,17 @@ export default function HomeFAQ() {
 
   return (
     <Section variant="paper" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 12 / FAQ ]
+        </span>
+      </div>
+
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('homeFaq.label')}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-ink mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-12">
         {t('homeFaq.title')}
       </h2>
 

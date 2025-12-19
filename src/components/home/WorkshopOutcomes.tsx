@@ -18,10 +18,17 @@ export default function WorkshopOutcomes() {
 
   return (
     <Section variant="paper" size="wide">
+      {/* Section ID */}
+      <div className="mb-6">
+        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
+          [ 06 / ARTIFACTS ]
+        </span>
+      </div>
+
       <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
         {t('workshopOutcomes.artifactLabel')}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-ink mb-6">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-6">
         {t('workshopOutcomes.title')}
       </h2>
       <p className="text-lg text-black/60 mb-10">{t('workshopOutcomes.intro')}</p>

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 interface CTAButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'secondary-ink';
+  variant?: 'primary' | 'primary-accent' | 'secondary' | 'secondary-ink';
   className?: string;
 }
 
@@ -13,6 +13,7 @@ interface CTAButtonProps {
  *
  * Variants:
  * - primary: Emerald background, white text (works on both ink/paper)
+ * - primary-accent: Emerald background with 1px emerald top-border accent (for hero CTAs)
  * - secondary: White background with black border (for paper sections)
  * - secondary-ink: Transparent with white border (for ink sections)
  */
@@ -27,6 +28,8 @@ export default function CTAButton({
 
   const variantStyles = {
     primary: 'bg-emerald-500 text-white hover:bg-emerald-600 focus-visible:ring-offset-transparent',
+    'primary-accent':
+      'bg-emerald-500 text-white hover:bg-emerald-600 focus-visible:ring-offset-transparent border-t border-emerald-300',
     secondary:
       'border border-black/20 bg-white text-ink hover:bg-black/5 hover:border-black/30 focus-visible:ring-offset-white',
     'secondary-ink':

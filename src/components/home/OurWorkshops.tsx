@@ -1,8 +1,10 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Clock, Users, Check } from 'lucide-react';
+import Link from 'next/link';
+import { Clock, Users, Check, ArrowRight } from 'lucide-react';
 import { Section, SectionID, CTAButton } from '@/components/marketing';
+import { cn } from '@/lib/utils';
 
 interface Workshop {
   name: string;
@@ -10,14 +12,24 @@ interface Workshop {
   audience: string;
   duration: string;
   outcomes: string[];
+  status: 'active' | 'coming-soon';
+  statusLabel: string;
+  href?: string;
+  waitlistText?: string;
 }
 
 /**
  * OurWorkshops - Premium Folder Aesthetic Cards
  *
- * Cards styled like high-end studio folders with crisp borders.
- * Geist Mono for tags, emerald checkmarks for outcomes.
- * Sharp minimal shadows for "printed card" feel.
+ * Active Card (AI Literate):
+ * - Hover lift + Emerald glow effect
+ * - Routes to /workshops/ai-literate
+ * - "Now Enrolling" status tag
+ *
+ * Roadmap Cards (Coming Soon):
+ * - Grayscale styling, 50% opacity
+ * - "Coming Soon" tag, no hover lift
+ * - Secondary "Get notified" / "Join waitlist" text link
  */
 export default function OurWorkshops() {
   const { t } = useTranslation('homepage');
@@ -38,55 +50,141 @@ export default function OurWorkshops() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {workshops.map((workshop, index) => (
-          <div
-            key={index}
-            className="bg-white border border-[#E2E8F0] rounded-md p-6 shadow-sm hover:shadow-md hover:border-black/20 transition-all duration-300"
-          >
-            {/* Workshop tag in Geist Mono */}
-            <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
-              {String(index + 1).padStart(2, '0')} / {workshop.duration.toUpperCase()}
-            </p>
+        {workshops.map((workshop, index) => {
+          const isActive = workshop.status === 'active';
 
-            <h3 className="text-xl font-semibold tracking-tight text-ink mb-3">{workshop.name}</h3>
-
-            <p className="text-sm text-black/60 mb-4">{workshop.description}</p>
-
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center gap-2 text-sm text-black/50">
-                <Users className="w-4 h-4 text-black/40" />
-                <span>{workshop.audience}</span>
+          const cardContent = (
+            <div
+              className={cn(
+                'relative bg-white border rounded-md p-6 transition-all duration-300 h-full',
+                isActive
+                  ? 'border-emerald-200 shadow-sm hover:shadow-lg hover:shadow-emerald-500/10 hover:-translate-y-1 hover:border-emerald-300 cursor-pointer'
+                  : 'border-black/10 opacity-60 grayscale'
+              )}
+            >
+              {/* Status badge */}
+              <div className="flex items-center justify-between mb-4">
+                <p
+                  className={cn(
+                    'text-xs font-mono uppercase tracking-widest',
+                    isActive ? 'text-emerald-500' : 'text-black/40'
+                  )}
+                >
+                  {String(index + 1).padStart(2, '0')} / {workshop.duration.toUpperCase()}
+                </p>
+                <span
+                  className={cn(
+                    'text-xs font-mono uppercase tracking-wider px-2 py-1 rounded',
+                    isActive
+                      ? 'bg-emerald-50 text-emerald-600 border border-emerald-200'
+                      : 'bg-black/5 text-black/40 border border-black/10'
+                  )}
+                >
+                  {workshop.statusLabel}
+                </span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-black/50">
-                <Clock className="w-4 h-4 text-black/40" />
-                <span>{workshop.duration}</span>
-              </div>
-            </div>
 
-            {/* Teams leave with - Structured inventory */}
-            <div className="border-t border-black/10 pt-4">
-              <p className="text-xs font-mono uppercase tracking-wider text-black/40 mb-3">
-                Teams leave with
+              <h3
+                className={cn(
+                  'text-xl font-semibold tracking-tight mb-3',
+                  isActive ? 'text-ink' : 'text-black/50'
+                )}
+              >
+                {workshop.name}
+              </h3>
+
+              <p className={cn('text-sm mb-4', isActive ? 'text-black/60' : 'text-black/40')}>
+                {workshop.description}
               </p>
-              <ul className="space-y-2">
-                {workshop.outcomes.map((outcome, idx) => (
-                  <li key={idx} className="text-sm text-black/70 flex items-start gap-2">
-                    <Check
-                      className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0"
-                      strokeWidth={2.5}
-                    />
-                    <span>{outcome}</span>
-                  </li>
-                ))}
-              </ul>
+
+              <div className="space-y-2 mb-4">
+                <div
+                  className={cn(
+                    'flex items-center gap-2 text-sm',
+                    isActive ? 'text-black/50' : 'text-black/30'
+                  )}
+                >
+                  <Users className={cn('w-4 h-4', isActive ? 'text-black/40' : 'text-black/20')} />
+                  <span>{workshop.audience}</span>
+                </div>
+                <div
+                  className={cn(
+                    'flex items-center gap-2 text-sm',
+                    isActive ? 'text-black/50' : 'text-black/30'
+                  )}
+                >
+                  <Clock className={cn('w-4 h-4', isActive ? 'text-black/40' : 'text-black/20')} />
+                  <span>{workshop.duration}</span>
+                </div>
+              </div>
+
+              {/* Teams leave with - Structured inventory */}
+              <div className="border-t border-black/10 pt-4">
+                <p
+                  className={cn(
+                    'text-xs font-mono uppercase tracking-wider mb-3',
+                    isActive ? 'text-black/40' : 'text-black/30'
+                  )}
+                >
+                  Teams leave with
+                </p>
+                <ul className="space-y-2">
+                  {workshop.outcomes.map((outcome, idx) => (
+                    <li
+                      key={idx}
+                      className={cn(
+                        'text-sm flex items-start gap-2',
+                        isActive ? 'text-black/70' : 'text-black/40'
+                      )}
+                    >
+                      <Check
+                        className={cn(
+                          'w-4 h-4 mt-0.5 flex-shrink-0',
+                          isActive ? 'text-emerald-500' : 'text-black/30'
+                        )}
+                        strokeWidth={2.5}
+                      />
+                      <span>{outcome}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Waitlist link for coming-soon cards */}
+              {!isActive && workshop.waitlistText && (
+                <div className="mt-4 pt-4 border-t border-black/10">
+                  <button className="text-sm text-black/50 hover:text-black/70 underline underline-offset-2 transition-colors">
+                    {workshop.waitlistText}
+                  </button>
+                </div>
+              )}
+
+              {/* Arrow indicator for active card */}
+              {isActive && (
+                <div className="absolute bottom-6 right-6">
+                  <ArrowRight className="w-5 h-5 text-emerald-500" />
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          );
+
+          // Wrap active cards in Link
+          if (isActive && workshop.href) {
+            return (
+              <Link key={index} href={workshop.href} className="block">
+                {cardContent}
+              </Link>
+            );
+          }
+
+          return <div key={index}>{cardContent}</div>;
+        })}
       </div>
 
+      {/* Primary CTA - View AI Literate Curriculum */}
       <div className="mt-10 flex justify-center">
-        <CTAButton href="#book" variant="primary">
-          {t('ourWorkshops.cta')}
+        <CTAButton href="/workshops/ai-literate" variant="primary">
+          {t('ourWorkshops.primaryCta')}
         </CTAButton>
       </div>
     </Section>

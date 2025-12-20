@@ -1,5 +1,5 @@
 {
-  "lastSequence": 25,
+  "lastSequence": 28,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -70,6 +70,14 @@
     {
       "branch": "fix/alignment-drift-brand-authority",
       "adrs": ["024-shared-section-id-component.md", "025-visual-inventory-svg-illustrations.md"]
+    },
+    {
+      "branch": "feature/editorial-noir-workshop-first",
+      "adrs": [
+        "026-shell-architecture-for-section-alignment.md",
+        "027-workshop-card-state-system.md",
+        "028-external-redirect-routes-for-sharing.md"
+      ]
     }
   ]
 }

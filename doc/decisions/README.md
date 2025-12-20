@@ -45,3 +45,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [023. Paper-on-Desk Stats Pattern](023-paper-on-desk-stats-pattern.md)
 - [024. Shared SectionID Component](024-shared-section-id-component.md)
 - [025. Visual Inventory SVG Illustrations](025-visual-inventory-svg-illustrations.md)
+- [026. Shell Architecture for Section Alignment](026-shell-architecture-for-section-alignment.md)
+- [027. Workshop Card State System](027-workshop-card-state-system.md)
+- [028. External Redirect Routes for Sharing](028-external-redirect-routes-for-sharing.md)

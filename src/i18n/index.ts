@@ -14,6 +14,7 @@ import footerEn from './locales/en/footer.json';
 import errorsEn from './locales/en/errors.json';
 import homepageEn from './locales/en/homepage.json';
 import protocolEn from './locales/en/protocol.json';
+import workshopsEn from './locales/en/workshops.json';
 
 const resources = {
   en: {
@@ -28,6 +29,7 @@ const resources = {
     errors: errorsEn,
     homepage: homepageEn,
     protocol: protocolEn,
+    workshops: workshopsEn,
   },
 };
 
@@ -50,6 +52,7 @@ i18n
       'errors',
       'homepage',
       'protocol',
+      'workshops',
     ],
     interpolation: {
       escapeValue: false, // React already escapes values

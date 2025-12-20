@@ -28,28 +28,38 @@
     "subtitle": "Every engagement starts here. Choose the format that fits your team.",
     "workshops": [
       {
-        "name": "AI Foundations",
+        "name": "AI Literate",
         "description": "For teams starting from scratch. Build shared understanding of what AI can and cannot do.",
         "audience": "Cross-functional teams",
         "duration": "Half-day",
-        "outcomes": ["Shared AI vocabulary", "Workflow audit", "First use case identified"]
+        "status": "active",
+        "statusLabel": "Now Enrolling",
+        "outcomes": ["Shared AI vocabulary", "Workflow audit", "First use case identified"],
+        "href": "/workshops/ai-literate"
       },
       {
         "name": "Workflow Integration",
         "description": "For teams with a specific problem. Design how AI fits into existing processes.",
         "audience": "Operations & product teams",
         "duration": "Full-day",
-        "outcomes": ["Process mapping", "Integration plan", "Pilot scope defined"]
+        "status": "coming-soon",
+        "statusLabel": "Coming Soon",
+        "outcomes": ["Process mapping", "Integration plan", "Pilot scope defined"],
+        "waitlistText": "Get notified"
       },
       {
         "name": "24-Hour Pilot Build",
         "description": "For teams ready to test. Go from workshop clarity to working prototype.",
         "audience": "Teams post-workshop",
         "duration": "24 hours",
-        "outcomes": ["Working AI pilot", "Documentation", "Handoff training"]
+        "status": "coming-soon",
+        "statusLabel": "Coming Soon",
+        "outcomes": ["Working AI pilot", "Documentation", "Handoff training"],
+        "waitlistText": "Join waitlist"
       }
     ],
-    "cta": "Book a Workshop"
+    "cta": "Book a Workshop",
+    "primaryCta": "View AI Literate Curriculum"
   },
   "howTeamsWork": {
     "label": "How it works",

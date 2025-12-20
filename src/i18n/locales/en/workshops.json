@@ -1,0 +1,82 @@
+{
+  "aiLiterate": {
+    "hero": {
+      "label": "Workshop",
+      "title": "AI Literate",
+      "subtitle": "Build shared understanding of what AI can and cannot do. Leave with a clear plan for your first pilot.",
+      "status": "Now Enrolling",
+      "duration": "Half-day",
+      "format": "In-person or virtual"
+    },
+    "definition": {
+      "label": "What is AI Literacy?",
+      "title": "The ability to evaluate, apply, and govern AI tools within your organization.",
+      "description": "AI Literacy is not about becoming a developer. It is about building the judgment to know when AI is the right tool, what it can realistically accomplish, and how to implement it responsibly within your workflows.",
+      "outcomes": [
+        "Evaluate AI tools without vendor hype",
+        "Identify high-value automation opportunities",
+        "Communicate AI capabilities to stakeholders",
+        "Set realistic expectations for AI projects"
+      ]
+    },
+    "audience": {
+      "forLabel": "Who This Is For",
+      "forItems": [
+        "Operations leaders exploring AI adoption",
+        "Product managers evaluating AI features",
+        "Department heads building AI strategy",
+        "Cross-functional teams needing shared vocabulary"
+      ],
+      "notForLabel": "Who This Is Not For",
+      "notForItems": [
+        "Teams looking for slide decks and theory",
+        "Anyone expecting AI to replace their team",
+        "Organizations without real workflows to improve"
+      ]
+    },
+    "modality": {
+      "label": "Workshop Modality",
+      "title": "Structured, interactive, outcome-focused.",
+      "description": "This is not a presentation. We bring your team together to work through real material. You bring the workflows, the frustrations, and the questions. We bring structure, AI fluency, and facilitation.",
+      "detailsLabel": "Workshop Details",
+      "format": {
+        "duration": "Half-day (4 hours)",
+        "participants": "6-15 team members",
+        "delivery": "In-person preferred, virtual available",
+        "prep": "Pre-workshop workflow survey"
+      }
+    },
+    "artifacts": {
+      "label": "What You Leave With",
+      "title": "Tangible artifacts, not just insights.",
+      "items": [
+        {
+          "title": "AI Capability Map",
+          "description": "A clear picture of what AI can and cannot do for your specific use cases."
+        },
+        {
+          "title": "Workflow Audit",
+          "description": "Your existing processes mapped with AI opportunity zones highlighted."
+        },
+        {
+          "title": "Pilot Recommendation",
+          "description": "One concrete use case ready for a 24-hour proof-of-concept build."
+        },
+        {
+          "title": "Shared Vocabulary",
+          "description": "Your team aligned on AI terminology and realistic expectations."
+        }
+      ]
+    },
+    "cta": {
+      "label": "Ready to Build AI Literacy?",
+      "title": "Register for the next session.",
+      "description": "Upcoming sessions are listed on Luma. Secure your team's spot.",
+      "primary": "Register on Luma",
+      "secondary": "See Upcoming Sessions",
+      "lumaUrl": "https://lu.ma/savvy-ai-literate",
+      "lumaCaption": "Registration handled securely via Luma."
+    },
+    "backToPrograms": "Back to Programs"
+  }
+}

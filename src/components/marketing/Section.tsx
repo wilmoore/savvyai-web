@@ -11,10 +11,19 @@ interface SectionProps {
   size?: 'default' | 'wide' | 'full';
   animate?: boolean;
   animationDelay?: number;
+  /** When true, uses shell architecture (7xl outer, variable inner) */
+  shell?: boolean;
 }
 
 /**
  * Section component for Editorial Paper & Ink theme system.
+ *
+ * Architecture:
+ * - Shell Mode (shell=true): Outer 7xl container creates consistent left edge for SectionIDs.
+ *   Content constrained to variable width (3xl/5xl/7xl) but LEFT-ALIGNED, not centered.
+ *   This creates a vertical "spine" for metadata tags while maintaining comfortable typography.
+ *
+ * - Legacy Mode (shell=false): Original centered container behavior for backwards compatibility.
  *
  * Variants:
  * - paper: Paper White (#FFFFFF) - Light sections in zebra pattern
@@ -37,6 +46,7 @@ export default function Section({
   size = 'default',
   animate = true,
   animationDelay = 0,
+  shell = true,
 }: SectionProps) {
   const sizeClasses = {
     default: 'max-w-3xl',
@@ -57,7 +67,14 @@ export default function Section({
     ink: 'bg-ink text-white theme-ink',
   };
 
-  const content = (
+  // Shell architecture: 7xl outer container, variable inner content
+  // Creates consistent left edge for SectionIDs across all sections
+  const content = shell ? (
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className={cn(sizeClasses[size])}>{children}</div>
+    </div>
+  ) : (
+    // Legacy: centered container (backwards compatibility)
     <div className={cn('container mx-auto px-4 md:px-6', sizeClasses[size])}>{children}</div>
   );
 

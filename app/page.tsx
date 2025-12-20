@@ -20,80 +20,87 @@ import {
 } from '@/components/home';
 
 /**
- * Homepage - Editorial Paper & Ink "Zebra" Rhythm
+ * Homepage - Institutional Perfection "High-Contrast" Zebra Rhythm
  *
  * THE ONE RULE: Programs -> Experience -> Proof -> Philosophy
  * Never the other way around.
  *
- * Section Order (Zebra Pattern):
- * 1. HERO (INK) - Billboard statement
- * 2. TRUST BAR (PAPER) - Logo wall / social proof
- * 3. WHO THIS IS FOR (PAPER) - Self-qualification
- * 4. OUR WORKSHOPS (PAPER) - Commercial clarity
- * 5. HOW TEAMS WORK (INK) - Technical blueprint
- * 6. WHAT HAPPENS IN A WORKSHOP (PAPER) - Visualization
- * 7. WHAT TEAMS LEAVE WITH (PAPER) - Artifact inventory
- * 8. THE SAVVY PILOT PROTOCOL (INK) - Credibility + IP
- * 9. WHY WE BUILD A PILOT IN 24 HOURS (PAPER) - Justification
- * 10. WHAT MAKES THIS DIFFERENT (PAPER) - Differentiation
- * 11. STATS GRID (INK) - Business impact numbers
- * 12. DATA, SECURITY, AND BOUNDARIES (INK) - Risk removal
- * 13. QUICK ANSWERS (FAQ) (PAPER) - Objection handling
- * 14. WHO THIS IS FOR / WHO THIS IS NOT FOR (PAPER) - Qualification
- * 15. FINAL CTA (INK) - Conversion
- * 16. BOOK A CONVERSATION (PAPER) - Lead capture
+ * DESIGN SYSTEM: Editorial Noir - Strict Binary Pattern
+ * - INK: #050505 (Ink Black) - Authority, premium, systems
+ * - PAPER: #FFFFFF (Stark White) - Clarity, readability, breathing room
+ *
+ * Section Order (Perfect Alternating Zebra):
+ * — HERO (INK) - Billboard statement (no SectionID)
+ * 01 TRUST (INK) - Logo wall / social proof
+ * 02 QUALIFICATION (PAPER) - Self-qualification
+ * 03 PROGRAMS (INK) - Workshop cards with authority
+ * 04 PROCESS (PAPER) - Technical blueprint
+ * 05 EXPERIENCE (INK) - Workshop visualization
+ * 06 ARTIFACTS (PAPER) - Deliverables inventory
+ * 07 PROTOCOL (INK) - Systems blueprint
+ * 08 METHOD (PAPER) - 24-hour pitch
+ * 09 CONTRAST (INK) - Why Us comparison
+ * 10 RESULTS (PAPER) - CRITICAL: Black numbers on white
+ * 11 SECURITY (INK) - Data security assurances
+ * 12 FAQ (PAPER) - Objection handling
+ * 13 QUALIFICATION (INK) - Who is/isn't it for
+ * 14 NEXT (PAPER) - Pre-CTA reset
+ * 15 CONTACT (INK) - Institutional close
+ *
+ * SectionID SPINE: All [ XX / NAME ] tags align to the same vertical axis
+ * via max-w-7xl shell architecture.
  */
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* 1. HERO (INK) - Billboard statement */}
+        {/* — HERO (INK) - Billboard statement */}
         <Hero />
 
-        {/* 2. TRUST BAR (PAPER) - Logo wall / social proof */}
+        {/* 01 TRUST (INK) - Logo wall / social proof */}
         <TrustBar />
 
-        {/* 3. WHO THIS IS FOR (PAPER) - Self-qualification */}
+        {/* 02 QUALIFICATION (PAPER) - Self-qualification */}
         <WhoThisIsFor />
 
-        {/* 4. OUR WORKSHOPS (PAPER) - Commercial clarity */}
+        {/* 03 PROGRAMS (INK) - Workshop cards with authority */}
         <OurWorkshops />
 
-        {/* 5. HOW TEAMS WORK (INK) - Technical blueprint */}
+        {/* 04 PROCESS (PAPER) - Technical blueprint */}
         <HowWeWork />
 
-        {/* 6. WHAT HAPPENS IN A WORKSHOP (PAPER) - Visualization */}
+        {/* 05 EXPERIENCE (INK) - Workshop visualization */}
         <WorkshopsExplained />
 
-        {/* 7. WHAT TEAMS LEAVE WITH (PAPER) - Artifact inventory */}
+        {/* 06 ARTIFACTS (PAPER) - Deliverables inventory */}
         <WorkshopOutcomes />
 
-        {/* 8. THE SAVVY PILOT PROTOCOL (INK) - Credibility + IP */}
+        {/* 07 PROTOCOL (INK) - Systems blueprint */}
         <Protocol />
 
-        {/* 9. WHY WE BUILD A PILOT IN 24 HOURS (PAPER) - Justification */}
+        {/* 08 METHOD (PAPER) - 24-hour pitch */}
         <Pilot24 />
 
-        {/* 10. WHAT MAKES THIS DIFFERENT (PAPER) - Differentiation */}
+        {/* 09 CONTRAST (INK) - Why Us comparison */}
         <Difference />
 
-        {/* 11. STATS GRID (INK) - Business impact numbers */}
+        {/* 10 RESULTS (PAPER) - CRITICAL: Black numbers on white */}
         <StatsGrid />
 
-        {/* 12. DATA, SECURITY, AND BOUNDARIES (INK) - Risk removal */}
+        {/* 11 SECURITY (INK) - Data security assurances */}
         <Safety />
 
-        {/* 13. QUICK ANSWERS (FAQ) (PAPER) - Objection handling */}
+        {/* 12 FAQ (PAPER) - Objection handling */}
         <HomeFAQ />
 
-        {/* 14. WHO THIS IS FOR / WHO THIS IS NOT FOR (PAPER) - Qualification */}
+        {/* 13 QUALIFICATION (INK) - Who is/isn't it for */}
         <Audience />
 
-        {/* 15. FINAL CTA (INK) - Conversion */}
+        {/* 14 NEXT (PAPER) - Pre-CTA reset */}
         <StartCTA />
 
-        {/* 16. BOOK A CONVERSATION (PAPER) - Lead capture */}
+        {/* 15 CONTACT (INK) - Institutional close */}
         <BookingForm />
       </main>
       <Footer />

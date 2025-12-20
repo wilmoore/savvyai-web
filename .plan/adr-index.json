@@ -1,5 +1,5 @@
 {
-  "lastSequence": 28,
+  "lastSequence": 29,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -78,6 +78,10 @@
         "027-workshop-card-state-system.md",
         "028-external-redirect-routes-for-sharing.md"
       ]
+    },
+    {
+      "branch": "design/institutional-perfection-final",
+      "adrs": ["029-institutional-perfection-zebra-pattern.md"]
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Shield, Lock, Eye, FileText } from 'lucide-react';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 const icons = [Shield, Lock, Eye, FileText];
 
@@ -18,12 +18,7 @@ export default function Safety() {
 
   return (
     <Section size="full" variant="ink">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
-          [ 11 / SECURITY ]
-        </span>
-      </div>
+      <SectionID number="11" name="SECURITY" variant="ink" />
 
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">

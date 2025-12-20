@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { X, Check } from 'lucide-react';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 interface ComparisonItem {
   typical: string;
@@ -20,25 +20,29 @@ export default function Difference() {
 
   return (
     <Section variant="paper" size="wide">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 09 / CONTRAST ]
-        </span>
+      <SectionID number="09" name="CONTRAST" variant="paper" />
+
+      {/* Founder Narrative Intro */}
+      <div className="mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-4">
+          {t('difference.founderHeadline')}
+        </h2>
+        <p className="text-lg text-black/60 max-w-3xl">{t('difference.founderBody')}</p>
       </div>
 
+      {/* Comparison Section */}
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('difference.label')}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-ink mb-12">
+      <h3 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-12">
         {t('difference.title')}
-      </h2>
+      </h3>
 
       <div className="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-xs font-mono uppercase tracking-wider text-black/40 mb-6">
+          <h4 className="text-xs font-mono uppercase tracking-wider text-black/40 mb-6">
             {t('difference.typicalTitle')}
-          </h3>
+          </h4>
           <ul className="space-y-4">
             {comparisons.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-black/50">
@@ -50,9 +54,9 @@ export default function Difference() {
         </div>
 
         <div className="bg-emerald-50/50 border border-emerald-100 rounded-md p-6">
-          <h3 className="text-xs font-mono uppercase tracking-wider text-emerald-600 mb-6">
+          <h4 className="text-xs font-mono uppercase tracking-wider text-emerald-600 mb-6">
             {t('difference.savvyTitle')}
-          </h3>
+          </h4>
           <ul className="space-y-4">
             {comparisons.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-black/70">

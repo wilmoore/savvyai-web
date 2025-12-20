@@ -133,6 +133,8 @@
     }
   },
   "difference": {
+    "founderHeadline": "Built on the systems of the world's most recognizable brands.",
+    "founderBody": "From scaling global retail operations at Apple and Starbucks to architecting software systems at Nordstrom and HP, our methods are forged in high-stakes environments where clarity is the only option.",
     "label": "The Difference",
     "title": "What Makes This Different",
     "typicalTitle": "Typical AI Training",
@@ -163,7 +165,7 @@
   "workshopsExplained": {
     "title": "What Happens in a Workshop",
     "intro": "Workshops are working sessions, not presentations.",
-    "clarification": "There are no slide decks. No lectures. No passive listening.",
+    "clarification": "No passive lectures. No 'Death-by-PowerPoint.' We use structured, interactive systems to move your team from theory to tangible artifacts in real-time.",
     "description": "We bring your team together to work through real material. You bring the workflows, the frustrations, and the questions. We bring structure, AI fluency, and facilitation.",
     "outcome": "By the end, your team has looked at their own work through a new lens. They understand what AI can and cannot do. And they have decided together what is worth testing first.",
     "aside": "If workshop is the wrong word, think of it as a structured thinking session where your team gets aligned and leaves with a plan."
@@ -184,6 +186,21 @@
     "validOutcome": {
       "line1": "Deciding not to proceed is a valid outcome.",
       "line2": "Some teams realize AI is not the right solution for their problem. That clarity is valuable. We would rather you discover this in a workshop than six months into a project."
+    },
+    "exampleArtifactsLabel": "Example Artifacts",
+    "artifacts": {
+      "retailSOP": {
+        "title": "Retail SOP Blueprint",
+        "description": "Operational checklists and procedures"
+      },
+      "engineeringWorkflow": {
+        "title": "Engineering Workflow",
+        "description": "System diagrams and data flows"
+      },
+      "aiPromptLibrary": {
+        "title": "AI Prompt Library",
+        "description": "Tested prompts for your use cases"
+      }
     }
   },
   "bridgeToProtocol": {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * WhoThisIsFor - Compact self-qualification section
@@ -15,12 +15,7 @@ export default function WhoThisIsFor() {
 
   return (
     <Section variant="paper" size="wide" className="py-12 md:py-16">
-      {/* Section ID */}
-      <div className="mb-4">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 02 / AUDIENCE ]
-        </span>
-      </div>
+      <SectionID number="02" name="AUDIENCE" variant="paper" className="mb-4" />
 
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('whoThisIsFor.label')}

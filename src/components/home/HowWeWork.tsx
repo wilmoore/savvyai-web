@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 interface Step {
   number: string;
@@ -27,12 +27,7 @@ export default function HowWeWork() {
 
   return (
     <Section size="wide" variant="ink">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
-          [ 04 / PROCESS ]
-        </span>
-      </div>
+      <SectionID number="04" name="PROCESS" variant="ink" />
 
       <div className="text-center mb-12">
         <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">

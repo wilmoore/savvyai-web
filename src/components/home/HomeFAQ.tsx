@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 interface FAQItem {
   question: string;
@@ -19,12 +19,7 @@ export default function HomeFAQ() {
 
   return (
     <Section variant="paper" size="wide">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 12 / FAQ ]
-        </span>
-      </div>
+      <SectionID number="12" name="FAQ" variant="paper" />
 
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">
         {t('homeFaq.label')}

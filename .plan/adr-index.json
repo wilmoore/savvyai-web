@@ -1,5 +1,5 @@
 {
-  "lastSequence": 23,
+  "lastSequence": 25,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -66,6 +66,10 @@
     {
       "branch": "design/high-density-editorial-perfection",
       "adrs": ["022-section-id-system.md", "023-paper-on-desk-stats-pattern.md"]
+    },
+    {
+      "branch": "fix/alignment-drift-brand-authority",
+      "adrs": ["024-shared-section-id-component.md", "025-visual-inventory-svg-illustrations.md"]
     }
   ]
 }

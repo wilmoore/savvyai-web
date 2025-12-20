@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Clock } from 'lucide-react';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * Pilot24 - Justification section
@@ -16,12 +16,7 @@ export default function Pilot24() {
 
   return (
     <Section size="wide" variant="paper">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 08 / METHOD ]
-        </span>
-      </div>
+      <SectionID number="08" name="METHOD" variant="paper" />
 
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-3 mb-6">

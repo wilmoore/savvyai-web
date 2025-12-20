@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Clock, Users, Check } from 'lucide-react';
-import { Section, CTAButton } from '@/components/marketing';
+import { Section, SectionID, CTAButton } from '@/components/marketing';
 
 interface Workshop {
   name: string;
@@ -25,12 +25,7 @@ export default function OurWorkshops() {
 
   return (
     <Section variant="paper" size="wide" className="border-b border-black/10">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 03 / PROGRAMS ]
-        </span>
-      </div>
+      <SectionID number="03" name="PROGRAMS" variant="paper" />
 
       <div className="mb-12">
         <p className="text-xs font-mono uppercase tracking-widest text-black/40 mb-4">

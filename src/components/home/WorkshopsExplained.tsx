@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * WorkshopsExplained - Paper section explaining workshop experience
@@ -11,12 +11,7 @@ export default function WorkshopsExplained() {
 
   return (
     <Section variant="paper" size="wide">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 05 / EXPERIENCE ]
-        </span>
-      </div>
+      <SectionID number="05" name="EXPERIENCE" variant="paper" />
 
       <div className="grid md:grid-cols-[1fr_1.5fr] gap-12 md:gap-16 items-start">
         <div>

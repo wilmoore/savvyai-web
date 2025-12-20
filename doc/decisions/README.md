@@ -43,3 +43,5 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [021. Geist Sans Typography System](021-geist-sans-typography.md)
 - [022. Section ID System](022-section-id-system.md)
 - [023. Paper-on-Desk Stats Pattern](023-paper-on-desk-stats-pattern.md)
+- [024. Shared SectionID Component](024-shared-section-id-component.md)
+- [025. Visual Inventory SVG Illustrations](025-visual-inventory-svg-illustrations.md)

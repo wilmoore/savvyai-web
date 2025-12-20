@@ -1,22 +1,26 @@
 'use client';
 
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * Stylized text logos with varying Geist Sans weights
  * Creates a "High-Density Wall of Trust" effect
+ *
+ * Companies derived from founders' backgrounds:
+ * Apple, Starbucks, Nordstrom, HP, Gap Inc, Aetna,
+ * Shutterstock, MapQuest, DavidsTea, Holt Renfrew
  */
 const LOGOS = [
-  { name: 'Google', weight: 'font-bold' },
-  { name: 'Meta', weight: 'font-semibold' },
-  { name: 'Stripe', weight: 'font-medium' },
-  { name: 'Airbnb', weight: 'font-semibold' },
-  { name: 'McKinsey', weight: 'font-medium' },
-  { name: 'Goldman Sachs', weight: 'font-semibold' },
-  { name: 'Salesforce', weight: 'font-medium' },
-  { name: 'Adobe', weight: 'font-bold' },
-  { name: 'Shopify', weight: 'font-semibold' },
-  { name: 'HubSpot', weight: 'font-medium' },
+  { name: 'Apple', weight: 'font-bold' },
+  { name: 'Starbucks', weight: 'font-semibold' },
+  { name: 'Nordstrom', weight: 'font-semibold' },
+  { name: 'HP', weight: 'font-bold' },
+  { name: 'Gap Inc', weight: 'font-medium' },
+  { name: 'Aetna', weight: 'font-semibold' },
+  { name: 'Shutterstock', weight: 'font-medium' },
+  { name: 'MapQuest', weight: 'font-medium' },
+  { name: 'DavidsTea', weight: 'font-medium' },
+  { name: 'Holt Renfrew', weight: 'font-semibold' },
 ];
 
 /**
@@ -29,12 +33,7 @@ const LOGOS = [
 export default function TrustBar() {
   return (
     <Section variant="ink" size="full" className="py-10 md:py-12 border-b border-white/10">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
-          [ 01 / TRUST ]
-        </span>
-      </div>
+      <SectionID number="01" name="TRUST" variant="ink" />
 
       <div className="text-center mb-8">
         <p className="text-xs font-mono uppercase tracking-widest text-white/40">

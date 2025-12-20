@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 interface Phase {
   number: string;
@@ -23,12 +23,7 @@ export default function Protocol() {
 
   return (
     <Section size="full" variant="ink">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
-          [ 07 / PROTOCOL ]
-        </span>
-      </div>
+      <SectionID number="07" name="PROTOCOL" variant="ink" />
 
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">

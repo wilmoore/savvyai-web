@@ -1,6 +1,6 @@
 'use client';
 
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * Business Impact Stats
@@ -39,12 +39,7 @@ const STATS = [
 export default function StatsGrid() {
   return (
     <Section variant="ink" size="full">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-white/30">
-          [ 10 / RESULTS ]
-        </span>
-      </div>
+      <SectionID number="10" name="RESULTS" variant="ink" />
 
       <div className="text-center mb-12">
         <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">

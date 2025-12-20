@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { Check, X } from 'lucide-react';
-import { Section } from '@/components/marketing';
+import { Section, SectionID } from '@/components/marketing';
 
 /**
  * Audience - Paper background qualification section
@@ -14,12 +14,7 @@ export default function Audience() {
 
   return (
     <Section variant="paper" size="wide">
-      {/* Section ID */}
-      <div className="mb-6">
-        <span className="text-xs font-mono uppercase tracking-widest text-black/30">
-          [ 13 / QUALIFICATION ]
-        </span>
-      </div>
+      <SectionID number="13" name="QUALIFICATION" variant="paper" />
 
       <p className="text-xs font-mono uppercase tracking-widest text-black/40 text-center mb-8">
         Is This For You?

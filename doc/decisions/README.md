@@ -48,3 +48,4 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [026. Shell Architecture for Section Alignment](026-shell-architecture-for-section-alignment.md)
 - [027. Workshop Card State System](027-workshop-card-state-system.md)
 - [028. External Redirect Routes for Sharing](028-external-redirect-routes-for-sharing.md)
+- [029. Institutional Perfection Zebra Pattern](029-institutional-perfection-zebra-pattern.md)

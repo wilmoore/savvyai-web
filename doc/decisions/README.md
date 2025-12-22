@@ -49,3 +49,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [027. Workshop Card State System](027-workshop-card-state-system.md)
 - [028. External Redirect Routes for Sharing](028-external-redirect-routes-for-sharing.md)
 - [029. Institutional Perfection Zebra Pattern](029-institutional-perfection-zebra-pattern.md)
+- [030. Hybrid Sequential Feedback Flow](030-hybrid-sequential-feedback-flow.md)
+- [031. Workshop Slug Validation Guard](031-workshop-slug-validation-guard.md)
+- [032. Phased Feedback Storage with Stub API](032-phased-feedback-storage-stub-api.md)

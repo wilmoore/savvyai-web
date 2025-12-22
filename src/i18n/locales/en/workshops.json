@@ -77,6 +77,32 @@
       "lumaUrl": "https://lu.ma/savvy-ai-literate",
       "lumaCaption": "Registration handled securely via Luma."
     },
-    "backToPrograms": "Back to Programs"
+    "backToPrograms": "Back to Programs",
+    "feedback": {
+      "confidenceQuestion": "How confident do you feel using AI tools after this workshop?",
+      "valuableQuestion": "What was the most valuable part of the workshop for you?",
+      "planQuestion": "What is one thing you plan to build or improve using AI?",
+      "emailLabel": "Email",
+      "emailHelper": "Only if you want us to follow up or send the downloads.",
+      "submit": "Submit",
+      "success": "Feedback submitted. Your materials are available below.",
+      "downloadsLabel": "Workshop Materials"
+    },
+    "downloads": [
+      { "label": "AI Capability Map Template", "url": "/downloads/ai-literate/capability-map.pdf" },
+      { "label": "Workflow Audit Worksheet", "url": "/downloads/ai-literate/workflow-audit.pdf" },
+      {
+        "label": "Pilot Recommendation Framework",
+        "url": "/downloads/ai-literate/pilot-framework.pdf"
+      }
+    ]
+  },
+  "common": {
+    "feedback": {
+      "notFound": "This workshop is no longer accepting feedback.",
+      "error": "Something went wrong. Please try again.",
+      "continue": "Continue",
+      "back": "Back"
+    }
   }
 }

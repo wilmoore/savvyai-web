@@ -1,5 +1,5 @@
 {
-  "lastSequence": 29,
+  "lastSequence": 32,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -82,6 +82,14 @@
     {
       "branch": "design/institutional-perfection-final",
       "adrs": ["029-institutional-perfection-zebra-pattern.md"]
+    },
+    {
+      "branch": "feat/workshop-feedback-page",
+      "adrs": [
+        "030-hybrid-sequential-feedback-flow.md",
+        "031-workshop-slug-validation-guard.md",
+        "032-phased-feedback-storage-stub-api.md"
+      ]
     }
   ]
 }

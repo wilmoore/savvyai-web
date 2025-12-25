@@ -41,8 +41,8 @@ export default function HowWeWork() {
       {/* Desktop: Horizontal blueprint with dashed connectors */}
       <div className="hidden md:block">
         <div className="relative flex items-start justify-between max-w-4xl mx-auto">
-          {/* Dashed connector line */}
-          <div className="absolute top-10 left-[10%] right-[10%] h-px border-t border-dashed border-black/20" />
+          {/* Dashed connector line - positioned to center with step circles */}
+          <div className="absolute top-12 left-[10%] right-[10%] h-px border-t border-dashed border-black/20" />
 
           {steps.map((step, index) => (
             <div key={step.number} className="relative flex flex-col items-center text-center w-40">
@@ -60,9 +60,9 @@ export default function HowWeWork() {
               <h3 className="text-base font-semibold text-ink mb-2">{step.name}</h3>
               <p className="text-sm text-black/50">{step.description}</p>
 
-              {/* Connection dot */}
+              {/* Connection dot - aligned with dashed connector line */}
               {index < steps.length - 1 && (
-                <div className="absolute top-10 -right-4 w-2 h-2 rounded-full bg-emerald-500/50" />
+                <div className="absolute top-12 -right-4 w-2 h-2 rounded-full bg-emerald-500/50 -translate-y-1/2" />
               )}
             </div>
           ))}

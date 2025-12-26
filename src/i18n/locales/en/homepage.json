@@ -197,19 +197,19 @@
       "line1": "Deciding not to proceed is a valid outcome.",
       "line2": "Some teams realize AI is not the right solution for their problem. That clarity is valuable. We would rather you discover this in a workshop than six months into a project."
     },
-    "exampleArtifactsLabel": "Example Artifacts",
+    "exampleArtifactsLabel": "Take-Home Resources",
     "artifacts": {
       "retailSOP": {
-        "title": "Retail SOP Blueprint",
-        "description": "Operational checklists and procedures"
+        "title": "AI Terminology Guide",
+        "description": "Clear definitions for every AI term you'll encounter"
       },
       "engineeringWorkflow": {
-        "title": "Engineering Workflow",
-        "description": "System diagrams and data flows"
+        "title": "AI Tooling Landscape Report",
+        "description": "2025 overview of tools worth knowing"
       },
       "aiPromptLibrary": {
-        "title": "AI Prompt Library",
-        "description": "Tested prompts for your use cases"
+        "title": "Prompting Fundamentals Guide",
+        "description": "How to write effective prompts, step by step"
       }
     }
   },

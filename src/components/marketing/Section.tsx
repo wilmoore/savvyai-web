@@ -68,10 +68,11 @@ export default function Section({
   };
 
   // Shell architecture: 7xl outer container, variable inner content
-  // Creates consistent left edge for SectionIDs across all sections
+  // Creates consistent left edge for SectionIDs via nested structure
+  // Inner content is centered for proper horizontal usage
   const content = shell ? (
     <div className="max-w-7xl mx-auto px-4 md:px-6">
-      <div className={cn(sizeClasses[size])}>{children}</div>
+      <div className={cn(sizeClasses[size], 'mx-auto')}>{children}</div>
     </div>
   ) : (
     // Legacy: centered container (backwards compatibility)

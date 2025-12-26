@@ -52,3 +52,4 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [030. Hybrid Sequential Feedback Flow](030-hybrid-sequential-feedback-flow.md)
 - [031. Workshop Slug Validation Guard](031-workshop-slug-validation-guard.md)
 - [032. Phased Feedback Storage with Stub API](032-phased-feedback-storage-stub-api.md)
+- [033. Shell Content Centering](033-shell-content-centering.md)

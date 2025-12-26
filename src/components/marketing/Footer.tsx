@@ -41,7 +41,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10">
           <p className="text-sm text-white/30 text-center">
-            &copy; {currentYear} Savvy AI. All rights reserved.
+            &copy; {currentYear} Śavvy AI. All rights reserved.
           </p>
         </div>
       </div>

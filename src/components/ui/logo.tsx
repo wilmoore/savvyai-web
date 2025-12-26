@@ -25,7 +25,7 @@ const Logo: React.FC<LogoProps> = ({ variant = 'black', className = '', size = '
       {/* Logo Icon */}
       <img
         src="/logomark.png"
-        alt="Savvy AI Logo"
+        alt="Śavvy AI Logo"
         className={`${sizeClasses[size]} w-auto object-contain`}
         style={{
           transform: 'translateY(-4px)',
@@ -39,7 +39,7 @@ const Logo: React.FC<LogoProps> = ({ variant = 'black', className = '', size = '
           size === 'sm' ? 'text-lg' : size === 'md' ? 'text-xl' : 'text-2xl'
         } ${variant === 'white' ? 'text-white' : 'text-foreground'}`}
       >
-        Savvy AI
+        Śavvy AI
       </span>
     </div>
   );

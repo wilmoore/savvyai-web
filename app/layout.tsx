@@ -8,12 +8,12 @@ const geistSans = GeistSans;
 const geistMono = GeistMono;
 
 export const metadata: Metadata = {
-  title: 'Savvy AI - Practical AI. Taught first. Built second.',
+  title: 'Śavvy AI - Practical AI. Taught first. Built second.',
   description:
     'We help teams adopt AI through hands-on workshops, then turn that clarity into systems teams actually use.',
   keywords:
     'AI consulting, machine learning, artificial intelligence, AI strategy, custom AI development, business automation',
-  authors: [{ name: 'Savvy AI' }],
+  authors: [{ name: 'Śavvy AI' }],
   icons: {
     icon: [
       { url: '/logomark-inverted.ico?v=20250820', type: 'image/x-icon' },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     shortcut: '/logomark-inverted.png?v=20250820',
   },
   openGraph: {
-    title: 'Savvy AI - Practical AI. Taught first. Built second.',
+    title: 'Śavvy AI - Practical AI. Taught first. Built second.',
     description:
       'We help teams adopt AI through hands-on workshops, then turn that clarity into systems teams actually use.',
     type: 'website',

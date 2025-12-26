@@ -63,7 +63,7 @@
   },
   "howTeamsWork": {
     "label": "How it works",
-    "title": "How Teams Work With Savvy",
+    "title": "How Teams Work With Śavvy",
     "steps": [
       {
         "number": "1",
@@ -88,7 +88,7 @@
     ]
   },
   "protocol": {
-    "title": "The Savvy Pilot Protocol",
+    "title": "The Śavvy Pilot Protocol",
     "subtitle": "A simple, repeatable way to move from AI curiosity to confident use.",
     "phases": [
       {
@@ -107,7 +107,7 @@
         "description": "Make sure your team understands and can use it."
       }
     ],
-    "cta": "Explore the Savvy Pilot Protocol"
+    "cta": "Explore the Śavvy Pilot Protocol"
   },
   "pilot24": {
     "title": "Why We Build a Pilot in 24 Hours",
@@ -148,7 +148,7 @@
     "label": "The Difference",
     "title": "What Makes This Different",
     "typicalTitle": "Typical AI Training",
-    "savvyTitle": "With Savvy",
+    "savvyTitle": "With Śavvy",
     "comparisons": [
       {
         "typical": "Generic slide decks about AI trends",
@@ -217,10 +217,10 @@
     "title": "From Workshop to Pilot",
     "content": {
       "line1": "Workshops are the front door. They are designed to be low-risk and high-clarity.",
-      "line2": "If your team decides to move forward, the next step is the Savvy Pilot Protocol. This is where we build a working AI tool in 24 hours based on what you learned in the workshop.",
+      "line2": "If your team decides to move forward, the next step is the Śavvy Pilot Protocol. This is where we build a working AI tool in 24 hours based on what you learned in the workshop.",
       "line3": "The decision to proceed is always yours. There is no pressure. Many teams take weeks to decide. Some never proceed, and that is fine."
     },
-    "cta": "Learn about the Savvy Pilot Protocol"
+    "cta": "Learn about the Śavvy Pilot Protocol"
   },
   "safety": {
     "title": "Data, Security, and Boundaries",

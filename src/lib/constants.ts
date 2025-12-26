@@ -8,6 +8,6 @@ export const EXTERNAL_LINKS = {
 
 // You can also add other constants here
 export const SITE_CONFIG = {
-  name: 'Savvy AI',
+  name: 'Śavvy AI',
   description: 'Practical AI. Engineered for Impact.',
 } as const;

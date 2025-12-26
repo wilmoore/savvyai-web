@@ -1,5 +1,5 @@
 {
-  "lastSequence": 32,
+  "lastSequence": 33,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -90,6 +90,10 @@
         "031-workshop-slug-validation-guard.md",
         "032-phased-feedback-storage-stub-api.md"
       ]
+    },
+    {
+      "branch": "fix/layout-consistency-horizontal-centering",
+      "adrs": ["033-shell-content-centering.md"]
     }
   ]
 }

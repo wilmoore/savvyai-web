@@ -36,7 +36,7 @@ export default function OurWorkshops() {
   const workshops = t('ourWorkshops.workshops', { returnObjects: true }) as Workshop[];
 
   return (
-    <Section variant="ink" size="wide" className="border-b border-white/10">
+    <Section variant="ink" size="full" className="border-b border-white/10">
       <SectionID number="03" name="PROGRAMS" variant="ink" />
 
       <div className="mb-12">

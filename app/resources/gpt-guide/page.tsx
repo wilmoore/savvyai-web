@@ -272,7 +272,7 @@ export default function GptGuidePage() {
             <div className="max-w-3xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <Link href="/" className="text-[#6B7280] hover:text-white transition-colors">
-                  Savvy AI
+                  Śavvy AI
                 </Link>
                 <p className="text-[#4B5563] text-sm">More resources coming soon.</p>
               </div>

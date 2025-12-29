@@ -8,7 +8,7 @@ import prettier from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier";
 
 export default tseslint.config(
-  { ignores: ["dist", "node_modules", ".next", ".playwright-mcp", "supabase", "*.config.ts", "*.config.js"] },
+  { ignores: ["dist", "node_modules", ".next", ".playwright-mcp", "supabase", "*.config.ts", "*.config.js", "app/_archive"] },
   // Base config for all TypeScript files
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

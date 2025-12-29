@@ -19,12 +19,6 @@ export default function Header() {
 
         <nav className="flex items-center gap-6">
           <Link
-            href="/protocol"
-            className="text-sm font-medium text-white/70 hover:text-white transition-colors"
-          >
-            The Protocol
-          </Link>
-          <Link
             href="#book"
             className="inline-flex items-center justify-center rounded-md bg-emerald-500 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-600 transition-colors"
           >

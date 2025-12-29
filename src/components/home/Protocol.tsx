@@ -1,8 +1,6 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { Section, SectionID } from '@/components/marketing';
 
 interface Phase {
@@ -36,7 +34,7 @@ export default function Protocol() {
           <p className="text-lg text-white/60 max-w-2xl mx-auto">{t('protocol.subtitle')}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-3 gap-6">
           {phases.map((phase) => (
             <div
               key={phase.number}
@@ -51,16 +49,6 @@ export default function Protocol() {
               <p className="text-sm text-white/60">{phase.description}</p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Link
-            href="/protocol"
-            className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors group"
-          >
-            {t('protocol.cta')}
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
       </div>
     </Section>

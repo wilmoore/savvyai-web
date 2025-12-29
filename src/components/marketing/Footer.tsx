@@ -27,12 +27,6 @@ export default function Footer() {
             <Link href="/" className="text-sm text-white/50 hover:text-white transition-colors">
               Home
             </Link>
-            <Link
-              href="/protocol"
-              className="text-sm text-white/50 hover:text-white transition-colors"
-            >
-              The Protocol
-            </Link>
             <Link href="#book" className="text-sm text-white/50 hover:text-white transition-colors">
               Contact
             </Link>

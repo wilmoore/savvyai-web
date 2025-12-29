@@ -1,0 +1,17 @@
+{
+  "lastSequence": 1,
+  "items": [
+    {
+      "id": 1,
+      "title": "Remove unscoped protocol page",
+      "description": "Remove the /protocol page as the offering has not been fully scoped. The page was using an outdated 'Workshop Authority' design system instead of the current 'Editorial Noir Institutional Perfection' theme. Rather than fix styling for an unready feature, remove it entirely. ADRs and i18n content preserved for future reference.",
+      "category": "bug",
+      "severity": "high",
+      "fingerprint": "bug|1|remove-unscoped-protocol-page",
+      "source": "/pro:bug",
+      "sourceBranch": "fix/remove-unscoped-protocol-page",
+      "createdAt": "2025-12-26T18:00:00Z",
+      "status": "ready-for-review"
+    }
+  ]
+}

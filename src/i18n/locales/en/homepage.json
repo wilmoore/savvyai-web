@@ -54,6 +54,20 @@
           "Clear recommendation on what to build (and what not to)"
         ],
         "href": "/contact"
+      },
+      {
+        "name": "ŚavvyBuild",
+        "description": "We design and deliver AI-native programs that fit your audience. For organizations, teams, and institutions that want something purpose-built.",
+        "audience": "Organizations & teams",
+        "duration": "Outcome-Scoped",
+        "status": "active",
+        "statusLabel": "Application Required",
+        "outcomes": [
+          "Custom program architecture",
+          "Delivery-ready curriculum",
+          "Implementation partnership"
+        ],
+        "href": "/build"
       }
     ],
     "cta": "Book a Workshop",

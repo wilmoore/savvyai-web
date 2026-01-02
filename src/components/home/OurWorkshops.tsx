@@ -21,7 +21,7 @@ interface Workshop {
 /**
  * OurWorkshops - AI Literate Format Cards
  *
- * Two-card layout presenting AI Literate formats:
+ * Three-card layout presenting engagement formats:
  *
  * Card 01: AI Literate · Bootcamp
  * - Live virtual training (public, cohort-based)
@@ -33,7 +33,12 @@ interface Workshop {
  * - "Now Booking" status
  * - Routes to /contact
  *
- * Both cards use active styling (emerald glow, hover lift).
+ * Card 03: ŚavvyBuild
+ * - Custom AI program design and delivery
+ * - "Application Required" status
+ * - Routes to /build
+ *
+ * All cards use active styling (emerald glow, hover lift).
  */
 export default function OurWorkshops() {
   const { t } = useTranslation('homepage');
@@ -53,7 +58,7 @@ export default function OurWorkshops() {
         <p className="text-lg text-white/60 max-w-2xl">{t('ourWorkshops.subtitle')}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {workshops.map((workshop, index) => {
           const isActive = workshop.status === 'active';
 

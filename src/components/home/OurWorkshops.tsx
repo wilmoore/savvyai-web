@@ -19,17 +19,21 @@ interface Workshop {
 }
 
 /**
- * OurWorkshops - Premium Folder Aesthetic Cards
+ * OurWorkshops - AI Literate Format Cards
  *
- * Active Card (AI Literate):
- * - Hover lift + Emerald glow effect
+ * Two-card layout presenting AI Literate formats:
+ *
+ * Card 01: AI Literate · Bootcamp
+ * - Live virtual training (public, cohort-based)
+ * - "Now Enrolling" status
  * - Routes to /workshops/ai-literate
- * - "Now Enrolling" status tag
  *
- * Roadmap Cards (Coming Soon):
- * - Grayscale styling, 50% opacity
- * - "Coming Soon" tag, no hover lift
- * - Secondary "Get notified" / "Join waitlist" text link
+ * Card 02: AI Literate · Team Session
+ * - Private, company-specific sessions
+ * - "Now Booking" status
+ * - Routes to /contact
+ *
+ * Both cards use active styling (emerald glow, hover lift).
  */
 export default function OurWorkshops() {
   const { t } = useTranslation('homepage');
@@ -49,7 +53,7 @@ export default function OurWorkshops() {
         <p className="text-lg text-white/60 max-w-2xl">{t('ourWorkshops.subtitle')}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {workshops.map((workshop, index) => {
           const isActive = workshop.status === 'active';
 

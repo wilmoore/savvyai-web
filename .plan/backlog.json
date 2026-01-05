@@ -16,14 +16,14 @@
     {
       "id": 2,
       "title": "Reframe Programs section with AI Literate hierarchy",
-      "description": "Restructure the Programs section to reflect reality: AI Literate as the umbrella brand with two formats underneath - Bootcamp (live virtual training, public) and Team Session (private, company-specific). Remove the third card (24-Hour Pilot Build) entirely until the offering is proven. Update copy to match advisory framing rather than productized workshop language.",
+      "description": "Restructure the Programs section to reflect reality: AI Literate as the umbrella brand with three formats - Bootcamp (live virtual training), Team Session (private, company-specific), and ŚavvyBuild (custom program design). Update copy to match advisory framing rather than productized workshop language.",
       "category": "feature",
       "severity": "medium",
       "fingerprint": "feature|2|reframe-programs-ai-literate-hierarchy",
       "source": "/pro:feature",
       "sourceBranch": "feature/reframe-programs-ai-literate-hierarchy",
       "createdAt": "2026-01-01T00:00:00Z",
-      "status": "in-progress"
+      "status": "ready-for-review"
     }
   ]
 }

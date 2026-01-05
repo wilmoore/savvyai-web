@@ -1,5 +1,5 @@
 {
-  "lastSequence": 33,
+  "lastSequence": 34,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -94,6 +94,10 @@
     {
       "branch": "fix/layout-consistency-horizontal-centering",
       "adrs": ["033-shell-content-centering.md"]
+    },
+    {
+      "branch": "feature/reframe-programs-ai-literate-hierarchy",
+      "adrs": ["034-ai-literate-brand-hierarchy.md"]
     }
   ]
 }

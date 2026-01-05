@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "label": "Custom Programs",
+    "title": "We design and deliver AI-native programs that fit your audience",
+    "subtitle": "ŚavvyBuild is our bespoke program design and delivery offering for organizations, teams, and institutions that need something purpose-built.",
+    "status": "Application Required",
+    "timeline": "Outcome-Scoped"
+  },
+  "scope": {
+    "label": "What We Build",
+    "title": "Custom AI training programs, from architecture to delivery",
+    "description": "Every engagement starts with understanding your audience, your outcomes, and your constraints. Then we design and deliver a program that fits.",
+    "items": [
+      {
+        "title": "Custom Curricula",
+        "description": "Purpose-built learning paths designed around your team's actual work, tools, and challenges."
+      },
+      {
+        "title": "Internal Training Programs",
+        "description": "Scalable AI literacy programs for organizations rolling out AI across departments."
+      },
+      {
+        "title": "Team Development",
+        "description": "Cohort-based programs that build shared language and practices across your team."
+      },
+      {
+        "title": "Implementation Partnership",
+        "description": "Ongoing support as your team applies what they've learned to real work."
+      }
+    ]
+  },
+  "fit": {
+    "label": "Audience",
+    "forLabel": "This is for you if",
+    "forItems": [
+      "You need training tailored to your specific tools and workflows",
+      "You're rolling out AI across multiple teams or departments",
+      "Off-the-shelf workshops don't address your unique context",
+      "You want measurable outcomes tied to business objectives"
+    ],
+    "notForLabel": "This is not for you if",
+    "notForItems": [
+      "You're looking for a single public workshop (see AI Literate Bootcamp)",
+      "You need a quick solution without discovery or customization",
+      "Your timeline doesn't allow for proper program design"
+    ]
+  },
+  "proof": {
+    "label": "Client Work",
+    "title": "Select engagements available upon request",
+    "description": "Due to confidentiality, we share case studies and references during the application process with qualified prospects."
+  },
+  "apply": {
+    "label": "Get Started",
+    "title": "Start with a conversation",
+    "description": "ŚavvyBuild engagements begin with a discovery call to understand your needs, timeline, and whether we're the right fit.",
+    "cta": "Schedule a Call",
+    "note": "No commitment required. We'll discuss your situation and recommend next steps."
+  },
+  "backToPrograms": "Back to Programs"
+}

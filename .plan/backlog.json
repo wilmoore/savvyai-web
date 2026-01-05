@@ -1,5 +1,5 @@
 {
-  "lastSequence": 1,
+  "lastSequence": 2,
   "items": [
     {
       "id": 1,
@@ -11,6 +11,18 @@
       "source": "/pro:bug",
       "sourceBranch": "fix/remove-unscoped-protocol-page",
       "createdAt": "2025-12-26T18:00:00Z",
+      "status": "ready-for-review"
+    },
+    {
+      "id": 2,
+      "title": "Create /build page for ŚavvyBuild",
+      "description": "Implement the /build page for ŚavvyBuild - custom AI program design and delivery offering. Premium, application-required positioning with 5 sections: BUILD (hero), SCOPE (what we build), FIT (audience), PROOF (testimonials placeholder), APPLY (CTA to /#book).",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|2|savvybuild-page",
+      "source": "/pro:feature",
+      "sourceBranch": "feature/savvybuild-page",
+      "createdAt": "2026-01-05T00:00:00Z",
       "status": "ready-for-review"
     }
   ]

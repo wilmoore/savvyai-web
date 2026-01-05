@@ -19,17 +19,26 @@ interface Workshop {
 }
 
 /**
- * OurWorkshops - Premium Folder Aesthetic Cards
+ * OurWorkshops - AI Literate Format Cards
  *
- * Active Card (AI Literate):
- * - Hover lift + Emerald glow effect
+ * Three-card layout presenting engagement formats:
+ *
+ * Card 01: AI Literate · Bootcamp
+ * - Live virtual training (public, cohort-based)
+ * - "Now Enrolling" status
  * - Routes to /workshops/ai-literate
- * - "Now Enrolling" status tag
  *
- * Roadmap Cards (Coming Soon):
- * - Grayscale styling, 50% opacity
- * - "Coming Soon" tag, no hover lift
- * - Secondary "Get notified" / "Join waitlist" text link
+ * Card 02: AI Literate · Team Session
+ * - Private, company-specific sessions
+ * - "Now Booking" status
+ * - Routes to /contact
+ *
+ * Card 03: ŚavvyBuild
+ * - Custom AI program design and delivery
+ * - "Application Required" status
+ * - Routes to /build
+ *
+ * All cards use active styling (emerald glow, hover lift).
  */
 export default function OurWorkshops() {
   const { t } = useTranslation('homepage');

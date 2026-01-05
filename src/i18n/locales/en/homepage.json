@@ -23,43 +23,55 @@
     ]
   },
   "ourWorkshops": {
-    "label": "Our Workshops",
-    "title": "Programs that get teams moving",
-    "subtitle": "Every engagement starts here. Choose the format that fits your team.",
+    "label": "AI Literate",
+    "title": "Choose the format that fits your goal",
+    "subtitle": "Every engagement starts with clarity. Where it goes depends on what you need.",
     "workshops": [
       {
-        "name": "AI Literate",
-        "description": "For teams starting from scratch. Build shared understanding of what AI can and cannot do.",
-        "audience": "Cross-functional teams",
-        "duration": "Half-day",
+        "name": "AI Literate · Bootcamp",
+        "description": "A practical, no-fluff session on using AI to reclaim time, sharpen workflows, and operate with leverage.",
+        "audience": "Individuals & teams",
+        "duration": "3 hours",
         "status": "active",
         "statusLabel": "Now Enrolling",
-        "outcomes": ["Shared AI vocabulary", "Workflow audit", "First use case identified"],
+        "outcomes": [
+          "Shared AI vocabulary (no hype)",
+          "Clear constraints and opportunities",
+          "Actionable next steps"
+        ],
         "href": "/workshops/ai-literate"
       },
       {
-        "name": "Workflow Integration",
-        "description": "For teams with a specific problem. Design how AI fits into existing processes.",
-        "audience": "Operations & product teams",
-        "duration": "Full-day",
-        "status": "coming-soon",
-        "statusLabel": "Coming Soon",
-        "outcomes": ["Process mapping", "Integration plan", "Pilot scope defined"],
-        "waitlistText": "Get notified"
+        "name": "AI Literate · Team Session",
+        "description": "A focused working session to align teams, cut through hype, and identify the right AI opportunities for your organization.",
+        "audience": "Companies",
+        "duration": "Half-day to full-day",
+        "status": "active",
+        "statusLabel": "Now Booking",
+        "outcomes": [
+          "Team alignment on AI direction",
+          "Workflow audit with opportunities marked",
+          "Clear recommendation on what to build (and what not to)"
+        ],
+        "href": "/contact"
       },
       {
-        "name": "24-Hour Pilot Build",
-        "description": "For teams ready to test. Go from workshop clarity to working prototype.",
-        "audience": "Teams post-workshop",
-        "duration": "24 hours",
-        "status": "coming-soon",
-        "statusLabel": "Coming Soon",
-        "outcomes": ["Working AI pilot", "Documentation", "Handoff training"],
-        "waitlistText": "Join waitlist"
+        "name": "ŚavvyBuild",
+        "description": "We design and deliver AI-native programs that fit your audience. For organizations, teams, and institutions that want something purpose-built.",
+        "audience": "Organizations & teams",
+        "duration": "Outcome-Scoped",
+        "status": "active",
+        "statusLabel": "Application Required",
+        "outcomes": [
+          "Custom program architecture",
+          "Delivery-ready curriculum",
+          "Implementation partnership"
+        ],
+        "href": "/build"
       }
     ],
     "cta": "Book a Workshop",
-    "primaryCta": "View AI Literate Curriculum"
+    "primaryCta": "See how it works"
   },
   "howTeamsWork": {
     "label": "How it works",

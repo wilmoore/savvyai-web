@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "content": "Create ADR for format-agnostic system page principle",
+      "status": "completed",
+      "activeForm": "Creating ADR"
+    },
+    {
+      "content": "Move planning docs to .plan/.done/",
+      "status": "in_progress",
+      "activeForm": "Moving planning docs"
+    },
+    { "content": "Commit changes", "status": "pending", "activeForm": "Committing changes" },
+    { "content": "Push and create PR", "status": "pending", "activeForm": "Creating PR" }
+  ]
+}

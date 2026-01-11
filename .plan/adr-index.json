@@ -1,5 +1,5 @@
 {
-  "lastSequence": 34,
+  "lastSequence": 35,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -98,6 +98,10 @@
     {
       "branch": "feature/three-page-ai-literate-architecture",
       "adrs": ["034-linkedin-only-cta-strategy.md"]
+    },
+    {
+      "branch": "feature/literate-definition-section-update",
+      "adrs": ["035-format-agnostic-system-page-content.md"]
     }
   ]
 }

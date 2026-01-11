@@ -54,3 +54,4 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [032. Phased Feedback Storage with Stub API](032-phased-feedback-storage-stub-api.md)
 - [033. Shell Content Centering](033-shell-content-centering.md)
 - [034. LinkedIn-Only CTA Strategy](034-linkedin-only-cta-strategy.md)
+- [035. Format-Agnostic System Page Content](035-format-agnostic-system-page-content.md)

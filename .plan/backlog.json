@@ -1,6 +1,18 @@
 {
-  "lastSequence": 3,
+  "lastSequence": 4,
   "items": [
+    {
+      "id": 4,
+      "title": "Update /literate definition section copy",
+      "description": "Replace definition section copy on /literate page with new artifact-focused messaging. Surgical swap of i18n content only - no layout or component changes.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|4|literate-definition-section-update",
+      "source": "/pro:feature",
+      "sourceBranch": "feature/literate-definition-section-update",
+      "createdAt": "2026-01-11T00:00:00Z",
+      "status": "ready-for-review"
+    },
     {
       "id": 1,
       "title": "Remove unscoped protocol page",

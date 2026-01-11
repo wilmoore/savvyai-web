@@ -20,7 +20,7 @@ import { EXTERNAL_LINKS } from '@/lib/constants';
  * Section Order (Perfect Alternating Zebra):
  * 01 SYSTEM (INK) - Hero
  * 02 DEFINITION (PAPER) - What AI Literate is
- * 03 COMPARISON (INK) - AI Literate vs AI Bootcamp
+ * 03 COMPARISON (INK) - System vs Delivery
  * 04 PARTNERSHIP (PAPER) - How people partner
  * 05 PROOF (INK) - April Sabral case study
  * 06 ACTION (PAPER) - CTA
@@ -46,8 +46,9 @@ export default function LiteratePage() {
   const comparison = t('comparison', { returnObjects: true }) as {
     label: string;
     title: string;
-    literate: { title: string; items: string[] };
-    bootcamp: { title: string; items: string[] };
+    description: string;
+    items: string[];
+    context: string;
     tagline: string;
   };
 
@@ -117,50 +118,34 @@ export default function LiteratePage() {
           <p className="text-base text-black/50 italic max-w-xl">{definition.tagline}</p>
         </Section>
 
-        {/* 03 COMPARISON (INK) - AI Literate vs AI Bootcamp */}
+        {/* 03 COMPARISON (INK) - System vs Delivery */}
         <Section variant="ink" size="wide">
           <SectionID number="03" name="COMPARISON" variant="ink" />
 
-          <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
-            {comparison.label}
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-10">
-            {comparison.title}
-          </h2>
+          <div className="max-w-2xl">
+            <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
+              {comparison.label}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-6 whitespace-pre-line">
+              {comparison.title}
+            </h2>
+            <p className="text-lg text-white/70 mb-6">{comparison.description}</p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-10">
-            {/* AI Literate column */}
-            <div className="bg-white/5 border border-white/10 rounded-md p-6">
-              <h3 className="text-lg font-semibold text-emerald-400 mb-4">
-                {comparison.literate.title}
-              </h3>
-              <ul className="space-y-3">
-                {comparison.literate.items.map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-white/80">
-                    <div className="w-2 h-2 rounded-full bg-emerald-400" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-3 mb-8">
+              {comparison.items.map((item, index) => (
+                <li key={index} className="flex items-start gap-3 text-white/80">
+                  <Check
+                    className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
+                    strokeWidth={2}
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
-            {/* AI Bootcamp column */}
-            <div className="bg-white/5 border border-white/10 rounded-md p-6">
-              <h3 className="text-lg font-semibold text-white/60 mb-4">
-                {comparison.bootcamp.title}
-              </h3>
-              <ul className="space-y-3">
-                {comparison.bootcamp.items.map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-white/60">
-                    <div className="w-2 h-2 rounded-full bg-white/40" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <p className="text-base text-white/60 mb-4">{comparison.context}</p>
+            <p className="text-base text-white/50 italic">{comparison.tagline}</p>
           </div>
-
-          <p className="text-lg text-white/70 italic text-center">{comparison.tagline}</p>
         </Section>
 
         {/* 04 PARTNERSHIP (PAPER) - How people partner */}

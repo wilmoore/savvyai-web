@@ -2,37 +2,32 @@
   "hero": {
     "label": "The System",
     "title": "AI Literate\u2122",
-    "subtitle": "The system for running practical, high-impact AI bootcamps and training programs.",
+    "subtitle": "The system for designing and running practical AI training.",
     "tagline": "Tools change. Leverage scales."
   },
   "definition": {
     "label": "What AI Literate Is",
     "title": "AI Literate is not a course.",
-    "description": "It\u2019s a system for designing AI training that produces real output, teaching workflows instead of tools, and turning AI into throughput\u2014not excitement.",
+    "description": "It's a system for designing AI training that leaves artifacts behind:",
     "items": [
-      "Designing AI training that produces real output",
-      "Teaching workflows instead of tools",
-      "Turning AI into throughput, not excitement"
+      "Reusable AI workflows",
+      "Explicit decisions on what to automate and what not to",
+      "Shared decision frameworks teams keep using"
     ],
-    "tagline": "If you\u2019ve seen AI bootcamps that actually work, this is how they\u2019re built."
+    "tagline": "If nothing remains after training, nothing changed."
   },
   "comparison": {
     "label": "System vs Delivery",
-    "title": "AI Literate vs AI Bootcamp",
-    "literate": {
-      "title": "AI Literate",
-      "items": ["The system", "The methodology", "Tool-agnostic", "Śavvy AI IP"]
-    },
-    "bootcamp": {
-      "title": "AI Bootcamp",
-      "items": [
-        "The delivery format",
-        "Partner-branded",
-        "Live and cohort-based",
-        "Runs on AI Literate"
-      ]
-    },
-    "tagline": "AI Bootcamp is the room. AI Literate is the engine."
+    "title": "AI Literate defines the system.\nWorkshops are how it's delivered.",
+    "description": "AI Literate is the underlying system for designing and running AI training. It defines:",
+    "items": [
+      "How training is structured",
+      "What gets taught and what doesn't",
+      "How workflows are built and reused",
+      "How AI becomes leverage instead of theater"
+    ],
+    "context": "That system can be delivered through different workshop formats, depending on context.",
+    "tagline": "No format is privileged. The system stays the same."
   },
   "partnership": {
     "label": "How People Partner",

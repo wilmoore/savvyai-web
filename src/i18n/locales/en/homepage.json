@@ -33,9 +33,9 @@
         "audience": "Cross-functional teams",
         "duration": "Half-day",
         "status": "active",
-        "statusLabel": "Now Enrolling",
+        "statusLabel": "Watch Replay",
         "outcomes": ["Shared AI vocabulary", "Workflow audit", "First use case identified"],
-        "href": "/workshops/ai-literate"
+        "href": "/workshops"
       },
       {
         "name": "Workflow Integration",

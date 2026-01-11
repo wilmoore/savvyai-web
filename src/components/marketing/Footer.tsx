@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Logo from '@/components/ui/logo';
+import { EXTERNAL_LINKS } from '@/lib/constants';
 
 /**
  * Footer - Editorial Ink Black Minimal
@@ -27,9 +28,14 @@ export default function Footer() {
             <Link href="/" className="text-sm text-white/50 hover:text-white transition-colors">
               Home
             </Link>
-            <Link href="#book" className="text-sm text-white/50 hover:text-white transition-colors">
-              Contact
-            </Link>
+            <a
+              href={EXTERNAL_LINKS.LINKEDIN}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/50 hover:text-white transition-colors"
+            >
+              LinkedIn
+            </a>
           </nav>
         </div>
 

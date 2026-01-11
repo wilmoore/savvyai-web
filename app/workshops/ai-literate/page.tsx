@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
-import { Clock, Users, Check, X, ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { Clock, Users, Check, X, ArrowRight, Play, MapPin } from 'lucide-react';
 import { Header, Footer, Section, SectionID, CTAButton } from '@/components/marketing';
 
 /**
@@ -55,8 +55,8 @@ export default function AILiteratePage() {
     description: string;
     primary: string;
     secondary: string;
-    lumaUrl: string;
-    lumaCaption: string;
+    replayUrl: string;
+    replayCaption: string;
   };
 
   return (
@@ -97,15 +97,15 @@ export default function AILiteratePage() {
               </div>
               <div className="mt-6">
                 <Link
-                  href={cta.lumaUrl}
+                  href={cta.replayUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 w-full justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-4 rounded-md transition-colors"
                 >
-                  <Calendar className="w-4 h-4" />
+                  <Play className="w-4 h-4" />
                   {cta.primary}
                 </Link>
-                <p className="text-xs text-white/40 text-center mt-2">{cta.lumaCaption}</p>
+                <p className="text-xs text-white/40 text-center mt-2">{cta.replayCaption}</p>
               </div>
             </div>
           </div>
@@ -265,16 +265,16 @@ export default function AILiteratePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={cta.lumaUrl}
+                href={cta.replayUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-6 rounded-md transition-colors"
               >
-                <Calendar className="w-4 h-4" />
+                <Play className="w-4 h-4" />
                 {cta.primary}
               </Link>
               <Link
-                href={cta.lumaUrl}
+                href={cta.replayUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white border border-black/20 hover:border-black/40 text-ink font-medium py-3 px-6 rounded-md transition-colors"

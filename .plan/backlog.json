@@ -1,5 +1,5 @@
 {
-  "lastSequence": 2,
+  "lastSequence": 3,
   "items": [
     {
       "id": 1,
@@ -23,6 +23,18 @@
       "source": "/pro:feature",
       "sourceBranch": "feature/savvybuild-page",
       "createdAt": "2026-01-05T00:00:00Z",
+      "status": "ready-for-review"
+    },
+    {
+      "id": 3,
+      "title": "Three-page AI Literate architecture refactor",
+      "description": "Refactor AI Literate from single page to three-page architecture: /workshops (directory, transactional), /literate (system IP explanation), /partners (B2B partnership conversion). Implements separation of jobs principle. Includes 301 redirect from /workshops/ai-literate to /literate.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|3|three-page-ai-literate-architecture",
+      "source": "/pro:feature",
+      "sourceBranch": "feature/three-page-ai-literate-architecture",
+      "createdAt": "2026-01-11T00:00:00Z",
       "status": "ready-for-review"
     }
   ]

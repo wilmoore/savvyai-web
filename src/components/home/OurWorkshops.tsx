@@ -23,7 +23,7 @@ interface Workshop {
  *
  * Active Card (AI Literate):
  * - Hover lift + Emerald glow effect
- * - Routes to /workshops/ai-literate
+ * - Routes to /workshops
  * - "Now Enrolling" status tag
  *
  * Roadmap Cards (Coming Soon):
@@ -183,7 +183,7 @@ export default function OurWorkshops() {
 
       {/* Primary CTA - View AI Literate Curriculum */}
       <div className="mt-10 flex justify-center">
-        <CTAButton href="/workshops/ai-literate" variant="primary">
+        <CTAButton href="/workshops" variant="primary">
           {t('ourWorkshops.primaryCta')}
         </CTAButton>
       </div>

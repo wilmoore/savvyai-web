@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "label": "Partnerships",
+    "title": "AI Literate Partnerships",
+    "subtitle": "Scale AI training through your organization or program."
+  },
+  "models": {
+    "label": "Partnership Models",
+    "title": "How we work together.",
+    "items": [
+      {
+        "title": "License",
+        "description": "License AI Literate for your training programs."
+      },
+      {
+        "title": "Embed",
+        "description": "Embed into leadership development curriculum."
+      },
+      {
+        "title": "Internal",
+        "description": "Run internal bootcamps for your teams."
+      },
+      {
+        "title": "Train-the-Trainer",
+        "description": "Train-the-trainer certification for your facilitators."
+      }
+    ]
+  },
+  "proof": {
+    "label": "Proof",
+    "title": "Partnerships that work.",
+    "description": "AI Bootcamp with April Sabral Leadership started as a single session and expanded into a recurring program. That\u2019s what happens when the system works."
+  },
+  "cta": {
+    "label": "Connect",
+    "title": "Ready to Partner?",
+    "description": "We\u2019re keeping this lightweight. DM on LinkedIn to start the conversation.",
+    "primary": "DM on LinkedIn",
+    "subtext": "Early-stage partnerships handled directly.",
+    "secondary": "Review the System"
+  }
+}

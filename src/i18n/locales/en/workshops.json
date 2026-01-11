@@ -1,10 +1,59 @@
 {
+  "directory": {
+    "hero": {
+      "label": "Workshops",
+      "title": "AI Literate\u2122 Workshops",
+      "subtitle": "Practical, hands-on AI training built for leverage, not demos.",
+      "tagline": "AI Literate™ is the system. Workshops are how it's delivered.",
+      "cta": "View Upcoming Workshops"
+    },
+    "outcomes": {
+      "label": "What You Leave With",
+      "title": "Not intro to AI. Applied leverage.",
+      "items": [
+        "Reusable AI workflows",
+        "Measurable gains in speed and output",
+        "Clear boundaries on what not to automate",
+        "Shared language that prevents AI theater"
+      ]
+    },
+    "audience": {
+      "forLabel": "Who It\u2019s For",
+      "forItems": [
+        "Leaders under pressure to do something with AI",
+        "Operators who need results, not slide decks",
+        "Teams tired of tool demos that don't stick"
+      ],
+      "notForLabel": "Not For",
+      "notForItems": ["Prompt tutorials", "Theory-first training", "Inspiration without execution"]
+    },
+    "schedule": {
+      "label": "Available Now",
+      "title": "Watch the replay or join a live session",
+      "workshops": [
+        {
+          "title": "AI Bootcamp with April Sabral Leadership",
+          "badge": "Runs on AI Literate\u2122"
+        }
+      ],
+      "watchReplay": "Watch Replay",
+      "viewSchedule": "View Schedule",
+      "note": "Additional partners and workshops coming soon.",
+      "replayNote": "Replay includes the full session and live workflow builds."
+    },
+    "system": {
+      "label": "The System",
+      "title": "Want to run AI training like this inside your organization?",
+      "cta": "DM on LinkedIn to discuss",
+      "secondary": "Learn about AI Literate"
+    }
+  },
   "aiLiterate": {
     "hero": {
       "label": "Workshop",
       "title": "AI Literate",
       "subtitle": "Build shared understanding of what AI can and cannot do. Leave with a clear plan for your first pilot.",
-      "status": "Now Enrolling",
+      "status": "Watch Replay",
       "duration": "Half-day",
       "format": "In-person or virtual"
     },
@@ -70,12 +119,12 @@
     },
     "cta": {
       "label": "Ready to Build AI Literacy?",
-      "title": "Register for the next session.",
-      "description": "Upcoming sessions are listed on Luma. Secure your team's spot.",
-      "primary": "Register on Luma",
-      "secondary": "See Upcoming Sessions",
-      "lumaUrl": "https://lu.ma/savvy-ai-literate",
-      "lumaCaption": "Registration handled securely via Luma."
+      "title": "Watch the replay.",
+      "description": "Get instant access to the full AI Bootcamp recording.",
+      "primary": "Watch Replay",
+      "secondary": "Learn More",
+      "replayUrl": "https://askaprilai.newzenler.com/courses/ai-bootcamp-master-chatgpt",
+      "replayCaption": "Hosted on Zenler."
     },
     "backToPrograms": "Back to Programs",
     "feedback": {

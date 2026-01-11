@@ -7,7 +7,7 @@ import { Section, SectionID } from '@/components/marketing';
  * WhoThisIsFor - Compact self-qualification section
  *
  * Paper background for zebra rhythm.
- * Helps visitors quickly determine if Savvy AI is for them.
+ * Helps visitors quickly determine if Śavvy AI is for them.
  */
 export default function WhoThisIsFor() {
   const { t } = useTranslation('homepage');

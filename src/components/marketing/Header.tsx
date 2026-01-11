@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Logo from '@/components/ui/logo';
+import { EXTERNAL_LINKS } from '@/lib/constants';
 
 /**
  * Header - Editorial Dark Floating Glass
@@ -18,12 +19,14 @@ export default function Header() {
         </Link>
 
         <nav className="flex items-center gap-6">
-          <Link
-            href="#book"
+          <a
+            href={EXTERNAL_LINKS.LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-emerald-500 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-600 transition-colors"
           >
-            Book a Conversation
-          </Link>
+            Message on LinkedIn
+          </a>
         </nav>
       </div>
     </header>

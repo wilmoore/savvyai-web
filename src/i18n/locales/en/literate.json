@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "label": "The System",
+    "title": "AI Literate\u2122",
+    "subtitle": "The system for running practical, high-impact AI bootcamps and training programs.",
+    "tagline": "Tools change. Leverage scales."
+  },
+  "definition": {
+    "label": "What AI Literate Is",
+    "title": "AI Literate is not a course.",
+    "description": "It\u2019s a system for designing AI training that produces real output, teaching workflows instead of tools, and turning AI into throughput\u2014not excitement.",
+    "items": [
+      "Designing AI training that produces real output",
+      "Teaching workflows instead of tools",
+      "Turning AI into throughput, not excitement"
+    ],
+    "tagline": "If you\u2019ve seen AI bootcamps that actually work, this is how they\u2019re built."
+  },
+  "comparison": {
+    "label": "System vs Delivery",
+    "title": "AI Literate vs AI Bootcamp",
+    "literate": {
+      "title": "AI Literate",
+      "items": ["The system", "The methodology", "Tool-agnostic", "Śavvy AI IP"]
+    },
+    "bootcamp": {
+      "title": "AI Bootcamp",
+      "items": [
+        "The delivery format",
+        "Partner-branded",
+        "Live and cohort-based",
+        "Runs on AI Literate"
+      ]
+    },
+    "tagline": "AI Bootcamp is the room. AI Literate is the engine."
+  },
+  "partnership": {
+    "label": "How People Partner",
+    "title": "AI Literate scales through partnerships.",
+    "description": "If you want repeatable results, you don\u2019t need new tools. You need a better system.",
+    "items": [
+      "Licensed to training providers",
+      "Embedded into leadership programs",
+      "Used to run internal bootcamps",
+      "Taught via train-the-trainer onboarding"
+    ]
+  },
+  "proof": {
+    "label": "In Practice",
+    "title": "AI Bootcamp with April Sabral Leadership",
+    "items": [
+      "Started as a one-off session",
+      "Expanded into a recurring program",
+      "Demand-driven, hands-on, no fluff"
+    ],
+    "tagline": "That wasn\u2019t accidental. It was AI Literate applied."
+  },
+  "cta": {
+    "label": "Next Steps",
+    "title": "Interested in partnering with AI Literate?",
+    "description": "To explore workshops or partnerships, DM on LinkedIn.",
+    "primary": "DM on LinkedIn",
+    "secondary": "See Workshops in Action"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "content": "Lock core thesis sentence",
+      "status": "completed",
+      "activeForm": "Locking core thesis"
+    },
+    {
+      "content": "Final hero pass - tighten headline + subhead",
+      "status": "completed",
+      "activeForm": "Tightening hero copy"
+    },
+    {
+      "content": "System page alignment (/literate)",
+      "status": "completed",
+      "activeForm": "Aligning system pages"
+    },
+    {
+      "content": "Lane model articulation (Direct/Partnered)",
+      "status": "completed",
+      "activeForm": "Articulating lane model"
+    },
+    {
+      "content": "Audit for drift (platitudes, redundancy)",
+      "status": "pending",
+      "activeForm": "Auditing for drift"
+    }
+  ]
+}

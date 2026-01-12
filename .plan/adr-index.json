@@ -1,5 +1,5 @@
 {
-  "lastSequence": 35,
+  "lastSequence": 36,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -102,6 +102,10 @@
     {
       "branch": "feature/literate-definition-section-update",
       "adrs": ["035-format-agnostic-system-page-content.md"]
+    },
+    {
+      "branch": "feature/enforce-page-boundaries",
+      "adrs": ["036-homepage-page-boundary-enforcement.md"]
     }
   ]
 }

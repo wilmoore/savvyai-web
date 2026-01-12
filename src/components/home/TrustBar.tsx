@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
 import { Section, SectionID } from '@/components/marketing';
 
 /**
@@ -29,15 +30,21 @@ const LOGOS = [
  * Stylized text logos in a tight 5-column grid.
  * Monochrome white at 20% opacity for subtle authority.
  * Creates a "Seal of Approval" block, not a list of names.
+ *
+ * Copy is system-focused (not workshop-focused) to enforce
+ * page boundaries: this is proof of system adoption, not
+ * workshop participation.
  */
 export default function TrustBar() {
+  const { t } = useTranslation('homepage');
+
   return (
     <Section variant="ink" size="full" className="py-10 md:py-12 border-b border-white/10">
       <SectionID number="01" name="TRUST" variant="ink" />
 
       <div className="text-center mb-8">
         <p className="text-xs font-mono uppercase tracking-widest text-white/40">
-          Teams from the world&apos;s most innovative companies
+          {t('trustBar.copy')}
         </p>
       </div>
 

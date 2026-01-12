@@ -48,15 +48,14 @@ export default function Hero() {
           {t('hero.description')}
         </motion.p>
 
-        <motion.div
-          className="space-y-3 text-base text-white/50 mb-12 max-w-xl relative z-10"
+        <motion.p
+          className="text-base text-white/50 mb-12 max-w-xl relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p>{t('hero.clarification.line1')}</p>
-          <p>{t('hero.clarification.line2')}</p>
-        </motion.div>
+          {t('hero.clarification')}
+        </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4 relative z-10"
@@ -64,10 +63,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <CTAButton href="#book" variant="primary-accent">
+          <CTAButton href="#systems" variant="primary-accent">
             {t('hero.cta.primary')}
           </CTAButton>
-          <CTAButton href="#book" variant="secondary-ink">
+          <CTAButton href="/workshops" variant="secondary-ink">
             {t('hero.cta.secondary')}
           </CTAButton>
         </motion.div>

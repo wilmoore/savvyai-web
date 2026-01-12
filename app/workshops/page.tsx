@@ -9,8 +9,9 @@ import { EXTERNAL_LINKS } from '@/lib/constants';
 /**
  * Workshops Directory Page
  *
- * Job: Show what's running now. Convert visitors to registrations.
- * This is the transactional page - directory, not education.
+ * Job: Show what's running now + comprehensive delivery details.
+ * This is the SINGLE SOURCE OF TRUTH for workshop information.
+ * Per ADR-036: All "what happens when" content lives here, not homepage.
  *
  * Editorial Noir design system:
  * - Zebra rhythm: Ink Black (#050505) / Paper White (#FFFFFF)
@@ -21,8 +22,10 @@ import { EXTERNAL_LINKS } from '@/lib/constants';
  * 01 WORKSHOPS (INK) - Hero
  * 02 OUTCOMES (PAPER) - What participants leave with
  * 03 AUDIENCE (INK) - Who it's for / not for
- * 04 SCHEDULE (PAPER) - Current workshop listing
- * 05 SYSTEM (INK) - Link to AI Literate system
+ * 04 EXPERIENCE (PAPER) - What happens in a workshop
+ * 05 SCHEDULE (INK) - Current workshop listing
+ * 06 FAQ (PAPER) - Common questions
+ * 07 SYSTEM (INK) - Link to AI Literate system
  */
 export default function WorkshopsPage() {
   const { t } = useTranslation('workshops');
@@ -63,6 +66,22 @@ export default function WorkshopsPage() {
     title: string;
     cta: string;
     secondary: string;
+  };
+
+  const experience = t('directory.experience', { returnObjects: true }) as {
+    label: string;
+    title: string;
+    intro: string;
+    clarification: string;
+    description: string;
+    outcome: string;
+    aside: string;
+  };
+
+  const faq = t('directory.faq', { returnObjects: true }) as {
+    label: string;
+    title: string;
+    items: { question: string; answer: string }[];
   };
 
   return (
@@ -157,24 +176,46 @@ export default function WorkshopsPage() {
           </div>
         </Section>
 
-        {/* 04 SCHEDULE (PAPER) - Current workshop listing */}
-        <Section variant="paper" size="wide" id="schedule">
-          <SectionID number="04" name="SCHEDULE" variant="paper" />
+        {/* 04 EXPERIENCE (PAPER) - What happens in a workshop */}
+        <Section variant="paper" size="wide">
+          <SectionID number="04" name="EXPERIENCE" variant="paper" />
 
           <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
+            {experience.label}
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-6 max-w-2xl">
+            {experience.title}
+          </h2>
+
+          <div className="max-w-2xl space-y-4">
+            <p className="text-lg text-black/70 font-medium">{experience.intro}</p>
+            <p className="text-base text-black/60">{experience.clarification}</p>
+            <p className="text-base text-black/60">{experience.description}</p>
+            <p className="text-base text-black/70 font-medium">{experience.outcome}</p>
+            <p className="text-sm text-black/50 italic border-l-2 border-emerald-500/30 pl-4 mt-6">
+              {experience.aside}
+            </p>
+          </div>
+        </Section>
+
+        {/* 05 SCHEDULE (INK) - Current workshop listing */}
+        <Section variant="ink" size="wide" id="schedule">
+          <SectionID number="05" name="SCHEDULE" variant="ink" />
+
+          <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
             {schedule.label}
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-10">
             {schedule.title}
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             {schedule.workshops.map((workshop, index) => (
-              <div key={index} className="p-6 bg-paper-secondary border border-black/10 rounded-md">
+              <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-md">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-2">{workshop.title}</h3>
-                    <span className="inline-block text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-emerald-50 text-emerald-600 border border-emerald-200">
+                    <h3 className="text-lg font-semibold text-white mb-2">{workshop.title}</h3>
+                    <span className="inline-block text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                       {workshop.badge}
                     </span>
                   </div>
@@ -192,7 +233,7 @@ export default function WorkshopsPage() {
                       href={EXTERNAL_LINKS.AI_BOOTCAMP_SCHEDULE}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-white border border-black/20 hover:border-black/40 text-ink font-medium py-2 px-4 rounded-md transition-colors text-sm"
+                      className="inline-flex items-center gap-2 bg-white/10 border border-white/20 hover:border-white/40 text-white font-medium py-2 px-4 rounded-md transition-colors text-sm"
                     >
                       <Calendar className="w-4 h-4" />
                       {schedule.viewSchedule}
@@ -201,15 +242,36 @@ export default function WorkshopsPage() {
                 </div>
               </div>
             ))}
-            <p className="text-xs text-black/50 mt-3">{schedule.replayNote}</p>
+            <p className="text-xs text-white/50 mt-3">{schedule.replayNote}</p>
           </div>
 
-          <p className="text-sm text-black/50 mt-6">{schedule.note}</p>
+          <p className="text-sm text-white/50 mt-6">{schedule.note}</p>
         </Section>
 
-        {/* 05 SYSTEM (INK) - Link to AI Literate system */}
+        {/* 06 FAQ (PAPER) - Common questions */}
+        <Section variant="paper" size="wide">
+          <SectionID number="06" name="FAQ" variant="paper" />
+
+          <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
+            {faq.label}
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-10">
+            {faq.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            {faq.items.map((item, index) => (
+              <div key={index} className="p-6 bg-paper-secondary border border-black/10 rounded-md">
+                <h3 className="text-base font-semibold text-ink mb-3">{item.question}</h3>
+                <p className="text-sm text-black/60">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* 07 SYSTEM (INK) - Link to AI Literate system */}
         <Section variant="ink" size="wide">
-          <SectionID number="05" name="SYSTEM" variant="ink" />
+          <SectionID number="07" name="SYSTEM" variant="ink" />
 
           <div className="text-center max-w-xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">

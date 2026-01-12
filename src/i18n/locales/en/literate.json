@@ -1,60 +1,58 @@
 {
   "hero": {
     "label": "The System",
-    "title": "AI Literate\u2122",
-    "subtitle": "The system for designing and running practical AI training.",
+    "title": "AI Literate™",
+    "subtitle": "A system for creating and applying leverage with AI.",
     "tagline": "Tools change. Leverage scales."
   },
   "definition": {
-    "label": "What AI Literate Is",
-    "title": "AI Literate is not a course.",
-    "description": "It's a system for designing AI training that leaves artifacts behind:",
+    "label": "What It Does",
+    "title": "AI Literate teaches teams how to work with AI.",
+    "description": "A system that produces lasting capability:",
     "items": [
       "Reusable AI workflows",
-      "Explicit decisions on what to automate and what not to",
-      "Shared decision frameworks teams keep using"
+      "Shared decision frameworks",
+      "Explicit choices on what to automate",
+      "Leverage you own"
     ],
     "tagline": "If nothing remains after training, nothing changed."
   },
-  "comparison": {
-    "label": "System vs Delivery",
-    "title": "AI Literate defines the system.\nWorkshops are how it's delivered.",
-    "description": "AI Literate is the underlying system for designing and running AI training. It defines:",
-    "items": [
-      "How training is structured",
-      "What gets taught and what doesn't",
-      "How workflows are built and reused",
-      "How AI becomes leverage instead of theater"
-    ],
-    "context": "That system can be delivered through different workshop formats, depending on context.",
-    "tagline": "No format is privileged. The system stays the same."
-  },
-  "partnership": {
-    "label": "How People Partner",
-    "title": "AI Literate scales through partnerships.",
-    "description": "If you want repeatable results, you don\u2019t need new tools. You need a better system.",
-    "items": [
-      "Licensed to training providers",
-      "Embedded into leadership programs",
-      "Used to run internal bootcamps",
-      "Taught via train-the-trainer onboarding"
-    ]
+  "lanes": {
+    "label": "How It's Delivered",
+    "title": "Two lanes. Same system.",
+    "description": "AI Literate can be delivered directly or through partners.",
+    "direct": {
+      "name": "Direct",
+      "description": "We work with your team.",
+      "items": [
+        "Workshops tailored to your workflows",
+        "Pilots built in 24 hours",
+        "Custom engagements as needed"
+      ],
+      "cta": "View Workshops"
+    },
+    "partnered": {
+      "name": "Partnered",
+      "description": "We license the system to you.",
+      "items": ["Training providers", "Leadership programs", "Internal team programs"],
+      "cta": "Discuss Partnership"
+    }
   },
   "proof": {
     "label": "In Practice",
-    "title": "AI Bootcamp with April Sabral Leadership",
+    "title": "AI Leadership Program with April Sabral",
     "items": [
       "Started as a one-off session",
       "Expanded into a recurring program",
       "Demand-driven, hands-on, no fluff"
     ],
-    "tagline": "That wasn\u2019t accidental. It was AI Literate applied."
+    "tagline": "That wasn't accidental. It was AI Literate applied."
   },
   "cta": {
     "label": "Next Steps",
-    "title": "Interested in partnering with AI Literate?",
-    "description": "To explore workshops or partnerships, DM on LinkedIn.",
+    "title": "Interested in AI Literate?",
+    "description": "Whether you want to run it with your team or license it for your clients.",
     "primary": "DM on LinkedIn",
-    "secondary": "See Workshops in Action"
+    "secondary": "View Workshops"
   }
 }

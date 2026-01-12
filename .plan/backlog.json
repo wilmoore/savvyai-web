@@ -1,6 +1,18 @@
 {
-  "lastSequence": 4,
+  "lastSequence": 5,
   "items": [
+    {
+      "id": 5,
+      "title": "Enforce page boundaries - remove workshop duplication from homepage",
+      "description": "Architectural refactor to enforce page responsibility boundaries. Homepage reduced to positioning + routing only (5-6 sections). Workshop content relocated to /workshops. Systems Overview section replaces workshop cards. TrustBar copy updated to be system-focused. Implements rule: if section explains 'what happens when', it cannot live on homepage.",
+      "category": "feature",
+      "severity": "high",
+      "fingerprint": "feature|5|enforce-page-boundaries",
+      "source": "/pro:feature",
+      "sourceBranch": "feature/enforce-page-boundaries",
+      "createdAt": "2026-01-11T12:00:00Z",
+      "status": "ready-for-review"
+    },
     {
       "id": 4,
       "title": "Update /literate definition section copy",

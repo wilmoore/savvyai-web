@@ -6,11 +6,18 @@ import { Check, ArrowRight, ExternalLink } from 'lucide-react';
 import { Header, Footer, Section, SectionID } from '@/components/marketing';
 import { EXTERNAL_LINKS } from '@/lib/constants';
 
+interface Lane {
+  name: string;
+  description: string;
+  items: string[];
+  cta: string;
+}
+
 /**
  * AI Literate System Page
  *
  * Job: Explain the system. Establish authority. Create gravity.
- * This is the conceptual page - define AI Literate as IP.
+ * Hierarchy: System → Lanes of delivery → Outcomes
  *
  * Editorial Noir design system:
  * - Zebra rhythm: Ink Black (#050505) / Paper White (#FFFFFF)
@@ -19,11 +26,10 @@ import { EXTERNAL_LINKS } from '@/lib/constants';
  *
  * Section Order (Perfect Alternating Zebra):
  * 01 SYSTEM (INK) - Hero
- * 02 DEFINITION (PAPER) - What AI Literate is
- * 03 COMPARISON (INK) - System vs Delivery
- * 04 PARTNERSHIP (PAPER) - How people partner
- * 05 PROOF (INK) - April Sabral case study
- * 06 ACTION (PAPER) - CTA
+ * 02 DEFINITION (PAPER) - What AI Literate does
+ * 03 LANES (INK) - Direct / Partnered
+ * 04 PROOF (PAPER) - April Sabral case study
+ * 05 ACTION (INK) - CTA
  */
 export default function LiteratePage() {
   const { t } = useTranslation('literate');
@@ -43,20 +49,12 @@ export default function LiteratePage() {
     tagline: string;
   };
 
-  const comparison = t('comparison', { returnObjects: true }) as {
+  const lanes = t('lanes', { returnObjects: true }) as {
     label: string;
     title: string;
     description: string;
-    items: string[];
-    context: string;
-    tagline: string;
-  };
-
-  const partnership = t('partnership', { returnObjects: true }) as {
-    label: string;
-    title: string;
-    description: string;
-    items: string[];
+    direct: Lane;
+    partnered: Lane;
   };
 
   const proof = t('proof', { returnObjects: true }) as {
@@ -94,7 +92,7 @@ export default function LiteratePage() {
           </div>
         </Section>
 
-        {/* 02 DEFINITION (PAPER) - What AI Literate is */}
+        {/* 02 DEFINITION (PAPER) - What AI Literate does */}
         <Section variant="paper" size="wide">
           <SectionID number="02" name="DEFINITION" variant="paper" />
 
@@ -118,79 +116,94 @@ export default function LiteratePage() {
           <p className="text-base text-black/50 italic max-w-xl">{definition.tagline}</p>
         </Section>
 
-        {/* 03 COMPARISON (INK) - System vs Delivery */}
+        {/* 03 LANES (INK) - Direct / Partnered */}
         <Section variant="ink" size="wide">
-          <SectionID number="03" name="COMPARISON" variant="ink" />
+          <SectionID number="03" name="LANES" variant="ink" />
 
-          <div className="max-w-2xl">
+          <div className="mb-12">
             <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
-              {comparison.label}
+              {lanes.label}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-6 whitespace-pre-line">
-              {comparison.title}
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
+              {lanes.title}
             </h2>
-            <p className="text-lg text-white/70 mb-6">{comparison.description}</p>
-
-            <ul className="space-y-3 mb-8">
-              {comparison.items.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 text-white/80">
-                  <Check
-                    className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
-                    strokeWidth={2}
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-base text-white/60 mb-4">{comparison.context}</p>
-            <p className="text-base text-white/50 italic">{comparison.tagline}</p>
+            <p className="text-lg text-white/60">{lanes.description}</p>
           </div>
-        </Section>
 
-        {/* 04 PARTNERSHIP (PAPER) - How people partner */}
-        <Section variant="paper" size="wide">
-          <SectionID number="04" name="PARTNERSHIP" variant="paper" />
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Direct Lane */}
+            <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-white mb-2">{lanes.direct.name}</h3>
+              <p className="text-white/60 mb-6">{lanes.direct.description}</p>
 
-          <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
-            {partnership.label}
-          </p>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-6 max-w-2xl">
-            {partnership.title}
-          </h2>
+              <ul className="space-y-3 mb-6">
+                {lanes.direct.items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-white/70">
+                    <Check
+                      className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
+                      strokeWidth={2}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
 
-          <div className="grid sm:grid-cols-2 gap-4 mb-8 max-w-2xl">
-            {partnership.items.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-3 p-4 bg-paper-secondary border border-black/10 rounded-md"
+              <Link
+                href="/workshops"
+                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
               >
-                <Check className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" strokeWidth={2} />
-                <span className="text-sm text-black/70">{item}</span>
-              </div>
-            ))}
-          </div>
+                {lanes.direct.cta}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
 
-          <p className="text-base text-black/50 italic max-w-xl">{partnership.description}</p>
+            {/* Partnered Lane */}
+            <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-white mb-2">{lanes.partnered.name}</h3>
+              <p className="text-white/60 mb-6">{lanes.partnered.description}</p>
+
+              <ul className="space-y-3 mb-6">
+                {lanes.partnered.items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-white/70">
+                    <Check
+                      className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
+                      strokeWidth={2}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href={EXTERNAL_LINKS.LINKEDIN}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+              >
+                {lanes.partnered.cta}
+                <ExternalLink className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </Section>
 
-        {/* 05 PROOF (INK) - April Sabral case study */}
-        <Section variant="ink" size="wide">
-          <SectionID number="05" name="PROOF" variant="ink" />
+        {/* 04 PROOF (PAPER) - April Sabral case study */}
+        <Section variant="paper" size="wide">
+          <SectionID number="04" name="PROOF" variant="paper" />
 
           <div className="max-w-xl">
-            <p className="text-xs font-mono uppercase tracking-widest text-white/40 mb-4">
+            <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
               {proof.label}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-6">
               {proof.title}
             </h2>
 
             <ul className="space-y-3 mb-8">
               {proof.items.map((item, index) => (
-                <li key={index} className="flex items-start gap-3 text-white/70">
+                <li key={index} className="flex items-start gap-3 text-black/70">
                   <Check
-                    className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0"
+                    className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0"
                     strokeWidth={2}
                   />
                   <span>{item}</span>
@@ -198,22 +211,22 @@ export default function LiteratePage() {
               ))}
             </ul>
 
-            <p className="text-base text-white/50 italic">{proof.tagline}</p>
+            <p className="text-base text-black/50 italic">{proof.tagline}</p>
           </div>
         </Section>
 
-        {/* 06 ACTION (PAPER) - CTA */}
-        <Section variant="paper" size="wide">
-          <SectionID number="06" name="ACTION" variant="paper" />
+        {/* 05 ACTION (INK) - CTA */}
+        <Section variant="ink" size="wide">
+          <SectionID number="05" name="ACTION" variant="ink" />
 
           <div className="text-center max-w-xl mx-auto">
-            <p className="text-xs font-mono uppercase tracking-widest text-emerald-500 mb-4">
+            <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
               {cta.label}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-ink mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
               {cta.title}
             </h2>
-            <p className="text-lg text-black/60 mb-8">{cta.description}</p>
+            <p className="text-lg text-white/60 mb-8">{cta.description}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -227,7 +240,7 @@ export default function LiteratePage() {
               </Link>
               <Link
                 href="/workshops"
-                className="inline-flex items-center justify-center gap-2 bg-white border border-black/20 hover:border-black/40 text-ink font-medium py-3 px-6 rounded-md transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 hover:border-white/40 text-white font-medium py-3 px-6 rounded-md transition-colors"
               >
                 {cta.secondary}
                 <ArrowRight className="w-4 h-4" />

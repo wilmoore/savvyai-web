@@ -9,7 +9,7 @@
     },
     "outcomes": {
       "label": "What You Leave With",
-      "title": "Not intro to AI. Applied leverage.",
+      "title": "Applied leverage.",
       "items": [
         "Reusable AI workflows",
         "Measurable gains in speed and output",
@@ -32,7 +32,7 @@
       "title": "Watch the replay or join a live session",
       "workshops": [
         {
-          "title": "AI Bootcamp with April Sabral Leadership",
+          "title": "AI Leadership Program with April Sabral",
           "badge": "Runs on AI Literate\u2122"
         }
       ],
@@ -46,6 +46,36 @@
       "title": "Want to run AI training like this inside your organization?",
       "cta": "DM on LinkedIn to discuss",
       "secondary": "Learn about AI Literate"
+    },
+    "experience": {
+      "label": "The Format",
+      "title": "What Happens in a Workshop",
+      "intro": "Workshops are working sessions, not presentations.",
+      "clarification": "No passive lectures. No 'Death-by-PowerPoint.' We use structured, interactive systems to move your team from theory to tangible artifacts in real-time.",
+      "description": "We bring your team together to work through real material. You bring the workflows, the frustrations, and the questions. We bring structure, AI fluency, and facilitation.",
+      "outcome": "By the end, your team has looked at their own work through a new lens. They understand what AI can and cannot do. And they have decided together what is worth testing first."
+    },
+    "faq": {
+      "label": "Common Questions",
+      "title": "Quick Answers",
+      "items": [
+        {
+          "question": "Do we need engineers involved?",
+          "answer": "Not for workshops. For pilots, engineering involvement is helpful but not required. We can build independently."
+        },
+        {
+          "question": "Is this just consulting?",
+          "answer": "No. Consulting usually means advice. We teach, then build. You leave with working tools and shared knowledge, not a report."
+        },
+        {
+          "question": "Is this only for large companies?",
+          "answer": "No. We work with teams of all sizes. What matters is having a real workflow you want to improve and people willing to learn."
+        },
+        {
+          "question": "What if we decide AI isn't right for us?",
+          "answer": "That's a valid outcome. Some teams realize AI isn't the right solution for their problem. That clarity is valuable. We'd rather you discover this in a workshop than six months into a project."
+        }
+      ]
     }
   },
   "aiLiterate": {
@@ -120,7 +150,7 @@
     "cta": {
       "label": "Ready to Build AI Literacy?",
       "title": "Watch the replay.",
-      "description": "Get instant access to the full AI Bootcamp recording.",
+      "description": "Get instant access to the full workshop recording.",
       "primary": "Watch Replay",
       "secondary": "Learn More",
       "replayUrl": "https://askaprilai.newzenler.com/courses/ai-bootcamp-master-chatgpt",

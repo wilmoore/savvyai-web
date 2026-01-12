@@ -21,14 +21,14 @@ export default function Difference() {
 
   return (
     <Section variant="ink" size="wide">
-      <SectionID number="09" name="CONTRAST" variant="ink" />
+      <SectionID number="03" name="DIFFERENCE" variant="ink" />
 
       {/* Founder Narrative Intro */}
       <div className="mb-16">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
           {t('difference.founderHeadline')}
         </h2>
-        <p className="text-lg text-white/60 max-w-3xl">{t('difference.founderBody')}</p>
+        <p className="text-lg text-white/60">{t('difference.founderBody')}</p>
       </div>
 
       {/* Comparison Section */}

@@ -1,5 +1,5 @@
 {
-  "lastSequence": 36,
+  "lastSequence": 37,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -106,6 +106,10 @@
     {
       "branch": "feature/enforce-page-boundaries",
       "adrs": ["036-homepage-page-boundary-enforcement.md"]
+    },
+    {
+      "branch": "feature/workshops-schedule-shareable-url",
+      "adrs": ["037-fragment-free-shareable-section-urls.md"]
     }
   ]
 }

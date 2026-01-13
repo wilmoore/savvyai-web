@@ -55,3 +55,5 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [033. Shell Content Centering](033-shell-content-centering.md)
 - [034. LinkedIn-Only CTA Strategy](034-linkedin-only-cta-strategy.md)
 - [035. Format-Agnostic System Page Content](035-format-agnostic-system-page-content.md)
+- [036. Homepage Page Boundary Enforcement](036-homepage-page-boundary-enforcement.md)
+- [037. Fragment-Free Shareable Section URLs](037-fragment-free-shareable-section-urls.md)

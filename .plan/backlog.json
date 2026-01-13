@@ -1,6 +1,18 @@
 {
-  "lastSequence": 5,
+  "lastSequence": 6,
   "items": [
+    {
+      "id": 6,
+      "title": "Clean shareable URL for workshops schedule",
+      "description": "Create /workshops/schedule route as a clean, shareable alternative to /workshops#schedule. Same page content, scrolls to schedule section on load. Hash fragments break on social platforms and are hard to communicate verbally.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|6|workshops-schedule-shareable-url",
+      "source": "/pro:feature",
+      "sourceBranch": "feature/workshops-schedule-shareable-url",
+      "createdAt": "2026-01-12T00:00:00Z",
+      "status": "ready-for-review"
+    },
     {
       "id": 5,
       "title": "Enforce page boundaries - remove workshop duplication from homepage",

@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "content": "Create ADR for shareable URL pattern",
+      "status": "completed",
+      "activeForm": "Creating ADR"
+    },
+    {
+      "content": "Bump version to 0.4.1",
+      "status": "in_progress",
+      "activeForm": "Bumping version"
+    },
+    { "content": "Push branch and create PR", "status": "pending", "activeForm": "Creating PR" },
+    {
+      "content": "Homepage refactor",
+      "status": "pending",
+      "activeForm": "Planning homepage refactor"
+    }
+  ]
+}

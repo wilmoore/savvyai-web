@@ -71,7 +71,7 @@ export default function SystemsOverview() {
                   ? 'bg-ink text-white border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-1 cursor-pointer ring-1 ring-emerald-500/30'
                   : isActive
                     ? 'bg-ink text-white border-ink hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-1 cursor-pointer'
-                    : 'bg-paper-secondary border-black/10 opacity-60'
+                    : 'bg-paper-secondary border-black/10 opacity-75'
               )}
             >
               {/* System number + status */}
@@ -79,7 +79,7 @@ export default function SystemsOverview() {
                 <p
                   className={cn(
                     'text-xs font-mono uppercase tracking-widest',
-                    isClickable ? 'text-emerald-400' : 'text-black/40'
+                    isClickable ? 'text-emerald-400' : 'text-black/55'
                   )}
                 >
                   {String(index + 1).padStart(2, '0')} / SYSTEM
@@ -95,7 +95,7 @@ export default function SystemsOverview() {
                   </span>
                 )}
                 {!isClickable && (
-                  <span className="text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-black/5 text-black/40 border border-black/10">
+                  <span className="text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-black/5 text-black/55 border border-black/10">
                     Coming Soon
                   </span>
                 )}
@@ -106,7 +106,7 @@ export default function SystemsOverview() {
                 className={cn(
                   'text-2xl md:text-3xl font-bold tracking-tight',
                   system.subname ? 'mb-1' : 'mb-4',
-                  isClickable ? 'text-white' : 'text-black/50'
+                  isClickable ? 'text-white' : 'text-black/55'
                 )}
               >
                 {system.name}
@@ -114,11 +114,11 @@ export default function SystemsOverview() {
               {system.subname && (
                 <p
                   className={cn(
-                    'text-lg italic mb-4',
-                    isClickable ? 'text-white/60' : 'text-black/40'
+                    'text-sm italic mb-4',
+                    isClickable ? 'text-white/60' : 'text-black/55'
                   )}
                 >
-                  ({system.subname})
+                  {system.subname}
                 </p>
               )}
 
@@ -126,7 +126,7 @@ export default function SystemsOverview() {
               <p
                 className={cn(
                   'text-base leading-relaxed flex-grow',
-                  isClickable ? 'text-white/70' : 'text-black/40'
+                  isClickable ? 'text-white/70' : 'text-black/55'
                 )}
               >
                 {system.purpose}
@@ -147,8 +147,8 @@ export default function SystemsOverview() {
               )}
               {!isClickable && (
                 <div className="mt-6 pt-6 border-t border-black/10 flex items-center justify-between">
-                  <span className="text-sm font-medium text-black/40">Learn more</span>
-                  <ArrowRight className="w-5 h-5 text-black/30" />
+                  <span className="text-sm font-medium text-black/55">Explore system</span>
+                  <ArrowRight className="w-5 h-5 text-black/40" />
                 </div>
               )}
             </div>

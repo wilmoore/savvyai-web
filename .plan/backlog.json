@@ -1,6 +1,18 @@
 {
-  "lastSequence": 8,
+  "lastSequence": 9,
   "items": [
+    {
+      "id": 9,
+      "title": "Homepage system card refinement - authority and hierarchy",
+      "description": "Micro-alignment pass on homepage systems section. Capability system: remove parentheses from AI Literate subname, reduce text size for clear hierarchy. Governance system: increase opacity (60→75), increase text contrast (40→55), update CTA to 'View framework'. Subtitle: remove explanatory weight.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|9|homepage-system-card-refinement",
+      "source": "/pro:feature",
+      "sourceBranch": "feat/homepage-system-card-refinement",
+      "createdAt": "2026-01-29T12:00:00Z",
+      "status": "ready-for-review"
+    },
     {
       "id": 8,
       "title": "Homepage System Map Revision v2 - three-system stack",

@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 
 interface System {
   name: string;
+  subname?: string;
   purpose: string;
   href: string;
   status: 'flagship' | 'active' | 'coming-soon';
@@ -56,7 +57,7 @@ export default function SystemsOverview() {
         <p className="text-lg text-black/60 max-w-2xl">{t('systemsOverview.subtitle')}</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {systems.map((system, index) => {
           const isFlagship = system.status === 'flagship';
           const isActive = system.status === 'active';
@@ -103,12 +104,23 @@ export default function SystemsOverview() {
               {/* System name - large, bold */}
               <h3
                 className={cn(
-                  'text-2xl md:text-3xl font-bold tracking-tight mb-4',
+                  'text-2xl md:text-3xl font-bold tracking-tight',
+                  system.subname ? 'mb-1' : 'mb-4',
                   isClickable ? 'text-white' : 'text-black/50'
                 )}
               >
                 {system.name}
               </h3>
+              {system.subname && (
+                <p
+                  className={cn(
+                    'text-lg italic mb-4',
+                    isClickable ? 'text-white/60' : 'text-black/40'
+                  )}
+                >
+                  ({system.subname})
+                </p>
+              )}
 
               {/* Purpose - system-level, no delivery language */}
               <p
@@ -120,7 +132,7 @@ export default function SystemsOverview() {
                 {system.purpose}
               </p>
 
-              {/* CTA for clickable cards */}
+              {/* CTA */}
               {isFlagship && (
                 <div className="mt-6 pt-6 border-t border-emerald-500/20 flex items-center justify-between">
                   <span className="text-sm font-medium text-emerald-300">Request Audit</span>
@@ -131,6 +143,12 @@ export default function SystemsOverview() {
                 <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
                   <span className="text-sm font-medium text-emerald-400">Explore system</span>
                   <ArrowRight className="w-5 h-5 text-emerald-400" />
+                </div>
+              )}
+              {!isClickable && (
+                <div className="mt-6 pt-6 border-t border-black/10 flex items-center justify-between">
+                  <span className="text-sm font-medium text-black/40">Learn more</span>
+                  <ArrowRight className="w-5 h-5 text-black/30" />
                 </div>
               )}
             </div>

@@ -1,22 +1,29 @@
 {
   "hero": {
-    "tagline": "Systems for leverage.",
-    "headline": "Taught first. Owned forever.",
-    "description": "We design systems that teach teams how to create and apply leverage with AI.",
-    "clarification": "You don't need to be technical.",
+    "tagline": "SYSTEMS FOR STRUCTURAL INTEGRITY",
+    "headline": "Structural integrity first. Leverage second.",
+    "description": "Before organizations add AI, automation, or scale, Śavvy AI assesses whether their operations can safely support additional load.",
+    "supporting": "We expose structural weakness before new leverage amplifies it.",
+    "clarification": "We do not implement, build, or remediate.\nWe determine what is structurally sound — and what is not.",
     "cta": {
-      "primary": "Explore Our Systems",
-      "secondary": "View Workshops"
+      "primary": "Request an Integrity Audit",
+      "secondary": "Explore Our Systems"
     }
   },
   "systemsOverview": {
     "label": "Our Systems",
-    "title": "Systems we build",
-    "subtitle": "Each system creates leverage your team owns.",
+    "title": "Our Systems",
+    "subtitle": "Each system addresses a different layer of leverage — from structural integrity to capability and execution.",
     "systems": [
       {
+        "name": "Operational Structural Integrity Audit",
+        "purpose": "An independent assessment of whether an organization's operations can safely support additional load. We identify structural risk, single-point dependencies, and hidden fragility before AI, automation, or scale amplify failure.",
+        "href": "https://linkedin.com/in/wilmoore",
+        "status": "flagship"
+      },
+      {
         "name": "AI Literate™",
-        "purpose": "Reusable workflows and decision frameworks for creating leverage with AI.",
+        "purpose": "Capability and training programs designed to raise baseline competence after structural risks are understood. AI Literate helps teams apply leverage safely once operations are sound.",
         "href": "/literate",
         "status": "active"
       },
@@ -178,8 +185,8 @@
     }
   },
   "difference": {
-    "founderHeadline": "Designed by operators, for teams who need leverage.",
-    "founderBody": "Our systems are shaped by years of operating inside large, complex organizations—where clarity, ownership, and failure tolerance mattered long before AI entered the picture. That discipline is what makes AI useful instead of distracting.",
+    "founderHeadline": "Designed by operators, for organizations that need structural clarity.",
+    "founderBody": "Śavvy AI works at the level where failure actually originates: operations, ownership, and decision flow. Our work is shaped by years inside complex organizations where scale, leverage, and accountability matter — and where adding new technology without structural integrity creates risk, not advantage.",
     "label": "The Difference",
     "title": "What Makes This Different",
     "typicalTitle": "What others offer",
@@ -187,23 +194,19 @@
     "comparisons": [
       {
         "typical": "Programs that end when the session ends",
-        "savvy": "Systems that compound over time"
+        "savvy": "Structural clarity before leverage"
       },
       {
-        "typical": "Moments of inspiration",
-        "savvy": "Momentum you can sustain"
+        "typical": "Inspiration without accountability",
+        "savvy": "Systems that compound safely over time"
       },
       {
-        "typical": "Knowledge transfer",
-        "savvy": "Leverage you own"
+        "typical": "Tools without structural context",
+        "savvy": "Decisions grounded in operational reality"
       },
       {
-        "typical": "Tools to try",
-        "savvy": "Frameworks to apply"
-      },
-      {
-        "typical": "Advice on what's possible",
-        "savvy": "Clarity on what's practical"
+        "typical": "Advice that assumes readiness",
+        "savvy": "Capability that rests on sound foundations"
       }
     ]
   },

@@ -6,6 +6,7 @@ interface CTAButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'primary-accent' | 'secondary' | 'secondary-ink';
   className?: string;
+  external?: boolean;
 }
 
 /**
@@ -16,12 +17,15 @@ interface CTAButtonProps {
  * - primary-accent: Emerald background with 1px emerald top-border accent (for hero CTAs)
  * - secondary: White background with black border (for paper sections)
  * - secondary-ink: Transparent with white border (for ink sections)
+ *
+ * External links open in new tab with proper rel attributes.
  */
 export default function CTAButton({
   href,
   children,
   variant = 'primary',
   className,
+  external = false,
 }: CTAButtonProps) {
   const baseStyles =
     'inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2';
@@ -35,6 +39,19 @@ export default function CTAButton({
     'secondary-ink':
       'border border-white/20 bg-transparent text-white hover:bg-white/5 hover:border-white/30 focus-visible:ring-offset-ink',
   };
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(baseStyles, variantStyles[variant], className)}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
     <Link href={href} className={cn(baseStyles, variantStyles[variant], className)}>

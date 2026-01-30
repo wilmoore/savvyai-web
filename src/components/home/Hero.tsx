@@ -3,12 +3,13 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Section, CTAButton } from '@/components/marketing';
+import { EXTERNAL_LINKS } from '@/lib/constants';
 
 /**
  * Hero - Editorial Billboard Statement
  *
  * Massive typography on ink black background.
- * "Taught first. Built second." as a billboard-scale headline.
+ * "Structural integrity first. Leverage second." as a billboard-scale headline.
  * Creates immediate premium, editorial impact.
  * Features subtle emerald glow behind headline for atmosphere.
  */
@@ -40,7 +41,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-white/70 max-w-2xl mb-10 relative z-10"
+          className="text-xl md:text-2xl text-white/70 max-w-2xl mb-6 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -49,7 +50,16 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="text-base text-white/50 mb-12 max-w-xl relative z-10"
+          className="text-lg text-white/60 max-w-xl mb-8 relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
+        >
+          {t('hero.supporting')}
+        </motion.p>
+
+        <motion.p
+          className="text-base text-white/40 mb-12 max-w-xl relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -63,10 +73,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <CTAButton href="#systems" variant="primary-accent">
+          <CTAButton href={EXTERNAL_LINKS.LINKEDIN} variant="primary-accent" external>
             {t('hero.cta.primary')}
           </CTAButton>
-          <CTAButton href="/workshops" variant="secondary-ink">
+          <CTAButton href="#systems" variant="secondary-ink">
             {t('hero.cta.secondary')}
           </CTAButton>
         </motion.div>

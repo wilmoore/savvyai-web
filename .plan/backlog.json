@@ -1,6 +1,18 @@
 {
-  "lastSequence": 6,
+  "lastSequence": 7,
   "items": [
+    {
+      "id": 7,
+      "title": "Homepage flagship repositioning - Operational Structural Integrity Audit",
+      "description": "Re-anchor Śavvy AI homepage around flagship Operational Structural Integrity Audit offering. Copy-only change: Update Hero section (new eyebrow, headline, subheadline, clarification, CTAs), add new flagship system card, update AI Literate description, revise Difference section copy, update footer tagline. Positions company above AI consultancies as structural integrity assessors.",
+      "category": "feature",
+      "severity": "high",
+      "fingerprint": "feature|7|homepage-flagship-repositioning",
+      "source": "/pro:feature",
+      "sourceBranch": "feat/homepage-flagship-repositioning",
+      "createdAt": "2026-01-29T00:00:00Z",
+      "status": "completed"
+    },
     {
       "id": 6,
       "title": "Clean shareable URL for workshops schedule",

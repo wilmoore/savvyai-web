@@ -13,7 +13,7 @@
   "systemsOverview": {
     "label": "Our Systems",
     "title": "Our Systems",
-    "subtitle": "Each system addresses a different layer of leverage — from structural integrity to capability and execution.",
+    "subtitle": "Each system addresses a different layer of organizational leverage — from structural integrity to capability and long-term durability.",
     "systems": [
       {
         "name": "Operational Structural Integrity Audit",
@@ -22,21 +22,16 @@
         "status": "flagship"
       },
       {
-        "name": "AI Literate™",
-        "purpose": "Capability and training programs designed to raise baseline competence after structural risks are understood. AI Literate helps teams apply leverage safely once operations are sound.",
+        "name": "Capability & Decision Literacy",
+        "subname": "AI Literate™",
+        "purpose": "Training and capability programs designed to raise baseline competence after structural integrity is confirmed. Teams learn how to think, decide, and apply leverage safely once operations are sound.",
         "href": "/literate",
         "status": "active"
       },
       {
-        "name": "Product Bakery",
-        "purpose": "A structured approach to validating and building AI-enhanced products.",
-        "href": "/bakery",
-        "status": "coming-soon"
-      },
-      {
-        "name": "Onboarding System",
-        "purpose": "AI-powered onboarding that gets new team members productive faster.",
-        "href": "/onboarding",
+        "name": "Governance & Operating Models",
+        "purpose": "Frameworks that institutionalize sound decisions over time. We define ownership, escalation paths, change control, and accountability so structural integrity does not decay as organizations grow.",
+        "href": "#",
         "status": "coming-soon"
       }
     ]
@@ -186,7 +181,7 @@
   },
   "difference": {
     "founderHeadline": "Designed by operators, for organizations that need structural clarity.",
-    "founderBody": "Śavvy AI works at the level where failure actually originates: operations, ownership, and decision flow. Our work is shaped by years inside complex organizations where scale, leverage, and accountability matter — and where adding new technology without structural integrity creates risk, not advantage.",
+    "founderBody": "Śavvy AI works at the level where failure actually originates: operations, ownership, and decision flow. Our work is shaped by years inside complex organizations where leverage, scale, and accountability matter — and where adding new technology without structural integrity creates risk, not advantage.",
     "label": "The Difference",
     "title": "What Makes This Different",
     "typicalTitle": "What others offer",

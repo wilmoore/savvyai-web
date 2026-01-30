@@ -1,6 +1,18 @@
 {
-  "lastSequence": 7,
+  "lastSequence": 8,
   "items": [
+    {
+      "id": 8,
+      "title": "Homepage System Map Revision v2 - three-system stack",
+      "description": "Align homepage with Śavvy AI long-term system map. Remove execution-adjacent systems (Product Bakery, Onboarding). Reframe AI Literate as capability system. Add Governance & Operating Models as third system. Update Difference section copy. Change grid from 4-col to 3-col. Copy-only except grid adjustment.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|8|homepage-system-map-revision-v2",
+      "source": "/pro:feature",
+      "sourceBranch": "feat/homepage-system-map-revision-v2",
+      "createdAt": "2026-01-29T00:00:00Z",
+      "status": "ready-for-review"
+    },
     {
       "id": 7,
       "title": "Homepage flagship repositioning - Operational Structural Integrity Audit",

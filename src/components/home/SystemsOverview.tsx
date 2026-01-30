@@ -10,7 +10,7 @@ interface System {
   name: string;
   purpose: string;
   href: string;
-  status: 'active' | 'coming-soon';
+  status: 'flagship' | 'active' | 'coming-soon';
 }
 
 /**
@@ -56,17 +56,21 @@ export default function SystemsOverview() {
         <p className="text-lg text-black/60 max-w-2xl">{t('systemsOverview.subtitle')}</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {systems.map((system, index) => {
+          const isFlagship = system.status === 'flagship';
           const isActive = system.status === 'active';
+          const isClickable = isFlagship || isActive;
 
           const cardContent = (
             <div
               className={cn(
                 'relative border rounded-lg p-8 transition-all duration-300 h-full min-h-[280px] flex flex-col',
-                isActive
-                  ? 'bg-ink text-white border-ink hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-1 cursor-pointer'
-                  : 'bg-paper-secondary border-black/10 opacity-60'
+                isFlagship
+                  ? 'bg-ink text-white border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-1 cursor-pointer ring-1 ring-emerald-500/30'
+                  : isActive
+                    ? 'bg-ink text-white border-ink hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-1 cursor-pointer'
+                    : 'bg-paper-secondary border-black/10 opacity-60'
               )}
             >
               {/* System number + status */}
@@ -74,17 +78,22 @@ export default function SystemsOverview() {
                 <p
                   className={cn(
                     'text-xs font-mono uppercase tracking-widest',
-                    isActive ? 'text-emerald-400' : 'text-black/40'
+                    isClickable ? 'text-emerald-400' : 'text-black/40'
                   )}
                 >
                   {String(index + 1).padStart(2, '0')} / SYSTEM
                 </p>
+                {isFlagship && (
+                  <span className="text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-emerald-500/30 text-emerald-300 border border-emerald-400/50">
+                    Flagship
+                  </span>
+                )}
                 {isActive && (
                   <span className="text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                     Active
                   </span>
                 )}
-                {!isActive && (
+                {!isClickable && (
                   <span className="text-xs font-mono uppercase tracking-wider px-2 py-1 rounded bg-black/5 text-black/40 border border-black/10">
                     Coming Soon
                   </span>
@@ -95,7 +104,7 @@ export default function SystemsOverview() {
               <h3
                 className={cn(
                   'text-2xl md:text-3xl font-bold tracking-tight mb-4',
-                  isActive ? 'text-white' : 'text-black/50'
+                  isClickable ? 'text-white' : 'text-black/50'
                 )}
               >
                 {system.name}
@@ -105,13 +114,19 @@ export default function SystemsOverview() {
               <p
                 className={cn(
                   'text-base leading-relaxed flex-grow',
-                  isActive ? 'text-white/70' : 'text-black/40'
+                  isClickable ? 'text-white/70' : 'text-black/40'
                 )}
               >
                 {system.purpose}
               </p>
 
-              {/* CTA for active cards */}
+              {/* CTA for clickable cards */}
+              {isFlagship && (
+                <div className="mt-6 pt-6 border-t border-emerald-500/20 flex items-center justify-between">
+                  <span className="text-sm font-medium text-emerald-300">Request Audit</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-300" />
+                </div>
+              )}
               {isActive && (
                 <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
                   <span className="text-sm font-medium text-emerald-400">Explore system</span>
@@ -121,7 +136,21 @@ export default function SystemsOverview() {
             </div>
           );
 
-          // Wrap active cards in Link
+          // Wrap clickable cards in Link (flagship is external)
+          if (isFlagship) {
+            return (
+              <a
+                key={index}
+                href={system.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                {cardContent}
+              </a>
+            );
+          }
+
           if (isActive) {
             return (
               <Link key={index} href={system.href} className="block">

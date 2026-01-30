@@ -1,0 +1,12 @@
+{
+  "attempts": [
+    {
+      "timestamp": "2026-01-30T03:24:29Z",
+      "tool": "Bash",
+      "error": "npm run lint 2>&1",
+      "status": "unresolved"
+    }
+  ],
+  "strikeCount": 1,
+  "lastErrorHash": "c6945974"
+}

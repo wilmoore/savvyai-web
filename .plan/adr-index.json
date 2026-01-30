@@ -1,5 +1,5 @@
 {
-  "lastSequence": 37,
+  "lastSequence": 38,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -110,6 +110,10 @@
     {
       "branch": "feature/workshops-schedule-shareable-url",
       "adrs": ["037-fragment-free-shareable-section-urls.md"]
+    },
+    {
+      "branch": "feat/homepage-flagship-repositioning",
+      "adrs": ["038-flagship-system-status-tier.md"]
     }
   ]
 }

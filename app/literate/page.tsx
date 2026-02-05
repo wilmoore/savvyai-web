@@ -52,6 +52,7 @@ export default function LiteratePage() {
   const lanes = t('lanes', { returnObjects: true }) as {
     label: string;
     title: string;
+    clarification: string;
     description: string;
     direct: Lane;
     partnered: Lane;
@@ -124,9 +125,10 @@ export default function LiteratePage() {
             <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-4">
               {lanes.label}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter leading-[1.1] text-white mb-2">
               {lanes.title}
             </h2>
+            <p className="text-base text-emerald-400 font-medium mb-4">{lanes.clarification}</p>
             <p className="text-lg text-white/60">{lanes.description}</p>
           </div>
 

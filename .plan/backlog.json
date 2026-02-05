@@ -1,6 +1,18 @@
 {
-  "lastSequence": 9,
+  "lastSequence": 10,
   "items": [
+    {
+      "id": 10,
+      "title": "Install Readiness Layer & Reframe Partnered Offering",
+      "description": "Align website with top-of-stack positioning by making Readiness/Judgment Layer explicit. Partners page gets new Readiness section above existing content. AI Literate definition title changes from teaching to outcome language. Two Lanes gets single-line readiness clarification. Site-wide removal of training-first language.",
+      "category": "feature",
+      "severity": "high",
+      "fingerprint": "feature|10|readiness-layer-reframe-partnered",
+      "source": "/pro:feature",
+      "sourceBranch": "feat/readiness-layer-reframe-partnered",
+      "createdAt": "2026-01-30T00:00:00Z",
+      "status": "in-progress"
+    },
     {
       "id": 9,
       "title": "Homepage system card refinement - authority and hierarchy",

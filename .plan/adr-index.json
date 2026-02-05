@@ -1,5 +1,5 @@
 {
-  "lastSequence": 38,
+  "lastSequence": 39,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -114,6 +114,10 @@
     {
       "branch": "feat/homepage-flagship-repositioning",
       "adrs": ["038-flagship-system-status-tier.md"]
+    },
+    {
+      "branch": "feat/readiness-layer-reframe-partnered",
+      "adrs": ["039-readiness-layer-top-of-stack-positioning.md"]
     }
   ]
 }

@@ -1,8 +1,25 @@
 {
+  "readiness": {
+    "label": "The Readiness Layer",
+    "title": "Control the Readiness Layer",
+    "body": "Before training, certification, or execution, candidates and teams pass through a universal readiness layer. This layer surfaces decision quality, AI misuse, communication risk, and role fit — before they are submitted, hired, or scaled.",
+    "conclusion": "Partners license this system to control who is ready for downstream execution.",
+    "intelligence": {
+      "title": "Readiness & Placement Intelligence",
+      "description": "Everyone enters through the same readiness layer. It is evaluative, not instructional.",
+      "signal": "The output is signal:",
+      "items": [
+        "Can this person operate safely in an AI-mediated environment?",
+        "Where does risk appear under pressure?",
+        "What, if anything, should happen next?"
+      ],
+      "clarification": "This layer determines whether downstream capability work is required — or whether nothing else is needed."
+    }
+  },
   "hero": {
     "label": "Partnerships",
-    "title": "AI Literate Partnerships",
-    "subtitle": "Scale AI training through your organization or program."
+    "title": "License Judgment and Gating",
+    "subtitle": "Control who is ready before execution begins."
   },
   "models": {
     "label": "Partnership Models",
@@ -10,19 +27,19 @@
     "items": [
       {
         "title": "License",
-        "description": "License AI Literate for your training programs."
+        "description": "License the readiness layer for your placement and hiring processes."
       },
       {
         "title": "Embed",
-        "description": "Embed into leadership development curriculum."
+        "description": "Embed readiness diagnostics into leadership development programs."
       },
       {
         "title": "Internal",
-        "description": "Run internal programs for your teams."
+        "description": "Run internal readiness assessments before capability work begins."
       },
       {
-        "title": "Train-the-Trainer",
-        "description": "Train-the-trainer certification for your facilitators."
+        "title": "Certify",
+        "description": "Certify your facilitators to administer the readiness layer."
       }
     ]
   },
@@ -34,7 +51,7 @@
   "cta": {
     "label": "Connect",
     "title": "Ready to Partner?",
-    "description": "We\u2019re keeping this lightweight. DM on LinkedIn to start the conversation.",
+    "description": "We're keeping this lightweight. DM on LinkedIn to start the conversation.",
     "primary": "DM on LinkedIn",
     "subtext": "Early-stage partnerships handled directly.",
     "secondary": "Review the System"

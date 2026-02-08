@@ -7,25 +7,26 @@
   },
   "definition": {
     "label": "What It Does",
-    "title": "AI Literate teaches teams how to work with AI.",
-    "description": "A system that produces lasting capability:",
+    "title": "AI Literate produces lasting capability.",
+    "description": "A system that delivers durable outcomes:",
     "items": [
       "Reusable AI workflows",
       "Shared decision frameworks",
       "Explicit choices on what to automate",
       "Leverage you own"
     ],
-    "tagline": "Workflows that keep working after you leave."
+    "tagline": "Capability that compounds after readiness is confirmed."
   },
   "lanes": {
     "label": "How It's Delivered",
     "title": "Two lanes. Same system.",
+    "clarification": "Both lanes begin with the same readiness layer.",
     "description": "AI Literate can be delivered directly or through partners.",
     "direct": {
       "name": "Direct",
-      "description": "We work with your team.",
+      "description": "We work with your team after readiness is confirmed.",
       "items": [
-        "Workshops tailored to your workflows",
+        "Capability sessions tailored to your workflows",
         "Pilots built in 24 hours",
         "Custom engagements as needed"
       ],
@@ -33,8 +34,12 @@
     },
     "partnered": {
       "name": "Partnered",
-      "description": "We license the system to you.",
-      "items": ["Training providers", "Leadership programs", "Internal team programs"],
+      "description": "You license the readiness layer and capability system.",
+      "items": [
+        "Placement and hiring processes",
+        "Leadership programs",
+        "Internal readiness programs"
+      ],
       "cta": "Discuss Partnership"
     }
   },

@@ -5,9 +5,15 @@
     "description": "Before organizations add AI, automation, or scale, Śavvy AI assesses whether their operations can safely support additional load.",
     "supporting": "We expose structural weakness before new leverage amplifies it.",
     "clarification": "We do not implement, build, or remediate.\nWe determine what is structurally sound — and what is not.",
+    "audience": "Designed for leaders, operators, and institutions preparing to add AI without breaking what already works.",
     "cta": {
       "primary": "Request an Integrity Audit",
+      "primaryMicro": "A 60–90 minute structural assessment. No implementation. No tools pushed.",
       "secondary": "Explore Our Systems"
+    },
+    "bridge": {
+      "text": "From Audit → Operator Readiness",
+      "subtext": "How teams move from structural clarity to operational capability."
     }
   },
   "systemsOverview": {
@@ -24,7 +30,7 @@
       {
         "name": "Capability & Decision Literacy",
         "subname": "AI Literate™",
-        "purpose": "Training and capability programs designed to raise baseline competence after structural integrity is confirmed. Teams learn how to think, decide, and apply leverage safely once operations are sound.",
+        "purpose": "Execution capability delivered after readiness is confirmed. Teams gain durable workflows, decision frameworks, and leverage they own — once the readiness layer determines they are ready.",
         "href": "/literate",
         "status": "active"
       },

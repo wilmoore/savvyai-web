@@ -59,7 +59,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="text-base text-white/40 mb-12 max-w-xl relative z-10"
+          className="text-base text-white/40 mb-8 max-w-xl relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -67,18 +67,52 @@ export default function Hero() {
           {t('hero.clarification')}
         </motion.p>
 
+        {/* Audience Self-Selection Anchor */}
+        <motion.p
+          className="text-sm font-medium text-emerald-400/80 mb-12 max-w-xl relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.55 }}
+        >
+          {t('hero.audience')}
+        </motion.p>
+
+        {/* Primary CTAs */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <CTAButton href={EXTERNAL_LINKS.LINKEDIN} variant="primary-accent" external>
-            {t('hero.cta.primary')}
-          </CTAButton>
+          <div className="flex flex-col">
+            <CTAButton href={EXTERNAL_LINKS.LINKEDIN} variant="primary-accent" external>
+              {t('hero.cta.primary')}
+            </CTAButton>
+            {/* CTA Micro-copy */}
+            <span className="text-xs text-white/40 mt-2 max-w-[240px]">
+              {t('hero.cta.primaryMicro')}
+            </span>
+          </div>
           <CTAButton href="#systems" variant="secondary-ink">
             {t('hero.cta.secondary')}
           </CTAButton>
+        </motion.div>
+
+        {/* Downstream Authority Bridge */}
+        <motion.div
+          className="mt-12 pt-8 border-t border-white/10 relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          <a href="/literate" className="group inline-flex flex-col">
+            <span className="text-sm font-mono uppercase tracking-wider text-white/50 group-hover:text-emerald-400 transition-colors">
+              {t('hero.bridge.text')}
+            </span>
+            <span className="text-xs text-white/30 group-hover:text-white/50 transition-colors mt-1">
+              {t('hero.bridge.subtext')}
+            </span>
+          </a>
         </motion.div>
       </div>
     </Section>

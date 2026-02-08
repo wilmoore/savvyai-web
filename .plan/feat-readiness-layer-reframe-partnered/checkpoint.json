@@ -1,0 +1,68 @@
+{
+  "branch": "feat/readiness-layer-reframe-partnered",
+  "status": "implementation-complete",
+  "completedAt": "2026-01-30T00:00:00Z",
+  "phases": {
+    "phase1_partners_page": {
+      "status": "complete",
+      "changes": [
+        "Added new 'readiness' section to partners.json with Readiness Layer framing",
+        "Reframed hero from 'AI Literate Partnerships' to 'License Judgment and Gating'",
+        "Updated partnership models to focus on readiness/gating language",
+        "Added new READINESS section (01) to partners page component",
+        "Renumbered existing sections (PARTNERS→02, MODELS→03, PROOF→04, CONNECT→05)",
+        "Updated zebra pattern (INK→PAPER→INK→PAPER→INK)"
+      ]
+    },
+    "phase2_literate_page": {
+      "status": "complete",
+      "changes": [
+        "Changed definition title from 'teaches teams' to 'produces lasting capability'",
+        "Added lanes.clarification: 'Both lanes begin with the same readiness layer'",
+        "Updated Direct lane: 'after readiness is confirmed'",
+        "Updated Partnered lane: 'license the readiness layer and capability system'",
+        "Replaced 'Workshops tailored' with 'Capability sessions tailored'",
+        "Replaced 'Training providers' with 'Placement and hiring processes'"
+      ]
+    },
+    "phase3_homepage_card": {
+      "status": "complete",
+      "changes": [
+        "Updated AI Literate system card purpose to condition as post-readiness",
+        "New: 'Execution capability delivered after readiness is confirmed'"
+      ]
+    },
+    "phase4_language_audit": {
+      "status": "complete",
+      "changes": [
+        "Updated workshops.json FAQ 'Is this just consulting?' answer",
+        "Changed from 'We teach, then build' to 'We assess readiness, build capability, then deliver'"
+      ]
+    }
+  },
+  "filesModified": [
+    "src/i18n/locales/en/partners.json",
+    "app/partners/page.tsx",
+    "src/i18n/locales/en/literate.json",
+    "app/literate/page.tsx",
+    "src/i18n/locales/en/homepage.json",
+    "src/i18n/locales/en/workshops.json",
+    "src/components/home/Hero.tsx"
+  ],
+  "additionalChanges": {
+    "homepage_authority_pass": {
+      "status": "complete",
+      "changes": [
+        "Added audience self-selection anchor below hero headline",
+        "Added CTA micro-copy under primary button (60-90 min assessment, no tools)",
+        "Added downstream authority bridge (From Audit → Operator Readiness)"
+      ]
+    }
+  },
+  "verification": {
+    "build": "passed",
+    "partners_page": "verified - Readiness section renders at top",
+    "literate_page": "verified - clarification line and outcome title render",
+    "homepage": "verified - AI Literate card shows post-readiness language"
+  }
+}

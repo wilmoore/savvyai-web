@@ -1,0 +1,29 @@
+{
+  "lastSequence": 2,
+  "items": [
+    {
+      "id": 1,
+      "title": "Homepage hero clarity",
+      "description": "Update the homepage hero small header to \"We fix what’s blocking revenue before anything else gets built.\" and remove all em/en dashes across the page while keeping layout intact.",
+      "category": "feature",
+      "severity": "medium",
+      "fingerprint": "feature|1|homepage-hero-clarity",
+      "source": "/pro:feature",
+      "sourceBranch": "feat/homepage-hero-clarity",
+      "createdAt": "2026-04-13T22:03:06Z",
+      "status": "in-progress"
+    },
+    {
+      "id": 2,
+      "title": "Repository hygiene: dev pid + session docs",
+      "description": "Resolve CodeRabbit flags by ignoring runtime .dev/pid.json artifacts and clarifying doc/.plan session handoff guidance so automated reviews pass without noise.",
+      "category": "maintenance",
+      "severity": "low",
+      "fingerprint": "feature|2|repo-hygiene-dev-pid-session-docs",
+      "source": "/pro:pr",
+      "sourceBranch": "feat/homepage-hero-clarity",
+      "createdAt": "2026-04-13T22:10:00Z",
+      "status": "todo"
+    }
+  ]
+}

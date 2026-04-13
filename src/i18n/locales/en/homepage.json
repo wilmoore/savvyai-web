@@ -1,6 +1,6 @@
 {
   "hero": {
-    "tagline": "SYSTEMS FOR STRUCTURAL INTEGRITY",
+    "tagline": "We fix what’s blocking revenue before anything else gets built.",
     "headline": "Structural integrity first. Leverage second.",
     "description": "Workshops, revenue audits, and agentic systems for organizations building with AI.",
     "cta": {
@@ -16,7 +16,7 @@
   "systemsOverview": {
     "label": "Our Systems",
     "title": "Our Systems",
-    "subtitle": "Each system addresses a different layer of leverage — from structural integrity to long-term durability.",
+    "subtitle": "Each system addresses a different layer of leverage, from structural integrity to long-term durability.",
     "systems": [
       {
         "name": "Revenue Recovery Audit",
@@ -189,7 +189,7 @@
   },
   "difference": {
     "founderHeadline": "Designed by operators, for organizations that need structural clarity.",
-    "founderBody": "Śavvy AI works at the level where failure actually originates: operations, ownership, and decision flow. Our work is shaped by years inside complex organizations where leverage, scale, and accountability matter — and where adding new technology without structural integrity creates risk, not advantage.",
+    "founderBody": "Śavvy AI works at the level where failure actually originates: operations, ownership, and decision flow. Our work is shaped by years inside complex organizations where leverage, scale, and accountability matter. Adding new technology without structural integrity creates risk, not advantage.",
     "label": "The Difference",
     "title": "What Makes This Different",
     "typicalTitle": "What others offer",

@@ -12,6 +12,8 @@ interface System {
   purpose: string;
   href: string;
   status: 'flagship' | 'active' | 'coming-soon';
+  ctaLabel?: string;
+  external?: boolean;
 }
 
 /**
@@ -62,6 +64,8 @@ export default function SystemsOverview() {
           const isFlagship = system.status === 'flagship';
           const isActive = system.status === 'active';
           const isClickable = isFlagship || isActive;
+          const isExternal = system.external ?? isFlagship;
+          const ctaLabel = system.ctaLabel ?? (isFlagship ? 'Request Audit' : 'Explore system');
 
           const cardContent = (
             <div
@@ -133,43 +137,57 @@ export default function SystemsOverview() {
               </p>
 
               {/* CTA */}
-              {isFlagship && (
-                <div className="mt-6 pt-6 border-t border-emerald-500/20 flex items-center justify-between">
-                  <span className="text-sm font-medium text-emerald-300">Request Audit</span>
-                  <ArrowRight className="w-5 h-5 text-emerald-300" />
-                </div>
-              )}
-              {isActive && (
-                <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-sm font-medium text-emerald-400">Explore system</span>
-                  <ArrowRight className="w-5 h-5 text-emerald-400" />
-                </div>
-              )}
-              {!isClickable && (
-                <div className="mt-6 pt-6 border-t border-black/10 flex items-center justify-between">
-                  <span className="text-sm font-medium text-black/55">Explore system</span>
-                  <ArrowRight className="w-5 h-5 text-black/40" />
-                </div>
-              )}
+              <div
+                className={cn(
+                  'mt-6 pt-6 border-t flex items-center justify-between',
+                  isFlagship
+                    ? 'border-emerald-500/20'
+                    : isActive
+                      ? 'border-white/10'
+                      : 'border-black/10'
+                )}
+              >
+                <span
+                  className={cn(
+                    'text-sm font-medium',
+                    isFlagship
+                      ? 'text-emerald-300'
+                      : isActive
+                        ? 'text-emerald-400'
+                        : 'text-black/55'
+                  )}
+                >
+                  {ctaLabel}
+                </span>
+                <ArrowRight
+                  className={cn(
+                    'w-5 h-5',
+                    isFlagship
+                      ? 'text-emerald-300'
+                      : isActive
+                        ? 'text-emerald-400'
+                        : 'text-black/40'
+                  )}
+                />
+              </div>
             </div>
           );
 
-          // Wrap clickable cards in Link (flagship is external)
-          if (isFlagship) {
-            return (
-              <a
-                key={index}
-                href={system.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                {cardContent}
-              </a>
-            );
-          }
+          if (isClickable) {
+            if (isExternal) {
+              return (
+                <a
+                  key={index}
+                  href={system.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  {cardContent}
+                </a>
+              );
+            }
 
-          if (isActive) {
             return (
               <Link key={index} href={system.href} className="block">
                 {cardContent}

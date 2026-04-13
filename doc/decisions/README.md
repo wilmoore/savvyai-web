@@ -57,3 +57,6 @@ We use the [Michael Nygard format](https://cognitect.com/blog/2011/11/15/documen
 - [035. Format-Agnostic System Page Content](035-format-agnostic-system-page-content.md)
 - [036. Homepage Page Boundary Enforcement](036-homepage-page-boundary-enforcement.md)
 - [037. Fragment-Free Shareable Section URLs](037-fragment-free-shareable-section-urls.md)
+- [038. Flagship System Status Tier](038-flagship-system-status-tier.md)
+- [039. Readiness Layer Top-of-Stack Positioning](039-readiness-layer-top-of-stack-positioning.md)
+- [040. System Cards Source CTA Metadata from Translations](040-system-card-cta-metadata.md)

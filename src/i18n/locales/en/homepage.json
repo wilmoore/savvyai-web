@@ -2,14 +2,11 @@
   "hero": {
     "tagline": "SYSTEMS FOR STRUCTURAL INTEGRITY",
     "headline": "Structural integrity first. Leverage second.",
-    "description": "Before organizations add AI, automation, or scale, Śavvy AI assesses whether their operations can safely support additional load.",
-    "supporting": "We expose structural weakness before new leverage amplifies it.",
-    "clarification": "We do not implement, build, or remediate.\nWe determine what is structurally sound — and what is not.",
-    "audience": "Designed for leaders, operators, and institutions preparing to add AI without breaking what already works.",
+    "description": "Workshops, revenue audits, and agentic systems for organizations building with AI.",
     "cta": {
-      "primary": "Request an Integrity Audit",
-      "primaryMicro": "A 60–90 minute structural assessment. No implementation. No tools pushed.",
-      "secondary": "Explore Our Systems"
+      "primary": "Request a Revenue Audit",
+      "primaryMicro": "Fast structural triage focused on recovering trapped revenue.",
+      "secondary": "See every system"
     },
     "bridge": {
       "text": "From Audit → Operator Readiness",
@@ -22,23 +19,28 @@
     "subtitle": "Each system addresses a different layer of leverage — from structural integrity to long-term durability.",
     "systems": [
       {
-        "name": "Operational Structural Integrity Audit",
-        "purpose": "An independent assessment of whether an organization's operations can safely support additional load. We identify structural risk, single-point dependencies, and hidden fragility before AI, automation, or scale amplify failure.",
+        "name": "Revenue Recovery Audit",
+        "purpose": "A structural audit that uncovers stalled revenue and prevents leakage before you layer new AI leverage.",
         "href": "https://linkedin.com/in/wilmoore",
-        "status": "flagship"
+        "status": "flagship",
+        "ctaLabel": "Start the audit",
+        "external": true
       },
       {
-        "name": "Capability & Decision Literacy",
+        "name": "AI Literacy",
         "subname": "AI Literate™",
-        "purpose": "Execution capability delivered after readiness is confirmed. Teams gain durable workflows, decision frameworks, and leverage they own — once the readiness layer determines they are ready.",
+        "purpose": "Outcome-focused literacy that teaches teams to spot leverage, design prompts, and make confident shipping decisions.",
         "href": "/literate",
-        "status": "active"
+        "status": "active",
+        "ctaLabel": "View the curriculum"
       },
       {
-        "name": "Governance & Operating Models",
-        "purpose": "Frameworks that institutionalize sound decisions over time. We define ownership, escalation paths, change control, and accountability so structural integrity does not decay as organizations grow.",
-        "href": "#",
-        "status": "coming-soon"
+        "name": "Agentic Software Engineering",
+        "purpose": "Agent-grade systems engineered alongside your operators so value compounds without adding fragility.",
+        "href": "https://linkedin.com/in/wilmoore",
+        "status": "active",
+        "ctaLabel": "Build your agent system",
+        "external": true
       }
     ]
   },

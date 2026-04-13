@@ -41,7 +41,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-white/70 max-w-2xl mb-6 relative z-10"
+          className="text-xl md:text-2xl text-white/70 max-w-3xl mb-10 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -49,40 +49,12 @@ export default function Hero() {
           {t('hero.description')}
         </motion.p>
 
-        <motion.p
-          className="text-lg text-white/60 max-w-xl mb-8 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.45 }}
-        >
-          {t('hero.supporting')}
-        </motion.p>
-
-        <motion.p
-          className="text-base text-white/40 mb-8 max-w-xl relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          {t('hero.clarification')}
-        </motion.p>
-
-        {/* Audience Self-Selection Anchor */}
-        <motion.p
-          className="text-sm font-medium text-emerald-400/80 mb-12 max-w-xl relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.55 }}
-        >
-          {t('hero.audience')}
-        </motion.p>
-
         {/* Primary CTAs */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="flex flex-col">
             <CTAButton href={EXTERNAL_LINKS.LINKEDIN} variant="primary-accent" external>
@@ -103,7 +75,7 @@ export default function Hero() {
           className="mt-12 pt-8 border-t border-white/10 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a href="/literate" className="group inline-flex flex-col">
             <span className="text-sm font-mono uppercase tracking-wider text-white/50 group-hover:text-emerald-400 transition-colors">

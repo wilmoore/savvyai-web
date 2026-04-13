@@ -11,7 +11,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feat/readiness-layer-reframe-partnered",
       "createdAt": "2026-01-30T00:00:00Z",
-      "status": "in-progress"
+      "status": "completed"
     },
     {
       "id": 9,
@@ -23,7 +23,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feat/homepage-system-card-refinement",
       "createdAt": "2026-01-29T12:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 8,
@@ -35,7 +35,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feat/homepage-system-map-revision-v2",
       "createdAt": "2026-01-29T00:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 7,
@@ -59,7 +59,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feature/workshops-schedule-shareable-url",
       "createdAt": "2026-01-12T00:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 5,
@@ -71,7 +71,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feature/enforce-page-boundaries",
       "createdAt": "2026-01-11T12:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 4,
@@ -95,7 +95,7 @@
       "source": "/pro:bug",
       "sourceBranch": "fix/remove-unscoped-protocol-page",
       "createdAt": "2025-12-26T18:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 2,
@@ -107,7 +107,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feature/savvybuild-page",
       "createdAt": "2026-01-05T00:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     },
     {
       "id": 3,
@@ -119,7 +119,7 @@
       "source": "/pro:feature",
       "sourceBranch": "feature/three-page-ai-literate-architecture",
       "createdAt": "2026-01-11T00:00:00Z",
-      "status": "ready-for-review"
+      "status": "completed"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "lastSequence": 39,
+  "lastSequence": 40,
   "entries": [
     {
       "branch": "fix/remove-book-navigation-links",
@@ -118,6 +118,10 @@
     {
       "branch": "feat/readiness-layer-reframe-partnered",
       "adrs": ["039-readiness-layer-top-of-stack-positioning.md"]
+    },
+    {
+      "branch": "feat/homepage-copy-remap-conversion",
+      "adrs": ["040-system-card-cta-metadata.md"]
     }
   ]
 }

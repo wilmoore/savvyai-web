@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "label": "Revenue Recovery Audit",
+    "title": "Find and fix what is blocking revenue.",
+    "description": "A 3-input diagnostic that tells us where to focus before anything else gets built.",
+    "cta": "Start Audit"
+  },
+  "form": {
+    "title": "Tell us where revenue is getting stuck.",
+    "fields": {
+      "product": {
+        "label": "What do you sell?",
+        "placeholder": "Enterprise platform, retail ops, hiring service..."
+      },
+      "stuck": {
+        "label": "Where is revenue getting stuck?",
+        "placeholder": "Renewals, onboarding, billing handoff, executive approval..."
+      },
+      "urgency": {
+        "label": "Urgency",
+        "placeholder": "This week, this quarter, future planning"
+      },
+      "contact": {
+        "label": "Best contact (optional)",
+        "placeholder": "Email or direct line"
+      }
+    },
+    "submit": "Send Audit",
+    "addContact": "Add contact info (optional)"
+  },
+  "success": {
+    "title": "We’ll review this and reach out directly.",
+    "linkedin": "Message on LinkedIn",
+    "message": "Hi {{recipient}}, I just submitted the revenue recovery audit. We sell {{product}} and revenue is getting stuck at {{stuck}}. Urgency: {{urgency}}."
+  }
+}

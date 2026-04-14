@@ -18,6 +18,8 @@ import workshopsEn from './locales/en/workshops.json';
 import buildEn from './locales/en/build.json';
 import literateEn from './locales/en/literate.json';
 import partnersEn from './locales/en/partners.json';
+import auditEn from './locales/en/audit.json';
+import intentDrivenEn from './locales/en/intent-driven.json';
 
 const resources = {
   en: {
@@ -36,6 +38,8 @@ const resources = {
     build: buildEn,
     literate: literateEn,
     partners: partnersEn,
+    audit: auditEn,
+    'intent-driven': intentDrivenEn,
   },
 };
 
@@ -62,6 +66,8 @@ i18n
       'build',
       'literate',
       'partners',
+      'audit',
+      'intent-driven',
     ],
     interpolation: {
       escapeValue: false, // React already escapes values

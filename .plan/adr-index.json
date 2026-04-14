@@ -122,6 +122,10 @@
     {
       "branch": "feat/homepage-copy-remap-conversion",
       "adrs": ["040-system-card-cta-metadata.md"]
+    },
+    {
+      "branch": "feat/internal-system-pages",
+      "adrs": ["040-system-card-cta-metadata.md"]
     }
   ]
 }

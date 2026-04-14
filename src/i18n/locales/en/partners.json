@@ -2,7 +2,7 @@
   "readiness": {
     "label": "The Readiness Layer",
     "title": "Control the Readiness Layer",
-    "body": "Before training, certification, or execution, candidates and teams pass through a universal readiness layer. This layer surfaces decision quality, AI misuse, communication risk, and role fit — before they are submitted, hired, or scaled.",
+    "body": "Before training, certification, or execution, candidates and teams pass through a universal readiness layer. This layer surfaces decision quality, AI misuse, communication risk, and role fit before they are submitted, hired, or scaled.",
     "conclusion": "Partners license this system to control who is ready for downstream execution.",
     "intelligence": {
       "title": "Readiness & Placement Intelligence",
@@ -13,7 +13,7 @@
         "Where does risk appear under pressure?",
         "What, if anything, should happen next?"
       ],
-      "clarification": "This layer determines whether downstream capability work is required — or whether nothing else is needed."
+      "clarification": "This layer determines whether downstream capability work is required, or whether nothing else is needed."
     }
   },
   "hero": {

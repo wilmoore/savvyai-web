@@ -3,7 +3,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Section, CTAButton } from '@/components/marketing';
-import { EXTERNAL_LINKS } from '@/lib/constants';
 
 /**
  * Hero - Editorial Billboard Statement
@@ -22,14 +21,16 @@ export default function Hero() {
         {/* Emerald glow behind headline */}
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <motion.p
-          className="text-xs font-mono tracking-widest text-white/40 mb-6 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          {t('hero.tagline')}
-        </motion.p>
+        {t('hero.tagline') && (
+          <motion.p
+            className="text-xs font-mono tracking-widest text-white/40 mb-6 relative z-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {t('hero.tagline')}
+          </motion.p>
+        )}
 
         <motion.h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tighter text-white mb-8 relative z-10"
@@ -57,34 +58,23 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="flex flex-col">
-            <CTAButton href={EXTERNAL_LINKS.LINKEDIN} variant="primary-accent" external>
+            <CTAButton href="/audit" variant="primary-accent" className="w-full sm:w-auto">
               {t('hero.cta.primary')}
             </CTAButton>
             {/* CTA Micro-copy */}
-            <span className="text-xs text-white/40 mt-2 max-w-[240px]">
-              {t('hero.cta.primaryMicro')}
-            </span>
+            {t('hero.cta.primaryMicro') && (
+              <span className="text-xs text-white/40 mt-2 max-w-[240px]">
+                {t('hero.cta.primaryMicro')}
+              </span>
+            )}
           </div>
-          <CTAButton href="#systems" variant="secondary-ink">
+          <CTAButton
+            href="#systems"
+            variant="secondary-ink"
+            className="w-full sm:w-auto text-white/70"
+          >
             {t('hero.cta.secondary')}
           </CTAButton>
-        </motion.div>
-
-        {/* Downstream Authority Bridge */}
-        <motion.div
-          className="mt-12 pt-8 border-t border-white/10 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <a href="/literate" className="group inline-flex flex-col">
-            <span className="text-sm font-mono uppercase tracking-wider text-white/50 group-hover:text-emerald-400 transition-colors">
-              {t('hero.bridge.text')}
-            </span>
-            <span className="text-xs text-white/30 group-hover:text-white/50 transition-colors mt-1">
-              {t('hero.bridge.subtext')}
-            </span>
-          </a>
         </motion.div>
       </div>
     </Section>

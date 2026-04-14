@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "label": "Agentic Software Engineering",
+    "title": "Intent-Driven Engineering",
+    "description": "Design and build production-grade agents with clear ownership, routing, and safeguards."
+  },
+  "playbook": {
+    "label": "Playbook",
+    "title": "Read the philosophy and apply it to your stack.",
+    "description": "Intent-Driven Engineering is a playbook for how agents should be specified, built, and maintained before they hit production.",
+    "cta": "Start Here"
+  },
+  "builds": {
+    "label": "App Builds",
+    "title": "Pick the build track that matches your risk tolerance and speed.",
+    "free": {
+      "label": "Free",
+      "title": "Sandbox",
+      "description": "Shared templates and routing diagrams for teams testing intent-driven flows."
+    },
+    "paid": {
+      "label": "Paid",
+      "title": "Guided build",
+      "description": "We spec, build, and hand off production-ready intent-driven agents with guardrails."
+    },
+    "cta": "Explore Builds"
+  }
+}

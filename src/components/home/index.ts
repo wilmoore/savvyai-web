@@ -16,9 +16,6 @@ export { default as SystemsOverview } from './SystemsOverview';
 // 03 DIFFERENCE (INK) - Founder POV, why Śavvy AI is different
 export { default as Difference } from './Difference';
 
-// 04 ROUTING (PAPER) - Primary navigation CTAs
-export { default as RoutingCTAs } from './RoutingCTAs';
-
 // =============================================================================
 // LEGACY COMPONENTS - Relocated to /workshops or removed
 // Preserved for reference and potential reuse on /workshops page

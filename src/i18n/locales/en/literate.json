@@ -1,63 +1,26 @@
 {
   "hero": {
-    "label": "The System",
+    "label": "AI Literacy",
     "title": "AI Literate™",
-    "subtitle": "A system for creating and applying leverage with AI.",
-    "tagline": "Tools change. Leverage scales."
+    "subtitle": "Teach teams how to make confident leverage decisions fast.",
+    "tagline": "Every session ends with a clear next move."
   },
-  "definition": {
-    "label": "What It Does",
-    "title": "AI Literate produces lasting capability.",
-    "description": "A system that delivers durable outcomes:",
-    "items": [
-      "Reusable AI workflows",
-      "Shared decision frameworks",
-      "Explicit choices on what to automate",
-      "Leverage you own"
+  "session": {
+    "label": "Join Session",
+    "title": "Current cohort is limited and fast-moving.",
+    "description": "Live working sessions that get your operators aligned, fluent, and ready to ship. No slides. No fluff.",
+    "details": [
+      "Seats confirmed after readiness check",
+      "Operator-led exercises",
+      "Build decision brief inside the session"
     ],
-    "tagline": "Capability that compounds after readiness is confirmed."
+    "cta": "View Sessions"
   },
-  "lanes": {
-    "label": "How It's Delivered",
-    "title": "Two lanes. Same system.",
-    "clarification": "Both lanes begin with the same readiness layer.",
-    "description": "AI Literate can be delivered directly or through partners.",
-    "direct": {
-      "name": "Direct",
-      "description": "We work with your team after readiness is confirmed.",
-      "items": [
-        "Capability sessions tailored to your workflows",
-        "Pilots built in 24 hours",
-        "Custom engagements as needed"
-      ],
-      "cta": "View Workshops"
-    },
-    "partnered": {
-      "name": "Partnered",
-      "description": "You license the readiness layer and capability system.",
-      "items": [
-        "Placement and hiring processes",
-        "Leadership programs",
-        "Internal readiness programs"
-      ],
-      "cta": "Discuss Partnership"
-    }
-  },
-  "proof": {
-    "label": "In Practice",
-    "title": "AI Leadership Program with April Sabral",
-    "items": [
-      "Started as a one-off session",
-      "Expanded into a recurring program",
-      "Demand-driven, hands-on, no fluff"
-    ],
-    "tagline": "That wasn't accidental. It was AI Literate applied."
-  },
-  "cta": {
-    "label": "Next Steps",
-    "title": "Interested in AI Literate?",
-    "description": "Whether you want to run it with your team or license it for your clients.",
-    "primary": "DM on LinkedIn",
-    "secondary": "View Workshops"
+  "partners": {
+    "label": "For Partners",
+    "title": "Bring AI Literate to your clients.",
+    "description": "License the readiness layer, run the curriculum inside your own programs, and keep our operators on standby when you need deeper build support.",
+    "cta": "Become a Partner",
+    "message": "Hi Will, I want to run AI Literate as a partner. I work with {{audience}} and can drive distribution."
   }
 }

@@ -1,58 +1,49 @@
 {
   "hero": {
-    "tagline": "We fix what’s blocking revenue before anything else gets built.",
+    "tagline": "",
     "headline": "Structural integrity first. Leverage second.",
     "description": "Workshops, revenue audits, and agentic systems for organizations building with AI.",
     "cta": {
-      "primary": "Request a Revenue Audit",
-      "primaryMicro": "Fast structural triage focused on recovering trapped revenue.",
-      "secondary": "See every system"
-    },
-    "bridge": {
-      "text": "From Audit → Operator Readiness",
-      "subtext": "How teams move from structural clarity to operational capability."
+      "primary": "Run a Revenue Audit",
+      "primaryMicro": "",
+      "secondary": "See Systems"
     }
   },
   "systemsOverview": {
     "label": "Our Systems",
     "title": "Our Systems",
-    "subtitle": "Each system addresses a different layer of leverage, from structural integrity to long-term durability.",
+    "subtitle": "",
+    "flagshipLabel": "Start here",
+    "defaultCtas": {
+      "flagship": "Run a Revenue Audit",
+      "active": "Explore System"
+    },
     "systems": [
       {
         "name": "Revenue Recovery Audit",
-        "purpose": "A structural audit that uncovers stalled revenue and prevents leakage before you layer new AI leverage.",
-        "href": "https://linkedin.com/in/wilmoore",
+        "purpose": "Identify and recover revenue leaks across billing, infrastructure, and lifecycle gaps.",
+        "supportingLine": "7-day audit. Measurable impact.",
+        "href": "/audit",
         "status": "flagship",
-        "ctaLabel": "Start the audit",
-        "external": true
+        "ctaLabel": "Run a Revenue Audit"
       },
       {
         "name": "AI Literacy",
-        "subname": "AI Literate™",
-        "purpose": "Outcome-focused literacy that teaches teams to spot leverage, design prompts, and make confident shipping decisions.",
+        "purpose": "Turn your team or audience into AI operators through live, practical workshops.",
+        "supportingLine": "Next session: Coming soon",
         "href": "/literate",
         "status": "active",
-        "ctaLabel": "View the curriculum"
+        "ctaLabel": "View Workshops"
       },
       {
         "name": "Agentic Software Engineering",
-        "purpose": "Agent-grade systems engineered alongside your operators so value compounds without adding fragility.",
+        "purpose": "Build production-ready agent systems with routing, reusable skills, and guardrails.",
         "href": "https://linkedin.com/in/wilmoore",
         "status": "active",
-        "ctaLabel": "Build your agent system",
+        "ctaLabel": "Build Your Agent System",
         "external": true
       }
     ]
-  },
-  "routing": {
-    "label": "Get Started",
-    "title": "Ready to explore?",
-    "subtitle": "Choose your path based on what you need right now.",
-    "cta": {
-      "workshops": "View Workshops",
-      "literate": "Explore AI Literate",
-      "linkedin": "Message on LinkedIn"
-    }
   },
   "trustBar": {
     "copy": "Systems shaped by experience at"

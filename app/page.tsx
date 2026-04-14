@@ -1,7 +1,7 @@
 'use client';
 
 import { Header, Footer } from '@/components/marketing';
-import { Hero, TrustBar, SystemsOverview, Difference, RoutingCTAs } from '@/components/home';
+import { Hero, TrustBar, SystemsOverview, Difference } from '@/components/home';
 
 /**
  * Homepage - Positioning + Routing ONLY
@@ -44,9 +44,6 @@ export default function Home() {
 
         {/* 03 DIFFERENCE (INK) - Founder POV */}
         <Difference />
-
-        {/* 04 ROUTING (PAPER) - Primary navigation CTAs */}
-        <RoutingCTAs />
       </main>
       <Footer />
     </div>

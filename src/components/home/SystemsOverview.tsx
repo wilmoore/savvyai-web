@@ -10,6 +10,7 @@ interface System {
   name: string;
   subname?: string;
   purpose: string;
+  supportingLine?: string;
   href: string;
   status: 'flagship' | 'active' | 'coming-soon';
   ctaLabel?: string;
@@ -44,6 +45,11 @@ interface System {
 export default function SystemsOverview() {
   const { t } = useTranslation('homepage');
   const systems = t('systemsOverview.systems', { returnObjects: true }) as System[];
+  const flagshipLabel = t('systemsOverview.flagshipLabel');
+  const defaultCtas = t('systemsOverview.defaultCtas', { returnObjects: true }) as {
+    flagship: string;
+    active: string;
+  };
 
   return (
     <Section variant="paper" size="full" className="border-b border-black/10">
@@ -64,8 +70,9 @@ export default function SystemsOverview() {
           const isFlagship = system.status === 'flagship';
           const isActive = system.status === 'active';
           const isClickable = isFlagship || isActive;
-          const isExternal = system.external ?? isFlagship;
-          const ctaLabel = system.ctaLabel ?? (isFlagship ? 'Request Audit' : 'Explore system');
+          const isExternal = system.external ?? false;
+          const ctaLabel =
+            system.ctaLabel ?? (isFlagship ? defaultCtas.flagship : defaultCtas.active);
 
           const cardContent = (
             <div
@@ -105,6 +112,12 @@ export default function SystemsOverview() {
                 )}
               </div>
 
+              {isFlagship && (
+                <p className="text-sm font-mono uppercase tracking-wider text-emerald-300 mb-3">
+                  {flagshipLabel}
+                </p>
+              )}
+
               {/* System name - large, bold */}
               <h3
                 className={cn(
@@ -129,12 +142,31 @@ export default function SystemsOverview() {
               {/* Purpose - system-level, no delivery language */}
               <p
                 className={cn(
-                  'text-base leading-relaxed flex-grow',
+                  'text-base leading-relaxed',
                   isClickable ? 'text-white/70' : 'text-black/55'
                 )}
               >
                 {system.purpose}
               </p>
+
+              {/* Supporting line - small supplementary text */}
+              {system.supportingLine && (
+                <p
+                  className={cn(
+                    'text-sm mt-2 flex-grow',
+                    isFlagship
+                      ? 'text-emerald-400/80'
+                      : isActive
+                        ? 'text-white/50'
+                        : 'text-black/40'
+                  )}
+                >
+                  {system.supportingLine}
+                </p>
+              )}
+
+              {/* Spacer when no supporting line */}
+              {!system.supportingLine && <div className="flex-grow" />}
 
               {/* CTA */}
               <div

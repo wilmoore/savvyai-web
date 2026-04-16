@@ -1,6 +1,18 @@
 {
-  "lastSequence": 3,
+  "lastSequence": 4,
   "items": [
+    {
+      "id": 4,
+      "title": "Restore Vercel deployments - webhook reconnection",
+      "description": "Vercel deployments stopped triggering 3+ days ago despite commits being pushed to deploy/main. Investigation and remediation to restore automatic deployments via GitHub webhook reconnection, build verification, and project settings review.",
+      "category": "chore",
+      "severity": "high",
+      "fingerprint": "chore|4|restore-vercel-deployments",
+      "source": "/pro:chore",
+      "sourceBranch": "chore/restore-vercel-deployments",
+      "createdAt": "2026-04-16T13:49:49Z",
+      "status": "in-progress"
+    },
     {
       "id": 1,
       "title": "Homepage hero clarity",
